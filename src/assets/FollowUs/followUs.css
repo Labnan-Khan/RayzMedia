@@ -2,7 +2,7 @@
 .follUs{
     width: 100%;
     /* background-color: #8D1FD4; */
-    height: 70vh;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -13,6 +13,8 @@
     background-position: center;
     background-repeat: no-repeat;
     /* padding: 20px; */
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 .follUs h4{

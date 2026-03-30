@@ -1,6 +1,7 @@
 
  .explorCollection{
     width: 100%;
+    height: auto;
     display: flex;
     justify-content:center ;
     align-items: center;
@@ -11,7 +12,8 @@
     /* background-color: #5d009abc; */
     background: linear-gradient(to right ,#8D1FD4,  #57346f ,#8D1FD4);
     width: 80%;
-    height: 40vh;
+    height: auto;
+    padding: 35px 0px;
     border-radius:10px;
     display: flex;
     flex-direction: row-reverse;
@@ -30,7 +32,7 @@
     justify-content: center;
     align-items: center;
     /* gap: 10px; */
-    width: 40%;
+    width: 50%;
     
 }
 
@@ -93,6 +95,7 @@
      background-color: white;
     color: #8D1FD4;
     border: 0px;
+    border: 2px solid white;
     transition: all 0.7 ease-in;
 }
 

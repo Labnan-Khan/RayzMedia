@@ -279,13 +279,13 @@ function Home() {
         </div>
 
         <div className='timelineRight'>
-          <div className={`div1 ${(imgPosition[0] == "middle")? "timelineImg" : ""} ${imgPosition[0]}`}>1</div>
-          <div className={`div1 ${(imgPosition[1] == "middle")? "timelineImg" : ""} ${imgPosition[1]}`}>2</div>
-          <div className={`div1 ${(imgPosition[2] == "middle")? "timelineImg" : ""} ${imgPosition[2]}`}>3</div>
-          <div className={`div2 ${(imgPosition[3] == "middle")? "timelineImg" : ""} ${imgPosition[3]}`}>4</div>
-          <div className={`div3 ${(imgPosition[4] == "middle")? "timelineImg" : ""} ${imgPosition[4]}`}>5</div>
-          <div className={`div3 ${(imgPosition[5] == "middle")? "timelineImg" : ""} ${imgPosition[5]}`}>6</div>
-          <div className={`div3 ${(imgPosition[6] == "middle")? "timelineImg" : ""} ${imgPosition[6]}`}>7</div>
+          <div className={`div1 ${(imgPosition[0] == "middle")? "timelineImg" : ""} ${imgPosition[0]}`}></div>
+          <div className={`div1 ${(imgPosition[1] == "middle")? "timelineImg" : ""} ${imgPosition[1]}`}></div>
+          <div className={`div1 ${(imgPosition[2] == "middle")? "timelineImg" : ""} ${imgPosition[2]}`}></div>
+          <div className={`div2 ${(imgPosition[3] == "middle")? "timelineImg" : ""} ${imgPosition[3]}`}></div>
+          <div className={`div3 ${(imgPosition[4] == "middle")? "timelineImg" : ""} ${imgPosition[4]}`}></div>
+          <div className={`div3 ${(imgPosition[5] == "middle")? "timelineImg" : ""} ${imgPosition[5]}`}></div>
+          <div className={`div3 ${(imgPosition[6] == "middle")? "timelineImg" : ""} ${imgPosition[6]}`}></div>
         </div>
 
       </div>

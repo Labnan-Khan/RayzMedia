@@ -1,12 +1,12 @@
 .testimonial{
     width: 100%;
-    min-height: 50vh;
-    /* background-color: aquamarine; */
+    height: auto;
     display: flex;
     /* flex-direction: column; */
     justify-content: center;
     align-items: center;
-    padding-bottom: 10vh;
+    padding-top: 40px;
+    padding-bottom: 50px;
    
     /* border: 2px solid white; */
 }
