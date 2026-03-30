@@ -10,7 +10,7 @@
  }
  .explorCollection .expCol{
     /* background-color: #5d009abc; */
-    background: linear-gradient(to right ,#8D1FD4,  #57346f ,#8D1FD4);
+    background-color: #1a0133;
     width: 80%;
     height: auto;
     padding: 35px 0px;
@@ -21,7 +21,7 @@
     align-items: center;
     gap: 10px;
     /* background-color: red; */
-    box-shadow: inset 0px 0px 20px #f1f1f1;
+    box-shadow: inset 0px 0px 20px #8D1FD4;
     /* box-shadow:  0px 0px 20px #a603f8; */
     
 
@@ -94,9 +94,8 @@
     font-size: 16px;
      background-color: white;
     color: #8D1FD4;
-    border: 0px;
-    border: 2px solid white;
     transition: all 0.7 ease-in;
+    border: 2px solid #8D1FD4;
 }
 
 .explorCollectionLeft button:hover{
@@ -167,10 +166,10 @@
     width: auto;
     font-weight: 500;
     font-size: 16px;
-     background-color: white;
+    background-color: white;
     color: #8D1FD4;
-    border: 0px;
     transition: all 0.7 ease-in;
+    border: 2px solid #8D1FD4;
 }
 
 .expColLeftBtn2:hover{
