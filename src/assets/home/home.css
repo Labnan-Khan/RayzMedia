@@ -1,0 +1,969 @@
+.home{
+    background-image: url(../bgImg.png);
+    /* background-color: black; */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    width: 100%;
+    gap: 40px;
+    /* padding: 5%;s */
+}
+
+.homeLeft{
+    width: 45%;
+    /* background-color: aqua; */
+    /* height: 90%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 30px;
+    padding-left: 3%;
+    padding-top: 4%;
+}
+
+.leftP1{
+    color: #8D1FD4;
+    font-size: 20px;
+    /* font-weight:10px; */
+}
+.leftP2{
+    display: none;
+}
+
+.LeftH1{
+    font-size:40px;
+    font-weight:900;
+}
+
+.leftSimpleP{
+    font-size: 17px;
+    /* font-weight: 10px; */
+    color: rgb(189, 189, 189);
+    /* background-color: #8D1FD4; */
+}
+
+.leftBtnD{
+    /* color: #8D1FD4 */
+    /* width: 80%; */
+    /* background-color: #cd8c0a; */
+    gap: 30px;
+    display: flex;
+
+}
+
+.leftBtnD button{
+
+    text-align: center;
+    /* border: 0px ; */
+    padding: 10px;
+    border-radius: 100px;
+    height: 45px;
+    width: 150px;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.leftBtn1{
+    background-color: #8D1FD4;
+    color: white;
+    border: 0px;
+    transition: all 0.7 ease-in-out;
+}
+
+.leftBtn1:hover{
+    cursor: pointer;
+    color: #8D1FD4;
+    background-color: #cba2e8;
+    border: 3px solid #8D1FD4;
+}
+
+.LeftBtn2{
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    transition: all 0.5s ease-in-out;
+}
+
+.LeftBtn2:hover{
+    background-color: white;
+    color: #8D1FD4;
+    cursor: pointer;
+    /* border: 2px solid #8D1FD4; */
+}
+
+.homeRight{
+    
+    width: 40%;
+    height: 70vh;
+    /* background-color: rgb(131, 26, 26); */
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.rightVideo{
+    /* background-color: rgba(58, 58, 58, 0.856); */
+    /* border: 1px solid #8D1FD4; */
+    /* border-radius: 5%; */
+    /* padding: 10px; */
+    margin: 0px;
+    width: 60%;
+    height: auto;
+
+}
+ .rightVideo video{
+    border: 2px solid #f5f2f7;
+    /* padding: 10px; */
+    width: 90%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5%;
+    /* background-color: black; */
+   
+ }
+
+ .rightVideo div{
+    /* border-left: 2px solid #8D1FD4; */
+    border: 2px solid #8D1FD4;
+    border-radius: 5%;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     box-shadow: 2px 2px 10px #8D1FD4;
+ }
+
+ .homeRight .rightBox{
+    background-color: rgba(0, 0, 0, 0.677);
+    position: relative;
+    width: 30%;
+    /* text-align: center; */
+    z-index: 1;
+    right: 10%;
+    top: -20%;
+    display: flex;
+    flex-direction: column;
+    gap:3px ;
+    padding: 10px;
+    /* width: 140px; */
+    border-radius: 5%;
+    font-size: 15px;
+ }
+ .rightBox1{
+    background-color: rgb(37, 32, 32);
+    display: flex;
+    gap: 2px;
+    padding-left: 10px;
+    height: 3vw;
+    border-radius: 10px;
+    justify-content: start;
+    align-items: center;
+    width: 90%;
+    margin-right: 5px;
+
+ }
+
+/* explorCollection after home css */
+
+
+ .explorCollection{
+    width: 100%;
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+    padding-bottom: 5%;
+    padding-top: 15%;
+ }
+ .explorCollection .expCol{
+    /* background-color: #5d009abc; */
+    background: 
+    linear-gradient(#464647bc,  #a629f9bc ,#464647bc);
+    width: 80%;
+    height: 40vh;
+    border-radius:10px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    
+
+ }
+
+.explorCollectionVideo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* gap: 10px; */
+    width: 40%;
+    
+}
+
+.explorCollectionVideo .video1{
+    transform: rotate(-10deg);
+    padding: 2px;
+    position: relative;
+    bottom: -5px;
+    right: -20px;
+}
+.explorCollectionVideo .video2{
+    position: relative;
+    bottom: 25px;
+    padding: 0px;
+    z-index: 1;
+}
+.explorCollectionVideo .video3{
+    transform: rotate(10deg);
+    padding: 2px;
+    position: relative;
+    bottom:  -20px;
+    right: 20px;
+}
+
+ .explorCollectionVideo video{
+    width: 120px;
+    border: 2px solid #c577f8;
+    border-radius: 10px;
+ }
+
+.explorCollectionLeft{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 20px;
+    /* background-color: rgb(15, 132, 128); */
+    padding-left: 5%;
+}
+.explorCollectionLeft h3{
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.explorCollectionLeft p{
+    color: rgb(165, 165, 165);
+}
+
+.explorCollectionLeft button{
+     text-align: center;
+    /* border: 0px ; */
+    padding: 10px;
+    border-radius: 100px;
+    height: 45px;
+    width: auto;
+    font-weight: 500;
+    font-size: 16px;
+     background-color: white;
+    color: #8D1FD4;
+    border: 0px;
+    transition: all 0.7 ease-in;
+}
+
+.explorCollectionLeft button:hover{
+    cursor: pointer;
+    background-color: #8D1FD4;
+    color: white;
+    border: 2px solid white;
+}
+
+.expColLeftBtn2{
+    display: none;
+}
+
+/* whats included after explore our collection  */
+
+.inclu{
+    /* background-color: #8D1FD4; */
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+
+.incluDiv{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #cba2e8; */
+    gap: 15px;
+}
+
+.incluDiv h3{
+    width: 90%;
+    text-align: center;
+    font-size: 29px;
+    font-weight:700;
+}
+.inclu .para{
+    /* color: #8D1FD4; */
+    font-size: 20px;
+    text-align: center;
+}
+
+.incluDiv p{
+    color: rgb(161, 161, 161);
+}
+
+.incluContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width: 300px;
+    min-width: 250px;
+    border: 2px solid #8D1FD4;
+    border-radius: 10px;
+    padding: 30px;
+    flex: 1 2 25%;
+    
+}
+
+.incluContainer .iconDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.iconDiv p{
+    background-color: rgba(255, 255, 255, 0.26);
+    color: white;
+    padding: 4px;
+    border-radius: 2px;
+}
+
+.incluContainer .iCon{
+    font-size: 50px;
+    font-weight: 100;
+    border-radius: 50%;
+    border: 2px solid #8D1FD4;
+    padding: 7px;
+}
+
+.incluContainer h5{
+    font-size: 25px;
+    text-align: start;
+}
+
+.incluBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.incluContainer:hover{
+    box-shadow: 1px 1px 10px white;
+}
+
+/* inside the timeline after what is included */
+
+.inTimeline{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.timelineBox{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     /* background-color: #3a025f; */
+     padding-top: 25px;
+     padding-bottom: 25px;
+     gap: 20px;
+}
+.timelineLeft{
+    width: 39%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    /* border: 2px solid white; */
+    height: 300px;
+    gap: 30px;
+    padding: 10px;
+}
+
+.timelineLeft h4{
+    font-size: 30px;
+}
+
+.timelineLeft p{
+    color: rgb(184, 184, 184);
+    font-size: 20px;
+}
+
+.leftBoxBtn{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.leftBoxBtn button{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: black;
+    color: white;
+    border: 2px solid #8D1FD4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.leftBoxBtn button .leftBoxIcon{
+    font-size: 25px;
+}
+
+.leftBoxBtn button:hover{
+    background-color: #8D1FD4;
+    
+}
+
+.timelineRight{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow:hidden;
+    position: relative;
+    top: 0px;
+    right: 0px;
+    /* background-color: antiquewhite; */
+}
+
+.timelineRight div{
+    width: 100%;
+    border: 3px solid #8D1FD4;
+    border-radius: 10px;
+    height: 45vh;
+    /* transition: all 1s ease-in; */
+    transition: transform 2s ease, opacity 1s ease;
+}
+
+.timelineRight .div1{
+    background-image: url(../ok.webp);
+    
+    
+}
+
+.timelineRight .div2{
+    background-image: url(../ok2.webp);
+    
+}
+.timelineRight .div3{
+    background-image: url(../ok3.webp);
+}
+
+
+
+.timelineRight .aLeft{
+    width: 0px;
+    opacity: 0;
+    z-index: 1;
+    transform: translateX(-100px);
+}
+
+.timelineRight .bLeft{
+    width: 0px;
+    opacity: 0;
+    z-index: 1;
+    transform: translateX(-80px);
+}
+.timelineRight .cLeft{
+    width: 0px;
+    opacity: 0;
+    z-index: 1;
+    border: none;
+    transform: translateX(-60%);
+
+}
+.timelineRight .bMiddle{
+    opacity: 1;
+    z-index: 3;
+     transform: translateX(0%);
+     margin-left: 10px;
+     margin-right: 10px;
+     border: 3px solid #8D1FD4;
+}
+
+.timelineRight .aRight{
+    width: 0px;
+    opacity:0;
+    z-index: 1;
+    border: none;
+     transform:translateX(60%);
+     
+}
+
+.timelineRight .bRight{
+    width: 0px;
+    opacity:0;
+    z-index: 1;
+     transform:translateX(80px);
+     
+}
+
+.timelineRight .cRight{
+    width: 0px;
+    opacity:0;
+    z-index: 1;
+     transform:translateX(100px);
+     
+}
+
+
+
+/* Why Choose EarnEdits? */
+
+.earnEidts{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid #8D1FD4; */
+    /* background-color: #c577f8; */
+    padding-bottom: 150px;
+    padding-top: 100px;
+    height: auto;
+}
+
+.earnEidts .eEdits{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 90%;
+
+}
+
+.eEdits .eEditsH4{
+    font-size: 30px;
+    font-weight: 600;
+    padding: 10px;
+}
+
+.eEdits .eEditsP1{
+    font-size: 20px;
+    color: rgb(170, 169, 169);
+    text-align: center;
+}
+
+.eEdits .eEditsBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 10px;
+
+}
+
+.eEditsBox .boxItem{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    /* width: 35%;
+    height: 40vh; */
+    min-width: 250px;
+    max-width: 350px;
+    min-height: 270px;
+    flex: 1 1 10%;
+    /* background-color: #8D1FD4; */
+    border: 2px solid #8D1FD4;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    border-radius: 20px;
+    position: relative; /* IMPORTANT */
+    z-index: 1;
+}
+
+.eEditsBox .boxItem::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5); /* control opacity here */
+    border-radius: 20px;
+    z-index: -1;
+}
+
+ .boxItem.boxImg1{
+    background-image: url(../why-image-1.webp);
+    
+}
+ .boxItem.boxImg2{
+    background-image: url(../why-image-2.webp);
+    
+}
+ .boxItem.boxImg3{
+    background-image: url(../why-image-3.webp);
+    
+}
+ .boxItem.boxImg4{
+    background-image: url(../why-image-4.webp);
+    
+}
+
+ .boxItemDiv{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    gap: 10px;
+    background-color: rgba(0, 0, 0, 0.648);
+    transition: all 1s ease;
+    
+    transform: translateY(40%);
+    /* border-radius: 20px; */
+ }
+
+.boxItem h6{
+    width: 100%;
+    font-size: 20px;
+    font-weight: 100;
+    /* padding-bottom: 15px; */
+}
+
+.boxItem p{
+    color: rgb(173, 171, 171);
+    transition: all 0.5s ease ;
+    opacity: 0;
+    
+}
+
+.boxItem:hover .boxItemDiv p{
+    opacity: 1;
+}
+
+.boxItem:hover .boxItemDiv{
+    transform: translateY(0%);
+    
+}
+
+
+
+
+
+
+
+
+
+/* how earneidts works */
+
+
+
+.hEWork{
+    width: 100%;
+    /* border: 1px solid white; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    
+}
+
+.EWork{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content:center ;
+    align-items: center;
+    row-gap: 20px;
+    padding-top: 10vh;
+}
+.EWorkH4{
+    font-size: 29px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.EWork .EWorkP{
+    text-align: center;
+}
+.EWork p{
+    font-size: 17px;
+    color: rgb(211, 211, 211);
+}
+ 
+.EWorkSec{
+    /* border: 2px solid white; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+.EWorkSecLeft{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    padding: 20px;
+    gap: 20px;
+    /* border: 2px solid white; */
+}
+
+.EWorkSecLeft .LeftP1{
+    width: fit-content;
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 30px;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    background-color: #9b34dfd3;
+}
+
+.EWorkSecLeft .LeftH5{
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.EWorkSec .EWorkSecRight{
+    width: 50%;
+    /* border: 1px solid white; */
+    /* background-color: #8D1FD4; */
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: 500px;
+    gap: 10px;
+    
+}
+
+
+
+.EWorkSecRight video{
+    /* background-color: #BD081C; */
+    width: 20%;
+    height: 150px;
+    min-height: 100px;
+    min-width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid white; */
+    border-radius: 10%;
+    object-fit: cover;
+    
+}
+
+
+.EWorkLine1{
+    width: 100%;
+    height: 150px;
+    /* border: 2px solid white; */
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+
+
+.EWorkLine1 div{
+    width: 60%;
+    height: 100%;
+    /* background-color:#8D1FD4 ; */
+    background-image: url(../line-1.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-color: #8D1FD4; */
+    
+}
+
+.EWorkLine2{
+    width: 100%;
+    height: 150px;
+    /* border: 2px solid white; */
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+
+
+.EWorkLine2 div{
+    width: 60%;
+    height: 90%;
+    /* background-color:#8D1FD4 ; */
+    background-image: url(../line-2.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* background-color: #8D1FD4; */
+    
+}
+
+
+
+
+.EWorkSec .rightSec1{
+    background-image: url(../01-Choose-Your-Viral-Video-project-1.webp);
+    
+}
+
+.EWorkSec .rightSec2{
+    background-image: url(../03-Learn-Edit-and-Use-Freely.webp);
+}
+
+.eworksec2{
+    flex-direction: row-reverse;
+
+}
+
+.EWorkSec .rightSec3{
+    background-image: url(../02-Download-the-Open-AEP-File.webp);
+}
+
+
+
+
+/* Responsive css for website */
+ @media (max-width:768px) {
+    
+
+
+
+    .home{
+        margin: 0px;
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+         align-items: center;
+        height: auto;
+        width: auto;
+        gap: 0px;
+        /* border-bottom: 2px solid wheat;
+        border-right: 2px solid wheat; */
+        
+    }
+
+    .homeLeft{
+    width: 90%;
+    padding-left: 10px;
+    /* background-color: rgb(86, 101, 101); */
+    /* height: 90%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 30px;
+    } 
+    
+    .leftP1{
+        display: none;
+    }
+
+    .leftP2{
+        display: block;
+        color: #8D1FD4;
+        font-size: 20px;
+    }
+
+    .homeRight{
+    margin-top: 40px;
+    width: 90%;
+    height: auto;
+    /* background-color: rgb(131, 26, 26); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+     .homeRight .rightBox{
+        position: relative;
+        width: auto;
+         /* height: 25%; */
+    }
+
+    .rightBox1{
+    background-color: rgb(37, 32, 32);
+    display: flex;
+    gap: 4px;
+    padding-left: 10px;
+    height: 3vh;
+    border-radius: 10px;
+    justify-content: start;
+    align-items: center;
+    width: 90%;
+    margin-right: 5px;
+
+ }
+
+ 
+
+
+/* inside the timeline after what is included */
+
+.timelineBox{
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+}
+.timelineLeft{
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+.timelineRight{
+    width: 90%;
+}
+
+/* how Earneddits works */
+.hEWork .EWorkSec{
+    flex-direction: column;
+    gap: 0px;
+}
+
+.hEWork .EWorkSec .EWorkSecLeft{
+    width: 100%;
+    padding-top: 10vh;
+}
+
+.hEWork .EWorkSec .EWorkSecRight{
+    width: 100%;
+    /* border: 1px solid white; */
+}
+
+.hEWork .EWorkLine1, .EWorkLine2{
+    display: none;
+}
+
+
+
+/* insidde the timeline */
+.timelineBox .timelineLeft{
+    width: 100%;
+    text-align: center;
+    /* background-color: #8D1FD4; */
+}
+
+ }

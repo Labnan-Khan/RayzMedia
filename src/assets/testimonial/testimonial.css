@@ -1,0 +1,114 @@
+.testimonial{
+    width: 100%;
+    min-height: 50vh;
+    /* background-color: aquamarine; */
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10vh;
+   
+    /* border: 2px solid white; */
+}
+
+.testiUSec{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid white; */
+    width:100%;
+    gap: 20px;
+    overflow: hidden;
+
+    /*  */
+ 
+
+    
+
+}
+
+@keyframes scrollTesti {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+    
+
+}
+
+.testiUSec .testiUSecH4{
+    font-size: 30px;
+    font-weight:600;
+    width: 90%;
+    text-align: center;
+}
+.testiUSec .testiUSecP1{
+    width: 90%;
+    text-align: center;
+}
+.testiBoxSec{
+    margin-top: 40px;
+    width: 250vh;
+    display:flex ;
+    gap: 6px;
+     animation: scrollTesti 40s linear infinite;
+     
+}
+
+.testiBoxSec:hover{
+    animation-play-state: paused;
+}
+
+.testiBoxSec .tBox{
+    display: flex;
+    flex-direction: column;
+    /* border: 2px solid white; */
+    padding: 20px;
+    /* width: 20%; */
+    gap: 20px;
+    background-color: rgb(32, 32, 32);
+    border-radius: 20px;
+    border: 2px solid black;
+    /* animation: scrollTesti 50s linear infinite; */
+}
+
+ .tBox:hover{
+    box-shadow: 1px 1px 10px white;
+    border: 2px solid #8D1FD4;
+    
+    
+}
+
+
+.tBox .tboxUpside{
+    width:100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+    color:yellow;
+    font-size: 20px;
+}
+
+.tBox .tboxDownSide{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+    border-top: 1px solid white;
+    padding-top: 10px;
+}
+
+.tBox .tboxDownSide div{
+    background-color: rgb(4, 184, 22);
+    color: black;
+    border-radius: 50%;
+    padding: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+}
