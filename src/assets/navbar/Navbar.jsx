@@ -50,9 +50,6 @@ function Navbar() {
     </div>
 
 
-    <div className='navDiv' onClick={ ()=>{ setClickMenu(!clickMenu); setDropMenu(!dropMenu)} }>
-
-        </div>
 
     </>
   )

@@ -5,10 +5,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 90vh;
+    height: auto;
     width: 100%;
     gap: 40px;
-    /* padding: 5%;s */
+    padding-top: 3%;
 }
 
 .homeLeft{
@@ -67,23 +67,23 @@
 }
 
 .leftBtn1{
-    background-color: #8D1FD4;
-    color: white;
-    border: 0px;
+    background-color: white;
+    color: #8D1FD4;
+    border: 3px solid #8D1FD4;
     transition: all 0.7 ease-in-out;
 }
 
 .leftBtn1:hover{
     cursor: pointer;
-    color: #8D1FD4;
-    background-color: #cba2e8;
-    border: 3px solid #8D1FD4;
+    color: white;
+    background-color: #8D1FD4;
+    border: 3px solid white;
 }
 
 .LeftBtn2{
     background-color: black;
     color: white;
-    border: 1px solid white;
+    border: 3px solid white;
     transition: all 0.5s ease-in-out;
 }
 
@@ -91,13 +91,14 @@
     background-color: white;
     color: #8D1FD4;
     cursor: pointer;
+    border: 3px solid #8D1FD4;
     /* border: 2px solid #8D1FD4; */
 }
 
 .homeRight{
     
     width: 40%;
-    height: 70vh;
+    height: auto;
     /* background-color: rgb(131, 26, 26); */
     display: flex;
     justify-content: start;
@@ -893,7 +894,7 @@
     height: auto;
     /* background-color: rgb(131, 26, 26); */
     display: flex;
-    justify-content: center;
+    justify-content: end;
     align-items: center;
     }
 
