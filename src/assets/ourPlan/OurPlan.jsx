@@ -13,11 +13,13 @@ function OurPlan() {
     <div  className='ourPlan'>
 
         <div className='finishProjects'>
-            <img src={backImg} alt="" />
+            {/* <img src={backImg} alt="" /> */}
             <div>
                 <h2>Finish Your Projects Faster,</h2>
                 <h4>Just Re-Edit Proven Ideas</h4>
+                <div></div>
             </div>
+
            
         </div>
 

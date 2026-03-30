@@ -37,7 +37,7 @@
 }
 
 .explorCollectionVideo .video1{
-    transform: rotate(-10deg);
+    transform: rotate(-7deg);
     padding: 2px;
     position: relative;
     bottom: -15px;
@@ -51,8 +51,12 @@
     padding: 0px;
     z-index: 1;
 }
+
+.explorCollectionVideo .video2 video{
+    border: 3px solid #8D1FD4;
+}
 .explorCollectionVideo .video3{
-    transform: rotate(10deg);
+    transform: rotate(7deg);
     padding: 2px;
     position: relative;
     bottom:  -15px;

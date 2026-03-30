@@ -14,10 +14,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 90vh;
+    height: auto;
     width: 100%;
     gap: 40px;
-    overflow: hidden;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    /* overflow: hidden; */
 }
 
 .ahomeLeft{
@@ -80,14 +82,14 @@
 .aleftBtn1:hover{
     cursor: pointer;
     color: #8D1FD4;
-    background-color: #cba2e8;
+    background-color: white;
     border: 3px solid #8D1FD4;
 }
 
 .aLeftBtn2{
     background-color: black;
     color: white;
-    border: 1px solid white;
+    border: 3px solid white;
     transition: all 0.5s ease-in-out;
 }
 
@@ -95,13 +97,13 @@
     background-color: white;
     color: #8D1FD4;
     cursor: pointer;
-    /* border: 2px solid #8D1FD4; */
+    border: 3px solid #8D1FD4;
 }
 
 .ahomeRight{
     
     width: 40%;
-    height: 70vh;
+    height: auto;
     /* background-color: rgb(131, 26, 26); */
     display: flex;
     justify-content: start;
@@ -216,8 +218,8 @@
 /* we help video editor */
 
  .about .helpEditors{
-    padding-top: 20vh;
-    padding-bottom: 20vh;
+    margin-top: 150px;
+    margin-bottom: 150px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -231,7 +233,7 @@
  .about .helpEditors h4{
     color: white;
     font-size: 30px;
-    padding-bottom: 10vh;
+    padding-bottom: 20px;
  }
 
  .about .helpEditors h5{
@@ -276,11 +278,11 @@
 
 
 
-
+/* boxx1 */
 
 .about .ChoseBox1{
     width: 90%;
-    min-height: 60vh;
+    height: auto;
     /* border: 1px solid white; */
     display: flex;
     justify-content: start;
@@ -290,14 +292,14 @@
     color: rgb(195, 195, 195);
     text-align: start;
     padding-top: 30px;
-    padding-bottom: 20vh;
+    margin-bottom: 50px;
 }
 .about .ChoseBox1 .rightSec{
     /* background-color: #8D1FD4; */
     min-width: 60%;
     /* height: 100%; */
     background-image: url(../aboutBoximg.png);
-    height: 60vh;
+    height: 500px;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -466,8 +468,14 @@
     width: 100%;
     font-size: 20px;
     font-weight: 100;
+    transform: translateX(20%);
     /* padding-bottom: 15px; */
+    transition: all 0.7s ease;
 }
+.boxItem:hover  h6{
+    transform: translateX(0);
+}
+
 
 .boxItem p{
     color: rgb(173, 171, 171);

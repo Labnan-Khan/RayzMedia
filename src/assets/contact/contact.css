@@ -1,5 +1,6 @@
 .ContactUs{
     width: 100%;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -11,8 +12,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 5vh;
-    height: 85vh;
+    padding-top: 100px;
+    height: auto;
     /* border: 2px solid white; */
     gap: 50px;
     
@@ -124,6 +125,9 @@
     border: 1px solid white;
 }
 
+
+
+/* reach us */
 .waysToReachUs{
     width: 90%;
     display: flex;
@@ -133,7 +137,9 @@
     gap: 20px;
     font-size: 19px;
     color: rgb(174, 174, 174);
-    min-height: 65vh;
+    /* min-height: 65vh; */
+    margin-top: 150px;
+    margin-bottom: 150px;
 }
 
 .waysToReachUs h4{
