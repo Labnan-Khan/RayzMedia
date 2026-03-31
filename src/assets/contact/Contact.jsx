@@ -1,10 +1,28 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import './contact.css'
 import FollowUs from '../FollowUs/FollowUs'
 import { PiHandWavingDuotone } from 'react-icons/pi'
 import { FaHandPointLeft, FaHandshake } from 'react-icons/fa'
+import emailjs from '@emailjs/browser';
 
 function Contact() {
+
+const form = useRef()
+
+const sendEmail = (e)=>{
+    e.preventDefault()
+
+    emailjs.sendForm("service_hhc0j9n", "template_79utwuf" , form.current, {
+        publicKey: "VUw7twkZAl6-LpT5M",
+    }).then(
+        form.current.reset()
+    ),
+    (error)=>{
+        console.log("failed")
+    }
+}
+
+
   return (
     <>
     <div className='ContactUs'>
@@ -22,12 +40,14 @@ function Contact() {
                      you and make sure everything works smoothly.
                 </p>
             </div>
-
+            
             <div className='contactHomeRight'>
-                <input type="text" placeholder='Name'/>
-                <input type="email" placeholder='Email' />
-                <textarea type="text" placeholder='Message' cols="7"/>
-                <button>Send Message</button>
+                <form className='formSec' ref={form} onSubmit={sendEmail}>
+                <input type="text" name="user_name" placeholder='Name'/>
+                <input type="email" name="user_email" placeholder='Email' />
+                <textarea type="text" name='message' placeholder='Message' cols="7"></textarea >
+                <button type='submit'>Send Message</button>
+                </form>
                 {/* <p>ok</p> */}
             </div>
         </div>

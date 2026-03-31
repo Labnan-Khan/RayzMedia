@@ -139,7 +139,7 @@ function About() {
 
               <div className='boxItem boxImga'>
                 <div className='boxItemDiv'>
-                  <h6>Learn Faster</h6>
+                  <h6 className='boxItemDivH6'>Learn Faster</h6>
                    <p>Study real project timelines and understand how 
                     viral edits are actually built - step by step.
                   </p>
@@ -150,7 +150,7 @@ function About() {
         
               <div className='boxItem boxImgb'>
                 <div className='boxItemDiv'>
-                  <h6>Re-edit Proven Ideas</h6>
+                  <h6 className='boxItemDivH6'>Re-edit Proven Ideas</h6>
                   <p>Not generic templates — but actual viral edits
                     recreated and packaged as open AE projects.
                   </p>
@@ -159,7 +159,7 @@ function About() {
 
               <div className='boxItem boxImgc'>
                 <div className='boxItemDiv'>
-                 <h6>Finish Projects Faster</h6>
+                 <h6 className='boxItemDivH6'>Finish Projects Faster</h6>
                   <p>Not generic templates — but actual viral edits
                     recreated and packaged as open AE projects.
                   </p>
@@ -168,7 +168,7 @@ function About() {
 
               <div className='boxItem boxImgd'>
                 <div className='boxItemDiv'>
-                  <h6>Proven Ideas</h6>
+                  <h6 className='boxItemDivH6'>Proven Ideas</h6>
                   <p>Not generic templates — but actual viral edits
                     recreated and packaged as open AE projects.
                   </p>

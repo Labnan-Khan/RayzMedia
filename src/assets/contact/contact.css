@@ -57,6 +57,14 @@
     box-shadow: inset 0px 0px 20px #8D1FD4;
     
 }
+.ContactUs .contactHome .contactHomeRight .formSec{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
 .contactHome .contactHomeRight button{
     width: 90%;
     background-color: white;
