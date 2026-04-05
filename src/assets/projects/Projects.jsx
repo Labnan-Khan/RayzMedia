@@ -1,16 +1,23 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './projects.css'
 import FollowUs from '../FollowUs/FollowUs'
 import video1 from "../homePageVideo.mp4"
 import { FaPlayCircle, FaRegWindowClose } from 'react-icons/fa'
 import { IoMdClose } from 'react-icons/io'
 import Testimonial from '../testimonial/Testimonial'
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 
 function Projects() {
     const [videoSize, setVideoSize] = useState(false)
 
+    useEffect(() => {
+        AOS.init({duration: 2000,
+             once: false,
+             offset:0,
+            anchorPlacement: 'top-bottom'});
+    }, []);
 
   return (
     <>
@@ -32,116 +39,116 @@ function Projects() {
 
         <div className='projectVideoBox'>
             
-            <div className="videoCon ">
+            <div className="videoCon" data-aos="fade-up" >
                 <video className='proVideo' src={video1}  autoPlay muted loop   controlsList="nodownload noplaybackrate  nofullscreen">
                 </video>
                 <button className='playButton' onClick={()=>setVideoSize(!videoSize)} ><div><FaPlayCircle /></div></button>
             </div>
 
-            <div className="videoCon ">
+            <div className="videoCon"  data-aos="fade-up">
                 <video className='proVideo' src={video1}  autoPlay muted loop   controlsList="nodownload noplaybackrate  nofullscreen">
                     <button className='playButton' onClick={()=>setVideoSize(!videoSize)} ><div><FaPlayCircle /></div></button>
                 </video>
                 <button className='playButton' onClick={()=>setVideoSize(!videoSize)} ><div><FaPlayCircle /></div></button>
             </div>
 
-            <div className="videoCon ">
+            <div className="videoCon " data-aos="fade-up">
                 <video className='proVideo' src={video1}  autoPlay muted loop   controlsList="nodownload noplaybackrate  nofullscreen">
                 </video>
                 <button className='playButton' onClick={()=>setVideoSize(!videoSize)} ><div><FaPlayCircle /></div></button>
             </div>
 
-            <div className="videoCon ">
+            <div className="videoCon " data-aos="fade-up">
                 <video className='proVideo' src={video1}  autoPlay muted loop   controlsList="nodownload noplaybackrate  nofullscreen">
                 </video>
                 <button className='playButton' onClick={()=>setVideoSize(!videoSize)} ><div><FaPlayCircle /></div></button>
             </div>
 
-            <div className="videoCon ">
+            <div className="videoCon " data-aos="fade-up">
                 <video className='proVideo' src={video1}  autoPlay muted loop   controlsList="nodownload noplaybackrate  nofullscreen">
                 </video>
                 <button className='playButton' onClick={()=>setVideoSize(!videoSize)} ><div><FaPlayCircle /></div></button>
             </div>
 
-            <div className="videoCon ">
+            <div className="videoCon " data-aos="fade-up">
                 <video className='proVideo' src={video1}  autoPlay muted loop   controlsList="nodownload noplaybackrate  nofullscreen">
                 </video>
                 <button className='playButton' onClick={()=>setVideoSize(!videoSize)} ><div><FaPlayCircle /></div></button>
             </div>
 
-            <div className="videoCon ">
+            <div className="videoCon " data-aos="fade-up">
                 <video className='proVideo' src={video1}  autoPlay muted loop   controlsList="nodownload noplaybackrate  nofullscreen">
                 </video>
                 <button className='playButton' onClick={()=>setVideoSize(!videoSize)} ><div><FaPlayCircle /></div></button>
             </div>
 
-            <div className="videoCon ">
+            <div className="videoCon " data-aos="fade-up">
                 <video className='proVideo' src={video1}  autoPlay muted loop   controlsList="nodownload noplaybackrate  nofullscreen">
                 </video>
                 <button className='playButton' onClick={()=>setVideoSize(!videoSize)} ><div><FaPlayCircle /></div></button>
             </div>
 
-            <div className="videoCon ">
+            <div className="videoCon " data-aos="fade-up">
                 <video className='proVideo' src={video1}  autoPlay muted loop   controlsList="nodownload noplaybackrate  nofullscreen">
                 </video>
                 <button className='playButton' onClick={()=>setVideoSize(!videoSize)} ><div><FaPlayCircle /></div></button>
             </div>
 
-            <div className="videoCon ">
+            <div className="videoCon " data-aos="fade-up">
                 <video className='proVideo' src={video1}  autoPlay muted loop   controlsList="nodownload noplaybackrate  nofullscreen">
                 </video>
                 <button className='playButton' onClick={()=>setVideoSize(!videoSize)} ><div><FaPlayCircle /></div></button>
             </div>
 
-            <div className="videoCon ">
+            <div className="videoCon" data-aos="fade-up" >
                 <video className='proVideo' src={video1}  autoPlay muted loop   controlsList="nodownload noplaybackrate  nofullscreen">
                 </video>
                 <button className='playButton' onClick={()=>setVideoSize(!videoSize)} ><div><FaPlayCircle /></div></button>
             </div>
 
-            <div className="videoCon ">
+            <div className="videoCon " data-aos="fade-up">
                 <video className='proVideo' src={video1}  autoPlay muted loop   controlsList="nodownload noplaybackrate  nofullscreen">
                 </video>
                 <button className='playButton' onClick={()=>setVideoSize(!videoSize)} ><div><FaPlayCircle /></div></button>
             </div>
             
-            <div className="videoCon ">
+            <div className="videoCon " data-aos="fade-up">
                 <video className='proVideo' src={video1}  autoPlay muted loop   controlsList="nodownload noplaybackrate  nofullscreen">
                 </video>
                 <button className='playButton' onClick={()=>setVideoSize(!videoSize)} ><div><FaPlayCircle /></div></button>
             </div>
-            <div className="videoCon ">
+            <div className="videoCon " data-aos="fade-up">
                 <video className='proVideo' src={video1}  autoPlay muted loop   controlsList="nodownload noplaybackrate  nofullscreen">
                 </video>
                 <button className='playButton' onClick={()=>setVideoSize(!videoSize)} ><div><FaPlayCircle /></div></button>
             </div>
-            <div className="videoCon ">
+            <div className="videoCon " data-aos="fade-up">
                 <video className='proVideo' src={video1}  autoPlay muted loop   controlsList="nodownload noplaybackrate  nofullscreen">
                 </video>
                 <button className='playButton' onClick={()=>setVideoSize(!videoSize)} ><div><FaPlayCircle /></div></button>
             </div>
-            <div className="videoCon ">
+            <div className="videoCon " data-aos="fade-up">
                 <video className='proVideo' src={video1}  autoPlay muted loop   controlsList="nodownload noplaybackrate  nofullscreen">
                 </video>
                 <button className='playButton' onClick={()=>setVideoSize(!videoSize)} ><div><FaPlayCircle /></div></button>
             </div>
-            <div className="videoCon ">
+            <div className="videoCon " data-aos="fade-up">
                 <video className='proVideo' src={video1}  autoPlay muted loop   controlsList="nodownload noplaybackrate  nofullscreen">
                 </video>
                 <button className='playButton' onClick={()=>setVideoSize(!videoSize)} ><div><FaPlayCircle /></div></button>
             </div>
-            <div className="videoCon ">
+            <div className="videoCon " data-aos="fade-up">
                 <video className='proVideo' src={video1}  autoPlay muted loop   controlsList="nodownload noplaybackrate  nofullscreen">
                 </video>
                 <button className='playButton' onClick={()=>setVideoSize(!videoSize)} ><div><FaPlayCircle /></div></button>
             </div>
-            <div className="videoCon ">
+            <div className="videoCon " data-aos="fade-up">
                 <video className='proVideo' src={video1}  autoPlay muted loop   controlsList="nodownload noplaybackrate  nofullscreen">
                 </video>
                 <button className='playButton' onClick={()=>setVideoSize(!videoSize)} ><div><FaPlayCircle /></div></button>
             </div>
 
-            <div className="videoCon ">
+            <div className="videoCon" data-aos="fade-up">
                 <video className='proVideo' src={video1}  autoPlay muted loop   controlsList="nodownload noplaybackrate  nofullscreen">
                 </video>
                 <button className='playButton' onClick={()=>setVideoSize(!videoSize)} ><div><FaPlayCircle /></div></button>
