@@ -5,6 +5,7 @@ import { TbBrandAdobeAfterEffect, TbTextRecognition } from 'react-icons/tb'
 import { AiOutlinePicture } from 'react-icons/ai'
 import { GiMusicalNotes } from 'react-icons/gi'
 import videoFile from "../homePageVideo.mp4"
+import videoFile1 from "../homePageVideo1.mp4"
 import { CgChevronLeft, CgChevronRight } from 'react-icons/cg'
 import { PiXLogo } from 'react-icons/pi'
 import { BiLogoGmail, BiLogoTiktok } from 'react-icons/bi'
@@ -157,7 +158,7 @@ const leftClickButton = ()=>{
         </div>
         <div className='homeRight'>
           <div className='rightVideo'>
-            <div><video  autoPlay loop  muted  src={videoFile}></video></div>
+            <div><video  autoPlay loop  muted  src={videoFile1}></video></div>
           </div>
 
           <div className='rightBox'>

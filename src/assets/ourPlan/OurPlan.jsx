@@ -205,6 +205,70 @@ function OurPlan() {
             
         </div>
 
+        <div className='ourPlnSolution'>
+            <h3>Video Editing Solution</h3>
+            <h3>You’ve been looking for</h3>
+
+            <div className='solutionContiner'>
+
+                <div className='solutionChildD gridittem1'>
+                    <div >2X</div>
+                    <div>
+                        <h5>Hassle-Free</h5>
+                        <p>No hiring or managing — just results, delivered 2x faster.</p>
+                    </div>
+                </div>
+
+                <div className='solutionChildD gridittem2'>
+                    <div className='seticons'></div>
+                    <div>
+                        <h5>Cost-Effective</h5>
+                        <p>Save up to 30% compared to in-house teams.</p>
+                    </div>
+                </div>
+                
+
+                <div className='solutionChildD gridittem3'>
+                    <div className='seticons'></div>
+                    <div>
+                        <h5>No Commitment</h5>
+                        <p>Scale up, down, or pause anytime — 100% flexibility.</p>
+                    </div>
+                </div>
+
+                <div className='solutionChildD gridittem4'>
+                    <div className='item4Animation0'>
+                        <div className='item4Animation1'>
+                        <div className='item4Animation2'>
+                            <div className='item4Animation3'><h6>AI</h6></div>
+                        </div>
+                    </div>
+                    </div>
+                    
+                    <div>
+                        <h5>Expert Editors + AI</h5>
+                        <p>Skilled humans using AI for custom B-roll, voiceovers, and effects — quality videos in half the time and cost.</p>
+                    </div>
+                </div>
+
+                <div className='solutionChildD gridittem5'>
+                    <div className='seticons'></div>
+                    <div>
+                        <h5>Dedicated Team</h5>
+                        <p>Ensuring every edit aligns with your goals and vision.</p>
+                    </div>
+                </div>
+
+                <div className='solutionChildD gridittem6'>
+                    <div className='seticons'></div>
+                    <div>
+                        <h5>Brand-Aligned Content</h5>
+                        <p>Videos that truly reflect your identity, increasing brand recall by 40%.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </div>
     
     </>
