@@ -1,482 +1,413 @@
 .ourPlan{
     width: 100%;
     height: auto;
+    padding: 30px 0px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 20px;
-    
-    
-}
-
-
-
-
-/* finish your project */
-
-
-.ourPlan .finishProjects{
-    width: 100%;
-    height: auto;
-    padding-top: 40px;
-    /* border-bottom: 1px solid white; */
-  
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
-    gap: 20px;
-    background-image: url(../bgImg.png);
+    background-image: url(../snake.png.webp);
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
-    margin-bottom: 100px;
-    
+    /* background-color: #14001a; */
 }
 
-.finishProjects div{
-    width: 90%;
+.ourPlan h3{
+    font-size: 35px;
+    font-weight: 600;
+    margin-bottom: 50px;
+}
+
+.priceHead{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: rgba(255, 255, 255, 0.097);
     padding: 10px;
-    /* position: relative; */
-    /* border: 2px solid white; */
-    font-size: 30px;
-    font-weight: 900;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    text-align: center;
-    /* background-color: #0dc179; */
-}
-
-.finishProjects div div{
-    height: 300px;
-    width: 100%;
-    background-image: url(../boxIcons.png);
-    background-repeat: no-repeat;
-    background-position:bottom center;
-    /* padding-top: 50px; */
-    background-size: contain;
-}
-
-/* subscription */
-.subscription{
-    width: 90%;
-    /* height: 70vh; */
-    /* border: 2px solid white; */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-}
-.subscription .upperSec{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    gap: 20px;
-    padding-bottom: 20px;
-}
-.subscription .upperSec p{
-    color: rgb(203, 203, 203);
-    
-}
-.subscription .upperSec h3{
-    font-size: 30px;
-}
-
-.subscription .downSec{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    width: 100%;
-    /* height: auto; */
-    padding: 10px;
-    /* border: 2px solid white; */
-    font-size: 19px;
-}
-
-.downSec .downSecBox{
-    /* background-color: rgba(193, 6, 240, 0.125); */
-    background-color: #1a0133;
-    padding: 20px;
     border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: start;
-    gap: 10px;
-    /* border: 2px solid white; */
+    /* font-size: 10px; */
+    margin-bottom: 10px;
+    border: 1px solid rgb(131, 131, 131);
 }
 
-.downSecBox .downSecBoxUp{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10px;
-}
-
-.downSecBoxUp h5{
-    font-size: 30px;
-    font-weight: 800;
-    display: inline;
-}
-.downSecBoxUp div{
-    background-color: #8D1FD4;
-    padding: 12px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 20px;
-    width: 20%;
-}
-
-.downSecBox .downSecBoxMiddle{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-
-.downSecBoxMiddle button{
-     background-color: #8D1FD4;
-    padding: 12px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 20px;
-    width: 90%;
-    font-size: 19px;
-    color: white;
-    border: 2px solid black;
-    transition: all 1s ease;
-}
-
-.downSecBoxMiddle button:hover{
-    background-color: white;
-    cursor: pointer;
-    color: #8D1FD4;
-    border: 2px solid #8D1FD4;
-}
-
-.downSecBox .downSecBoxDown{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: start;
-    gap: 10px;
-}
-
-.downSecBoxDown .downLines{
-    display: flex;
-    width: 100%;
-    /* height: 10vh; */
-    justify-content: start;
-    align-items: start;
-    gap: 10px;
-}
-
-.downLines div{
-    display: flex;
-    width: auto;
-    height: auto;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    border:none;
-    background-color: #8D1FD4;
-    color: white;
-}
-
-
-
-
-
-/* founder */
-
-.founderdiv{
-    width: 100%;
-    padding-top: 20vh;
-    padding-bottom: 20px;
-    /* background-color: #ce06f1f3; */
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-}
-
-
-
-
-.founder1 .imgeF{
-    width: 100px;
-    height: 100px;
-    background-image: url(../founderpic.jpeg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position:top center;
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    align-items: end;
-    /* border: 2px solid black; */
-    box-shadow: 0px 0px 15px #8D1FD4;
-    z-index: 0;
-    border-radius: 50%;
-}
-
-
-.founder1 div{
-    width: 100%;
-    height: auto;
-    /* background-color: #a301c0; */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    color: #8D1FD4;
-}
-
-
-.founder1{
-    background-image: url(../bgImg.png);
-    max-width:  500px;
-    width: 70%;
-    min-height: 500px;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items:start ;
-    gap: 30px;
-    color: white;
-    /* color: #ce06f1; */
-    /* border: 1px solid white; */
+.priceHead button{
     font-size: 15px;
-    padding: 30px;
-    border-radius: 20px;
-    background-size: contain;
-    box-shadow: 0px 0px 20px #8D1FD4;
-    /* background-color: rgba(193, 6, 240, 0.125); */
-}
-
-
-
-
-/* why choose us */
-
-
-.whyChoseUs{
-    width: 100%;
-    /* border: 1px solid white; */
+    padding: 10px;
+    border-radius: 15px;
+    border: 0px;
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    gap: 20px;
-    padding-top: 10vh;
-    padding-bottom: 10vh;
-    color: rgb(168, 168, 168);
-    font-size: 19px;
-}
-
-.whyChoseUs h4{
-    color: white;
-    font-size: 30px;
-    font-weight: 900;
-    text-align: center;
-    width: 90%;
-}
-.whyChoseUs .whyChoseUsP1{
-    text-align: center;
-    width: 95%;
-}
-
-.whyChoseUs .ChoseBox1{
-    width: 90%;
-    height: auto;
-    /* border: 1px solid white; */
-    display: flex;
-    justify-content: start;
     align-items: center;
     gap: 10px;
-    font-size: 20px;
-    text-align: start;
-    padding-top: 30px;
-}
-.ChoseBox1 .rightSec{
-    /* background-color: #8D1FD4; */
-    min-width: 60%;
-    background-image: url(../plan-img-1.png);
-    height: 500px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    padding: 30px;
-}
-.ChoseBox1 .leftSec{
-    width: 40%;
-    /* border-right: 2px solid white; */
-    /* padding: 10px; */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: start;
-    gap: 15px;
-}
-
-.ChoseBox1 .leftSec h5{
     color: white;
-    font-size: 25px;
-    padding-bottom: 20px;
+    background-color: #14001abb;
+    border: 1px solid white;
 }
 
-.ChoseBox1 .leftSec div{
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    align-items: center;
-}
-
-.ChoseBox1 .leftSec div div{
-    background-color: #8D1FD4;
+.priceHead button:hover{
+    background:linear-gradient(to bottom right,white, rgb(249, 239, 250), #8D1FD4);
+    cursor: pointer;
     color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    /* padding: 1px; */
 }
 
-.ChoseBox2{
-    padding-top: 100px;
-    /* padding-top: 15vh; */
-    padding-bottom: 20px;
-    /* background-color: #8D1FD4; */
-    width: 90%;
-    /* min-height: 60vh; */
+.priceHead button span{
+    font-size: 12px;
+    background-color: #8D1FD4;
+    color: white;
+    padding: 2px 5px;
+    border-radius: 10px;
+}
+
+.ourPlan .priceSec{
+    width: 700px;
+    height: 450px;
     display: flex;
     flex-direction: row-reverse;
     justify-content: center;
     align-items: center;
-    gap: 20px;
-
+    color: rgb(166, 166, 166);
+    font-size: 16px;
+    gap: 30px;
+    border-radius: 20px;
+    /* padding: 30px; */
+    background-color: #1a013358;
+    border: 1px solid rgb(131, 131, 131);
 }
 
-.ChoseBox2 .rightSect{
-    width: 60%;
-    
-    /* min-width: 30vh; */
-    /* height: 100%; */
-    background-image: url(../pln-img.png);
-    min-height: 450px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    padding: 30px;
-}
-
-
-.ChoseBox2 .leftSect{
-    width: 40%;
+.priceSec .priceSecLeft{
+    width: 50%;
+    height: 90%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: start;
+    align-items: center;
     gap: 10px;
+    padding: 20px 10px;
     /* background-color: #8D1FD4; */
-    padding: 10px;
-    /* border: 1px solid white; */
-    font-size: 17px;
 }
 
-.ChoseBox2 .leftSect h5{
+.priceSecLeft .priceSecleftDiv{
+    width: 90%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+    background: #14001aaf;
+    border: 2px solid rgb(85, 85, 85);
+    border-radius: 10px; 
+    transition: all 0.5s ease; 
+    /* box-shadow:inset 0px 0px 10px #6f468a; */
+}
+
+.priceSecLeft .priceSecleftDiv:hover{
+    background: #1a0133;
+    border: 2px solid #8D1FD4;
+    cursor: pointer;
+    box-shadow:inset 0px 0px 10px #6f468a;
+}
+
+.priceSecLeft .priceSecleftDiv div{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 5px;
+}
+
+.priceSecLeft .priceSecleftDiv div h6{
+    font-size: 20px;
+    color: aliceblue;
+}
+
+.priceSecLeft .priceSecleftDiv div p{
+    background-color: rgba(0, 0, 0, 0.792);
+    padding: 4px 6px;
+    border-radius: 5px;
+    transition: all 0.5s ease;
+
+}
+.priceSecLeft .priceSecleftDiv:hover div p{
+    background-color: #9a03ff;
     color: white;
+}
+
+.priceSecLeft .priceSecleftDiv span{
     font-size: 25px;
-}
-
-.ChoseBox2 .leftSect .secP{
-    font-size: 20px;
-    padding-bottom: 20px;
-}
-
-.ChoseBox2 .leftSect h6{
     color: white;
-    font-size: 20px;
-    padding-bottom: 5px;
-    padding-top: 10px;
+    font-weight: 500;
 }
 
+.priceSec .priceSecRight{
+    width: 40%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0px;
+    /* background-color: aquamarine; */
+}
 
-.whyChoseUs .chooseUsNTS{
-    /* width: 70%; */
-    background-color: rgba(42, 42, 42, 0.6);
+.priceSecRight .DetailSec{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+    /* background-color: #14001a; */
+}
+
+.priceSecRight  h6{
+    /* width: 100%; */
+    display: flex;
+    font-size: 14px;
+    font-weight: 100;
     color: #8D1FD4;
-    text-align: center;
-    font-size: 22px;
-    border-radius: 30px;
-    padding: 15px 40px;
-    
+    justify-content: center;
+}
+
+.priceSecRight .DetailSec .items{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    color: rgb(199, 199, 199);
+    /* background-color: aliceblue; */
+    /* border-bottom: 1px solid rgba(142, 142, 142, 0.222); */
+    padding-bottom: 10px;
+    width: 100%;
+}
+.priceSecRight .DetailSec .items div{
+    font-size: 15px;
+    /* background-color: #8D1FD4; */
+    color: #9a03ff;
+    display: flex;
+    border: 1px solid rgb(122, 122, 122);
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    padding: 2px;
+}
+
+.priceSecRight .RightBtnSec{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.priceSecRight .RightBtnSec button{
+    width: 125px;
+    padding: 5px 10px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 10px;
+    border: 1px solid white;
+    background-color: black;
+    color: white;
+}
+.priceSecRight .RightBtnSec button:hover{
+    /* border: 1px solid #8D1FD4; */
+    cursor: pointer;
+    background-color: white;
+    color: black;
 }
 
 
 
+
+
+
+
+
+.comparePrice{
+    width: 90%;
+    /* background-color: #6f468a; */
+    display: flex;
+    flex-direction: column;
+    justify-content:center ;
+    align-items: center;
+    margin-top: 100px;
+}
+
+
+.comparePriceTableSec{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.comparePriceTableSec .headH2{
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+    padding: 0px;
+}
+
+
+.comparePriceTableSec .headP{
+    color: rgb(153, 153, 153);
+    font-size: 17px;
+    text-align: center;
+}
+
+
+.comparePrice table{
+    width: 80%;
+    border: 1px solid rgb(156, 155, 155);
+    padding: 20px 30px;
+    padding-bottom: 30px;
+    border-spacing: 0px;
+    border-radius: 20px;
+    /* text-align: start; */
+}
+
+.comparePrice table th div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    /* min-width: 80px; */
+    margin-left: 10px;
+    padding: 5px 15px;
+    font-size: 25px;
+    color: white;
+    /* background-color: #64ec0a; */
+}
+
+.comparePrice table th div span{
+    color: rgb(146, 146, 146);
+}
+
+.comparePrice table tr th{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.458);
+    text-align: start;
+    padding-bottom: 15px;
+}
+
+.comparePrice table tr td{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.125);
+    text-align: center;
+    padding-top: 15px;
+    /* padding-left: 10px; */
+    padding-bottom: 15px;
+}
+
+.comparePrice table tr td:first-child{
+    /* width: 50%; */
+    text-align: start;
+}
 
 
 
 @media (max-width:768px){
-    .downSec {
+
+    .priceHead{
+        max-width: 90%;
+    }
+    
+    .ourPlan .priceSec{
         flex-direction: column;
+        max-width: 90% !important;
+        min-width: 70% !important;
+        height: auto;
+        padding: 0px;
+        margin: 0px;
+        width: auto;
+        height: auto;
+        gap: 0px;
     }
 
-    .founder1{
-        flex-direction: column;
-    }
-
-    .founder1 .founRight{
-        transform: translateX(0);
-        transform: translateY(-20%);
-        width: 80%;
-    }
-
-
-    .ChoseBox1{
-        flex-direction: column;
+    .priceSec .priceSecLeft{
+        width: 90%;
+        flex-direction: row;
+        padding: 10px;
         justify-content: center;
-        align-items: start;
+        align-items: center;
+        /* flex-wrap: wrap; */
+        border-radius: 20px;
+        margin-top: 10px;
+    }
+    .priceSec .priceSecLeft .priceSecleftDiv h6{
+        font-size: 17px;
+    }
+     .priceSecLeft .priceSecleftDiv span{
+        font-size: 17px;
+     }
+
+    .priceSecLeft .priceSecleftDiv{
+        padding: 10px;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        gap: 10px;
+        flex-wrap: wrap;
+        /* background-color: #8D1FD4; */
+    }
+    .priceSecLeft .priceSecleftDiv div p{
+        display:none;
     }
 
-    .ChoseBox1 .leftSec{
-        width: 100%;
-        padding-top: 0px;
-        padding-top: 8vh;
+    .priceSec .priceSecRight{
+        width: 250px;
+        height: auto;
+        /* padding: 0px; */
+        gap: 20px;
+        margin-bottom: 10px;
     }
-    .ChoseBox1 .rightSec{
+
+    .comparePrice table tr th:first-child{
+        /* width: 50%; */
+        text-align: start;
+    }
+    .comparePrice table tr td:first-child{
+    /* width: 50%; */
+    text-align: start;
+}
+    .comparePrice table{
+        width: 100%;
+        border:0px ;
+        padding-left: 0px;
+        padding-right: 0px;
+        margin: 0px;
+        border-top: 1px solid #9a03ff;
+        /* border-bottom: 1px solid white; */
+        border-radius: 0px;
+        /* box-shadow: 0px 0px 10px #a56dca; */
+    }
+    .comparePriceTableSec,.comparePrice{
+        width: 100%;
+    }
+    .comparePriceTableSec .headP{
         width: 90%;
     }
-    .ChoseBox2{
-        flex-direction: column;
-        justify-content: center;
-        align-items: start;
+    .comparePrice table tr th:first-child{
+        
+        padding-left: 20px;
     }
+    .comparePrice table tr td:first-child{
+        background-color: #9a03ff10;
+        padding-left: 20px;
+    }
+    .comparePrice table tr th:nth-child(3){
+        
+        padding-right: 15px;
+    }
+    .comparePrice table tr td:nth-child(3){
+        background-color: #9a03ff10;
+        padding-right: 15px;
+    }
+  
 
-    .ChoseBox2 .leftSect{
-        width: 100%;
-        padding-bottom: 5vh;
-    }
-    .ChoseBox2 .rightSect{
-        width: 90%;
-    }
 
 }

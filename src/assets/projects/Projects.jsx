@@ -25,8 +25,10 @@ function Projects() {
 
 
 
-        <h4 className='projectH4'>Projects</h4>
-        <p className='projectO1'>Showing 1–4 of 60 results</p>
+        <h4 className='projectH4'>Video Gallery</h4>
+        <p className='projectP1'>Discover professional content across industries
+             and formats  from TikTok
+             & Reels to YouTube, Podcasts, and Custom VFX</p>
 
         <div className='projectVideoBox'>
             
@@ -153,7 +155,7 @@ function Projects() {
     </div>
     
 
-    <FollowUs />
+    {/* <FollowUs /> */}
     <Testimonial />
     </>
   )

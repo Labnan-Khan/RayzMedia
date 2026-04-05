@@ -9,10 +9,11 @@ function ExploreOurCollection() {
      <div className='explorCollection'>
       <div className='expCol'>
         <div className='explorCollectionLeft' >
-           <h3>Explore Our Collection Of After Effects Projects</h3>
-           <p>A curated selection of our top-performing viral edit
-           projects - crafted to capture attention
-           instantly and convert viewers from the very first scroll.</p>
+           <h3>Explore our collection of viral projects </h3>
+           <p>A curated selection of our top performing 
+            viral edits, crafted to capture attention and hook 
+            viewers from the very first scroll
+           </p>
            <button className='expColLeftBtn'><Link to="/projects" >Browse Projects</Link></button>
         </div>
          <div className='explorCollectionVideo'>

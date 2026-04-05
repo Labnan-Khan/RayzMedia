@@ -1,221 +1,209 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './ourPlan.css'
-import backImg from '../plan-banner-image.webp'
-
-import { IoMdCheckmark, IoMdCheckmarkCircle } from 'react-icons/io'
-import { IoCheckmarkOutline } from 'react-icons/io5'
-import { GiCheckMark } from 'react-icons/gi'
-import ExploreOurCollection from '../explorOurCollection/ExploreOurCollection'
+import { IoCheckmarkOutline, IoCheckmarkSharp } from 'react-icons/io5'
+import { Link } from 'react-router-dom'
+import { IoMdCheckmark, IoMdClose } from 'react-icons/io'
 function OurPlan() {
+
+    const regularItem = ["2–3 business days turnaround*","2 revisions","Dedicated Video Editing Team","p to 2 brands","Up to 2 users","ok"]
+    const proItem = ["1 day turnaround*","Unlimited revisions","Dedicated Video Editing Team","Unlimited brand accounts","Unlimited users","Chat with editor on Slack"]
+    const customItem = ["All in PRO Plan +","Custom Turnaround","Dedicated Video Editor","Instant Slack Collaboration","Simultaneous requests","ok"]
+    const [showWIncluded,setShowWIncluded] = useState(regularItem)
+
+    const monthlyPrice =[850,1950,4499]
+    const quartelyPrice =[765,1755,4049]
+    const annuallyPrice =[680,1560,3599]
+    const [showPlanPrice,setShowPlanPrice] = useState(monthlyPrice)
   return (
     <>
     
     <div  className='ourPlan'>
 
-        <div className='finishProjects'>
-            {/* <img src={backImg} alt="" /> */}
-            <div>
-                <h2>Finish Your Projects Faster,</h2>
-                <h4>Just Re-Edit Proven Ideas</h4>
-                <div></div>
-            </div>
-
-           
+        <h3>Join Rayzmedia now</h3>
+        
+        <div className='priceHead'>
+            <button onClick={()=>setShowPlanPrice(monthlyPrice)}>Monthly</button>
+            <button onClick={()=>setShowPlanPrice(quartelyPrice)}><span>save 10%</span>Quarterly</button>
+            <button onClick={()=>setShowPlanPrice(annuallyPrice)}><span>save 20%</span>Annually</button>
         </div>
 
-        <div className='subscription'>
-            <div className='upperSec'>
-                <h3>One Subscription. Unlimited Viral Edits.</h3>
-                <p>Get unlimited access to real, open After
-                     Effects projects - built to help you study
-                      professional timelines, re-edit proven 
-                    ideas, and complete your projects faster.
+        <div className='priceSec'>
+
+            <div className='priceSecLeft'>
+                <div className='priceSecleftDiv' onClick={()=>setShowWIncluded(regularItem)}>
+                    <div >
+                        <h6>Regular</h6>
+                        <p>Most popular</p>
+                    </div>
+                    <p><span>{showPlanPrice[0]}$</span>/m</p>
+                </div>
+
+                <div className='priceSecleftDiv' onClick={()=>setShowWIncluded(proItem)}>
+                    <div >
+                        <h6>Pro</h6>
+                        <p>More feature</p>
+                    </div>
+                    <p><span>{showPlanPrice[1]}$</span>/m</p>
+                </div>
+
+                <div className='priceSecleftDiv' onClick={()=>setShowWIncluded(customItem)}>
+                    <div >
+                        <h6>Custom</h6>
+                        <p>Advanced clint</p>
+                    </div>
+                    <p><span>{showPlanPrice[2]}$</span>/m</p>
+                </div>
+            </div>
+
+            <div className='priceSecRight'>
+                 <h6>WHAT'S INCLUDED</h6>
+                <div className='DetailSec'>
+                    {/* <h6>WHAT'S INCLUDED</h6> */}
+                    <div className='items'><p>{showWIncluded[0]}</p><div><IoCheckmarkSharp /></div></div>
+                    <div className='items'><p>{showWIncluded[1]}</p><div><IoCheckmarkSharp /></div></div>
+                    <div className='items'><p>{showWIncluded[2]}</p><div><IoCheckmarkSharp /></div></div>
+                    <div className='items'><p>{showWIncluded[3]}</p><div><IoCheckmarkSharp /></div></div>
+                    <div className='items'><p>{showWIncluded[4]}</p><div><IoCheckmarkSharp /></div></div>
+                    <div className='items'><p>{showWIncluded[5]}</p><div><IoCheckmarkSharp /></div></div>
+                </div>
+                <div className='RightBtnSec'>
+                    <button onClick={()=>{ document.getElementById("comparePriceTableSection")?.scrollIntoView({ behavior: "smooth" });}}>
+                        Compare Plan
+                    </button>
+                    <button > <Link to="/contact"> Contact us</Link></button>
+                </div>
+            </div>
+        </div>
+
+        <div className='comparePrice'>
+            <div id='comparePriceTableSection' className='comparePriceTableSec'>
+                <h2 className='headH2'>Compare all plans</h2>
+                <p className='headP'>Video editing prices - Rayzmedia.
+                     See which is the best price plan for you.
                 </p>
-            </div>
 
-            <div className='downSec'>
+                <table>
 
-                <div className='downSecBox'>
+                    <thead>
+                         <tr>
+                        <th>Feature</th>
                     
-                    <div className='downSecBoxUp'>
-                        <p><h5>$96 </h5>  /year $324 (Save over 70%)
-                            Everything you need to start editing
-                        </p>
-                        <div>Monthly Plan</div>
-                    </div>
-                    <div className='downSecBoxMiddle'><button>Start Monthly Access</button></div>
-                    <div className='downSecBoxDown'>
+                        <th>
+                            <div>
+                                <h6>Regular</h6>
+                                <h6>850$<span>/m</span></h6>
+                            </div>
+                        </th>
+                        <th>
+                            <div>
+                                <h6>Pro</h6>
+                                <h6>1950$<span>/m</span></h6>
+                            </div>
+                        </th>
+                    </tr>
 
-                        <div className='downLines'>
-                            <div><IoCheckmarkOutline /></div> 
-                            <p>Access to every new project added weekly.</p>
-                        </div>
-
-                        <div className='downLines'>
-                            <div><IoCheckmarkOutline /></div> 
-                            <p>Access to every new project added weekly.</p>
-                        </div>
-
-                        <div className='downLines'>
-                            <div><IoCheckmarkOutline /></div> 
-                            <p>Access to every new project added weekly.</p>
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <div className='downSecBox'>
+                    </thead>
                     
-                    <div className='downSecBoxUp'>
-                        <p><h5>$96 </h5>  /year $324 (Save over 70%)
-                            Everything you need to start editing
-                        </p>
-                        <div>Monthly Plan</div>
-                    </div>
-                    <div className='downSecBoxMiddle'><button>Start Monthly Access</button></div>
-                    <div className='downSecBoxDown'>
 
-                        <div className='downLines'>
-                            <div><IoCheckmarkOutline /></div> 
-                            <p>Access to every new project added weekly.</p>
-                        </div>
+                   
+                    <tbody>
 
-                        <div className='downLines'>
-                            <div><IoCheckmarkOutline /></div> 
-                            <p>Access to every new project added weekly.</p>
-                        </div>
+                    <tr>
+                        <td>Short-form {"<"} 90s (per day)  </td>
+                        <td>1/day</td>                        
+                        <td>multiple</td>
+                    </tr>
 
-                        <div className='downLines'>
-                            <div><IoCheckmarkOutline /></div> 
-                            <p>Access to every new project added weekly.</p>
-                        </div>
+                    <tr>
+                        <td>Long-form {"<"} 10 min</td>
+                        <td>up to 2 days</td>                        
+                        <td>up to 1 day</td>
+                    </tr>
 
-                    </div>
+                    <tr>
+                        <td>Long-form {"<"} 20 min</td>
+                        <td>up to 2 days</td>                        
+                        <td>up to 1 day</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Long-form {"<"} 30 min</td>
+                        <td>up to 3 days</td>                        
+                        <td>up to 2 days</td>
+                    </tr>
 
-                </div>
+                    <tr>
+                        <td>Long-form {"<"} 60 min</td>
+                        <td>up to 4 days</td>                        
+                        <td>up to 2 days</td>
+                    </tr>
 
+                    <tr>
+                        <td>revisions</td>
+                        <td>2</td>
+                        <td>Unlimited</td>
+                    </tr>
+
+                    <tr>
+                        <td>Engaging animations & motion graphics </td>
+                        <td><IoMdCheckmark /></td>
+                        <td><IoMdCheckmark /></td>
+                    </tr>
+
+                    <tr>
+                        <td>Audio enhancement</td>
+                        <td><IoMdCheckmark /></td>
+                        <td><IoMdCheckmark /></td>
+                    </tr>
+
+                    <tr>
+                        <td>Resizing to different platforms</td>
+                        <td><IoMdCheckmark /></td>
+                        <td><IoMdCheckmark /></td>
+                    </tr>
+
+                    <tr>
+                        <td>Stock footage</td>
+                        <td><IoMdCheckmark /></td>
+                        <td><IoMdCheckmark /></td>
+                    </tr>
+
+                    <tr>
+                        <td>Camera LOG/RAW editing</td>
+                        <td><IoMdCheckmark /></td>
+                        <td><IoMdCheckmark /></td>
+                    </tr>
+
+                    <tr>
+                        <td>Color correction & grading </td>
+                        <td><IoMdCheckmark /></td>
+                        <td><IoMdCheckmark /></td>
+                    </tr>
+
+                    <tr>
+                        <td>Raw footage per order </td>
+                        <td><IoMdCheckmark /></td>
+                        <td><IoMdCheckmark /></td>
+                    </tr>
+
+                    <tr>
+                        <td>Real-time collaboration (Slack/Discord/Gmeet)</td>
+                        <td><IoMdCheckmark /></td>
+                        <td><IoMdCheckmark /></td>
+                    </tr>
+
+                    <tr>
+                        <td>Project Files</td>
+                        <td><IoMdClose /></td>
+                        <td><IoMdCheckmark /></td>
+                    </tr>
+                    
+                    </tbody>
+                   
+                </table>
             </div>
-        </div>
-
-        <div className='founderdiv'>
-
-            <div className='founder1'>
-               
-                    <div>
-                         <div className='imgeF'></div> 
-                         <h3>Message from the founder</h3>
-                    </div>
-
-                    <p>Lorem, ipsum dolor sit amet
-                         consectetur adipisicing elit. Deleniti,
-                          temporibus. Aspernatur at omnis magnam voluptates
-                           qui. Architecto, ipsa molestiae
-                         eaque officia, aliquam neque vero sit
-                          temporibus quos distinctio eius fugit!
-                    </p>
-                    <p>Lorem, ipsum dolor sit amet
-                         consectetur adipisicing elit. Deleniti,
-                          temporibus. Aspernatur at omnis magnam voluptates
-                           qui. Architecto, ipsa molestiae
-                         eaque officia, aliquam neque vero sit
-                          temporibus quos distinctio eius fugit!
-                    </p>
-                    <p>Lorem, ipsum dolor sit amet
-                         consectetur adipisicing elit. Deleniti,
-                          temporibus. Aspernatur at omnis magnam voluptates
-                           qui. Architecto, ipsa molestiae
-                         eaque officia, aliquam neque vero sit
-                          temporibus quos distinctio eius fugit!
-                    </p>
-
-                    {/* <h4>We added our latest project file: 7 hours ago</h4>
-                    <p>At EarnEdits, we consistently release new After Effects 
-                        project files created by verified  creators.
-                    </p>
-                    <p>Every file is carefully reviewed to 
-                     guarantee viral-ready quality, clean structure, 
-                     organized timelines, and proven real-world execution.
-                    </p> */}
-                
-                
-            </div>
-        </div>
-
-        <ExploreOurCollection />
-
-        <div className='whyChoseUs'>
-            <h4>Why Editors Choose the EarnEdits Subscription ?</h4>
-            <p className='whyChoseUsP1'>Buying one project helps once. Accessing a 
-                growing library helps every time.
-            </p>
             
-            <div className='ChoseBox1'>
-                <div className='leftSec'>
-                    <h5>With EarnEdits, you always have:</h5>
-
-                    <div>
-                        <div><IoMdCheckmark /></div><p>A starting point for new client work.</p>
-                    </div>
-
-                    <div>
-                        <div><IoMdCheckmark /></div><p>A starting point for new client work.</p>
-                    </div>
-
-                    <div>
-                        <div><IoMdCheckmark /></div><p>A starting point for new client work.</p>
-                    </div>
-                    <p>Finish projects faster. Learn smarter. Deliver better results.</p>
-
-                </div>
-                <div className='rightSec'></div>
-            </div>
-
-            <div className='ChoseBox2'>
-                <div className='leftSect'>
-                    <h5>Built by Editors - For Editors</h5>
-                    <p className='secP'>Every project on EarnEdits is:</p>
-
-                    <div>
-                        <h6>Smooth Motion Graphics</h6>
-                        <p>Every project is built with clean, smooth motion
-                             that feels natural and professional. All keyframes
-                              
-                        </p>
-                    </div>
-
-                    <div>
-                        <h6>Smooth Motion Graphics</h6>
-                        <p>Every project is built with clean, smooth motion
-                             that feels natural and professional. All keyframes
-                             
-                        </p>
-                    </div>
-
-                    <div>
-                        <h6>Smooth Motion Graphics</h6>
-                        <p>Every project is built with clean, smooth motion
-                             that feels natural and professional. All keyframes
-                              
-                        </p>
-                    </div>
-
-                    
-
-                </div>
-                <div className='rightSect'>
-                </div>
-            </div>
-
-
-            <div className='chooseUsNTS'>
-                <p>This is not a template store. 
-                    This is a learning + production library.
-                </p>
-            </div>
-
         </div>
-
 
     </div>
     

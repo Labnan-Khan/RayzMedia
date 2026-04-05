@@ -20,6 +20,10 @@
     font-weight: 600;
     color: white;
 }
+.project .projectP1{
+    width: 90%;
+    text-align: center;
+}
 
 .projectVideoBox{
     width: 90%;

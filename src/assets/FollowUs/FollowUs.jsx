@@ -11,10 +11,9 @@ function FollowUs() {
     
     
         <div className='follUs'>
-          <h4 className='follUsH4'>Follow Us</h4>
-          <p className='follUsP1'>Stay inspired with weekly
-             viral edits, motion tutorials, 
-            and behind-the-scenes design breakdowns.
+          <h4 className='follUsH4'> Stay Connected with RayzMedia</h4>
+          <p className='follUsP1'>A closer look at the edits, ideas, and
+            creative process behind content that performs.
           </p>
           <div className='follUsLogo'>
             <div className='logoSec' >
