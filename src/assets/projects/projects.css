@@ -11,8 +11,10 @@
     font-size: 20px;
     color: rgb(204, 204, 204);
     padding-bottom: 150px;
-    background-image: url(../bgImg.png);
+    background-image: url(../snake2.0.png);
     background-repeat: no-repeat;
+    background-position:top center;
+    background-size: contain;
 }
 
 .project .projectH4{
@@ -23,6 +25,45 @@
 .project .projectP1{
     width: 90%;
     text-align: center;
+}
+
+.project .ProjectVideoTypeBtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    /* display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
+    
+    justify-content: center;
+    align-items: center; */
+    width: 70%;
+    gap: 10px;
+    /* padding: 0px; */
+    
+    /* color: white; */
+}
+
+.project .ProjectVideoTypeBtn button{
+    color: rgb(129, 129, 129);
+    background-color: #9b05ff50;
+    font-size: 15px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: none;
+    transition: all 0.3s ease;
+}
+ 
+.ProjectVideoTypeBtn button:hover{
+    cursor: pointer;
+    background-color: #9305f187;
+    color: white;
+    box-shadow:inset 0px 0px 5px white;
+}
+
+.project .ProjectVideoTypeBtn .currentCatagerybutton{
+    background:linear-gradient(to top left, rgb(205, 191, 83), #8D1FD4);
+    color: white;
 }
 
 .projectVideoBox{
@@ -205,6 +246,8 @@
     }
 
 
-
+    .project .ProjectVideoTypeBtn{
+        width: 90%;
+    }
 
 }

@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import './ourPlan.css'
+import videoAi from '../Ai Button.webm'
 import { IoCheckmarkOutline, IoCheckmarkSharp } from 'react-icons/io5'
 import { Link } from 'react-router-dom'
 import { IoMdCheckmark, IoMdClose } from 'react-icons/io'
 function OurPlan() {
-
+    const [currentRate, setCurrentRate] = useState(1)
+    const [currentList, setCurrentList] = useState(1)
     const regularItem = ["2–3 business days turnaround*","2 revisions","Dedicated Video Editing Team","p to 2 brands","Up to 2 users","ok"]
     const proItem = ["1 day turnaround*","Unlimited revisions","Dedicated Video Editing Team","Unlimited brand accounts","Unlimited users","Chat with editor on Slack"]
     const customItem = ["All in PRO Plan +","Custom Turnaround","Dedicated Video Editor","Instant Slack Collaboration","Simultaneous requests","ok"]
@@ -22,15 +24,15 @@ function OurPlan() {
         <h3>Join Rayzmedia now</h3>
         
         <div className='priceHead'>
-            <button onClick={()=>setShowPlanPrice(monthlyPrice)}>Monthly</button>
-            <button onClick={()=>setShowPlanPrice(quartelyPrice)}><span>save 10%</span>Quarterly</button>
-            <button onClick={()=>setShowPlanPrice(annuallyPrice)}><span>save 20%</span>Annually</button>
+            <button className={`${(currentRate ==1)? "CurrentBtnPrice" :""}`} onClick={()=>{setShowPlanPrice(monthlyPrice); setCurrentRate(1)}}>Monthly</button>
+            <button className={`${(currentRate ==2)? "CurrentBtnPrice" :""}`} onClick={()=>{setShowPlanPrice(quartelyPrice); setCurrentRate(2)}}><span>save 10%</span>Quarterly</button>
+            <button className={`${(currentRate ==3)? "CurrentBtnPrice" :""}`} onClick={()=>{setShowPlanPrice(annuallyPrice); setCurrentRate(3)}}><span>save 20%</span>Annually</button>
         </div>
 
         <div className='priceSec'>
 
             <div className='priceSecLeft'>
-                <div className='priceSecleftDiv' onClick={()=>setShowWIncluded(regularItem)}>
+                <div className={`priceSecleftDiv ${(currentList == 1)? "CurrentBtnList": ""}`} onClick={()=>{setShowWIncluded(regularItem); setCurrentList(1)}}>
                     <div >
                         <h6>Regular</h6>
                         <p>Most popular</p>
@@ -38,7 +40,7 @@ function OurPlan() {
                     <p><span>{showPlanPrice[0]}$</span>/m</p>
                 </div>
 
-                <div className='priceSecleftDiv' onClick={()=>setShowWIncluded(proItem)}>
+                <div className={`priceSecleftDiv ${(currentList == 2)? "CurrentBtnList": ""}`} onClick={()=>{setShowWIncluded(proItem); setCurrentList(2)}}>
                     <div >
                         <h6>Pro</h6>
                         <p>More feature</p>
@@ -46,7 +48,7 @@ function OurPlan() {
                     <p><span>{showPlanPrice[1]}$</span>/m</p>
                 </div>
 
-                <div className='priceSecleftDiv' onClick={()=>setShowWIncluded(customItem)}>
+                <div className={`priceSecleftDiv ${(currentList == 3)? "CurrentBtnList": ""}`} onClick={()=>{setShowWIncluded(customItem); setCurrentList(3)}}>
                     <div >
                         <h6>Custom</h6>
                         <p>Advanced clint</p>
@@ -212,7 +214,7 @@ function OurPlan() {
             <div className='solutionContiner'>
 
                 <div className='solutionChildD gridittem1'>
-                    <div >2X</div>
+                    <div><h6>2X</h6></div>
                     <div>
                         <h5>Hassle-Free</h5>
                         <p>No hiring or managing — just results, delivered 2x faster.</p>
@@ -237,13 +239,14 @@ function OurPlan() {
                 </div>
 
                 <div className='solutionChildD gridittem4'>
-                    <div className='item4Animation0'>
-                        <div className='item4Animation1'>
-                        <div className='item4Animation2'>
-                            <div className='item4Animation3'><h6>AI</h6></div>
+                    <video src={videoAi} autoPlay muted loop></video>
+                    {/* <div className='item4Animation0'>
+                         <div className='item4Animation1'>
+                            <div className='item4Animation2'>
+                                <div className='item4Animation3'><h6>AI</h6></div>
+                            </div>
                         </div>
-                    </div>
-                    </div>
+                    </div> */}
                     
                     <div>
                         <h5>Expert Editors + AI</h5>
@@ -268,6 +271,8 @@ function OurPlan() {
                 </div>
 
             </div>
+
+            <button > <Link to="/contact">Let's Talk!</Link></button>
         </div>
     </div>
     

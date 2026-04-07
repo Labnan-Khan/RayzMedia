@@ -11,7 +11,8 @@ import "aos/dist/aos.css";
 
 function Projects() {
     const [videoSize, setVideoSize] = useState(false)
-
+    const [currentCatageryBtn, setCurrentCatageryBtn] =useState(0)
+    const videoTypeListBtn = ["All categories", "Ads", "Agencies", "Beauty & Fashion", "Business & Marketing","Coaching & Education", "Course Creators","Crowdfunding", "Custom nimtion/VFX", "Creators","Ecommerce", "Entertainment", "Fitness", "Health & Wellness", "Intros", "Lifestyle", "Medical", "Personal Brand", "Podcast", "product Ads", "Production Companies", "Real estate", "Languages", "template-Based Videos", "Text hooks",  "Tiktok & Reel", "Youtube"]
     useEffect(() => {
         AOS.init({duration: 2000,
              once: false,
@@ -35,7 +36,15 @@ function Projects() {
         <h4 className='projectH4'>Video Gallery</h4>
         <p className='projectP1'>Discover professional content across industries
              and formats  from TikTok
-             & Reels to YouTube, Podcasts, and Custom VFX</p>
+             & Reels to YouTube, Podcasts, and Custom VFX
+        </p>
+
+        <div className='ProjectVideoTypeBtn'>
+            {videoTypeListBtn.map((btn,index) =>{
+                return <button className={`${(currentCatageryBtn == index)? "currentCatagerybutton" : ""}`} onClick={()=>{setCurrentCatageryBtn(index)}}>{btn}</button>
+            })}
+            
+        </div>
 
         <div className='projectVideoBox'>
             

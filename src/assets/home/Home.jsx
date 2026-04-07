@@ -6,6 +6,7 @@ import { AiOutlinePicture } from 'react-icons/ai'
 import { GiMusicalNotes } from 'react-icons/gi'
 import videoFile from "../homePageVideo.mp4"
 import videoFile1 from "../homePageVideo1.mp4"
+import videoFile2 from "../Homepage-animation2.mp4"
 import { CgChevronLeft, CgChevronRight } from 'react-icons/cg'
 import { PiXLogo } from 'react-icons/pi'
 import { BiLogoGmail, BiLogoTiktok } from 'react-icons/bi'
@@ -117,7 +118,9 @@ const leftClickButton = ()=>{
 
   return (
     <>
+    
     <div className='home'>
+
         <div className='homeLeft'>
 
 
@@ -214,6 +217,7 @@ const leftClickButton = ()=>{
           </div>
 
           <div className='EWorkSecRight rightSec2'>
+            <video src={videoFile2} autoPlay muted loop></video>
           </div>
         </div>
 
