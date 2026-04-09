@@ -33,7 +33,18 @@
     align-items: center;
     /* gap: 10px; */
     width: 50%;
+    position: relative;
     
+}
+
+.explorCollectionVideo::before{
+    position: absolute;
+    content: "";
+    inset: 0;
+    top: -30px;
+    bottom: -30px;
+    z-index: 2;
+    opacity: 0;
 }
 
 .explorCollectionVideo .video1{

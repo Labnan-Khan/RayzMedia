@@ -33,6 +33,32 @@ function Navbar() {
     },[lastScroll]);
 
 
+    useEffect(()=>{
+        if(dropMenu && window.innerWidth <=768){
+
+            document.body.style.overflow = "hidden";
+        }else{
+            document.body.style.overflow = "auto";
+        }
+
+        return ()=>{
+            document.body.style.overflow = "auto";
+        }
+    },[dropMenu])
+
+    useEffect(() => {
+        const handleResize = () => {
+        if (window.innerWidth > 768) {
+            setDropMenu(false);          // close dropdown when on desktop
+            // document.body.style.overflow = "auto"; // restore scroll
+        }
+        };
+
+        window.addEventListener("resize", handleResize);
+
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
   return (
     <>
     <div className={`nav ${showNavbar ? "show" : "hide"}`} >

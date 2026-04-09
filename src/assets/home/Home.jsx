@@ -7,6 +7,7 @@ import { GiMusicalNotes } from 'react-icons/gi'
 import videoFile from "../homePageVideo.mp4"
 import videoFile1 from "../homePageVideo1.mp4"
 import videoFile2 from "../Homepage-animation2.mp4"
+import videoFile3 from "../homePage-animaation3.mp4"
 import { CgChevronLeft, CgChevronRight } from 'react-icons/cg'
 import { PiXLogo } from 'react-icons/pi'
 import { BiLogoGmail, BiLogoTiktok } from 'react-icons/bi'
@@ -177,7 +178,7 @@ const leftClickButton = ()=>{
 
     
 
-    {/* HowEarnedits Works */}
+    {/* How its Works */}
 
     <div className='hEWork'>
       <div className='EWork'>
@@ -197,9 +198,51 @@ const leftClickButton = ()=>{
           </div>
 
           <div className='EWorkSecRight rightSec1'>
-            <video src={videoFile} autoPlay muted loop></video>
-            <video src={videoFile} autoPlay muted loop></video>
-            <video src={videoFile} autoPlay muted loop></video>
+
+            <div className='row1st'>
+              <div></div>
+              <div>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+
+            <div className='row2nd'>
+              <span></span>
+              <span></span>
+            </div>
+
+            <div className='row3rd'>
+                <div>
+                    <video src={videoFile} autoPlay muted loop></video>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div>
+                    <video src={videoFile} autoPlay muted loop></video>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <div>
+                    <video src={videoFile} autoPlay muted loop></video>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            
+          
           </div>
         </div>
 
@@ -236,6 +279,7 @@ const leftClickButton = ()=>{
           </div>
 
           <div className='EWorkSecRight rightSec3'>
+            <video src={videoFile3} autoPlay muted loop></video>
           </div>
         </div>
 
@@ -264,7 +308,10 @@ const leftClickButton = ()=>{
             <div className='incluContainer'>
 
               <div className='iconDiv'>
-                <TbBrandAdobeAfterEffect className='iCon'/>
+                {/* <TbBrandAdobeAfterEffect className='iCon'/> */}
+                <div className='iCon'>
+                  <div className='iCon1'></div>
+                </div>
                  {/* <p>Item 01</p> */}
               </div>
               <div>
@@ -281,8 +328,9 @@ const leftClickButton = ()=>{
             <div className='incluContainer'>
 
               <div className='iconDiv'>
-                <TbBrandAdobeAfterEffect className='iCon'/>
-                 {/* <p>Item 02</p> */}
+                <div className='iCon'>
+                  <div className='iCon2'></div>
+                </div>
               </div>
               <div>
                 <h5>Saas animation</h5>
@@ -297,8 +345,9 @@ const leftClickButton = ()=>{
             <div className='incluContainer'>
 
               <div className='iconDiv'>
-                <TbBrandAdobeAfterEffect className='iCon'/>
-                 {/* <p>Item 03</p> */}
+                <div className='iCon'>
+                  <div className='iCon3'></div>
+                </div>
               </div>
               <div>
                 <h5>Content Strategy</h5>
@@ -313,8 +362,9 @@ const leftClickButton = ()=>{
             <div className='incluContainer'>
 
               <div className='iconDiv'>
-                <TbBrandAdobeAfterEffect className='iCon'/>
-                 {/* <p>Item 04</p> */}
+                <div className='iCon'>
+                  <div className='iCon4'></div>
+                </div>
               </div>
               <div>
                 <h5>Multi-Platform Optimization</h5>
@@ -329,8 +379,9 @@ const leftClickButton = ()=>{
             <div className='incluContainer'>
 
               <div className='iconDiv'>
-                <TbBrandAdobeAfterEffect className='iCon'/>
-                 {/* <p>Item 05</p> */}
+                <div className='iCon'>
+                  <div className='iCon5'></div>
+                </div>
               </div>
               <div>
                 <h5> Ads & Marketing</h5>
@@ -345,8 +396,9 @@ const leftClickButton = ()=>{
             <div className='incluContainer'>
 
               <div className='iconDiv'>
-                <TbBrandAdobeAfterEffect className='iCon'/>
-                 {/* <p>Item 06</p> */}
+                <div className='iCon'>
+                  <div className='iCon6'></div>
+                </div>
               </div>
               <div>
                 <h5>Social media management</h5>
@@ -388,7 +440,7 @@ const leftClickButton = ()=>{
       </div>
     </div>
 
-    {/* why Chose EarnEdits after inside the timeline */}
+    {/* why Chose rayzmedia after inside the timeline */}
 
     <div className='earnEidts'>
       <div className='eEdits'>
@@ -412,10 +464,9 @@ const leftClickButton = ()=>{
         
         <div className='boxItem boxImg2'>
           <div className='boxItemDiv'>
-             <h6>We Deliver Premium Results</h6>
-             <p>From motion graphics to sound design, we deliver polished,
-               high-end edits that reflect
-               your brand and elevate your content above the noise.
+             <h6> We Think Like Strategists</h6>
+             <p>We combine storytelling, pacing, and platform psychology 
+              to turn raw footage into content that actually works.
              </p>
           </div>
           
@@ -434,7 +485,7 @@ const leftClickButton = ()=>{
 
         <div className='boxItem boxImg4'>
           <div className='boxItemDiv'>
-             <h6>We Help You Grow</h6>
+             <h6>We Help, You Grow</h6>
              <p>Whether you're a personal brand or a
                growing business, our editing systems are designed 
               to help you stay consistent, save time, and grow faster.
