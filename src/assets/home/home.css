@@ -1,7 +1,8 @@
 .home{
     background-image: url(../bgImg.png);
     background-size: contain;
-    background-position: left center;
+    background-position: top center;
+    background-repeat:space;
     /* background-color: black; */
     color: white;
     display: flex;
@@ -337,7 +338,6 @@
     /* font-size: 50px; */
     /* font-weight: 100; */
     /* border-radius: 50%; */
-    /* border: 2px solid #1fd452; */
 
     padding: 0px;
     width: 50px;
@@ -345,7 +345,7 @@
     /* background-image: url(../What-do-we-offer-Img6.png); */
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position:top center;
     position: relative;
 
 }
@@ -359,7 +359,25 @@
     background-image: url(../What-do-we-offer-Img3.png);
 }
 .incluContainer .iCon .iCon4{
-    background-image: url(../What-do-we-offer-Img4.png);
+    width: 100%;
+    height: auto;
+    position: relative;
+    /* background-image: url(../What-do-we-offer-Img4.png); */
+    /* background-color: #8D1FD4; */
+
+}
+
+.incluContainer .iCon .iCon4::before{
+    position: absolute;
+    content: "";
+    inset: 0;
+    /* background-color: #8D1FD4; */
+    z-index: 2;
+    opacity: 0;
+}
+.incluContainer .iCon .iCon4 video{
+    width: 100%;
+    height: auto;
 }
 .incluContainer .iCon .iCon5{
     background-image: url(../What-do-we-offer-Img5.png);
@@ -377,7 +395,8 @@
 .incluBox{
     display: grid;
     grid-template-columns: auto auto auto auto;
-     grid-template-rows: 270px 270px;
+     grid-template-rows: repeat(3,auto);
+
     grid-template-areas: "gridittem4 gridittem1 gridittem2 gridittem3"
                 "gridittem4 gridittem6 gridittem6 gridittem5";
     /* justify-content: space-between; */
@@ -440,151 +459,122 @@
     align-items: center;
      /* background-color: #3a025f; */
      padding-top: 0px;
+     margin-top: 30px;
      padding-bottom: 25px;
      gap: 20px;
 }
 .timelineLeft{
-    width: 39%;
+    width: 30%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: start;
     /* border: 2px solid white; */
-    height: 300px;
+    /* height: 400px; */
     gap: 30px;
     padding: 10px;
 }
 
-.timelineLeft .timelineH3{
-    font-size: 25px;
-    background-color: #8D1FD4;
+.timelineLeft h3{
+    color: rgb(158, 157, 157);
+    text-align: start;
 }
-
 .timelineLeft p{
-    color: rgb(184, 184, 184);
-    font-size: 20px;
+    color: rgb(87, 87, 87);
+    font-size: 18px;
 }
 
-.leftBoxBtn{
-    width: 30%;
+.timelineLeft div{
+    width: 100%;
     display: flex;
-    justify-content: start;
-    align-items: center;
-    gap: 20px;
-}
-.leftBoxBtn button{
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: black;
-    color: white;
-    border: 2px solid #8D1FD4;
-    display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: start;
+    gap: 5px;
+    
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0);
 }
-.leftBoxBtn button .leftBoxIcon{
-    font-size: 25px;
+.timelineLeft div:hover{
+    cursor: pointer;
+    border-bottom: 1px solid rgba(70, 70, 70, 0.534);
 }
 
-.leftBoxBtn button:hover{
-    background-color: #8D1FD4;
-    
+.timelineLeft .active h3{
+    color: #8D1FD4;
 }
+/* .timelineLeft .active p{
+    color: rgb(182, 182, 182);
+} */
+
+
 
 .timelineRight{
-    width: 50%;
+    width: 60%;
+    /* min-height: 400px; */
+    aspect-ratio: 16 / 9;
+    
     display: flex;
     justify-content: center;
     align-items: center;
     overflow:hidden;
     position: relative;
     top: 0px;
+    padding: 10px;
     right: 0px;
-}
-
-.timelineRight div{
-    width: 100%;
-    /* border: 3px solid #8D1FD4; */
-    border-radius: 10px;
-    height: 400px;
-    /* transition: all 1s ease-in; */
-    transition: transform 2s ease, opacity 1s ease;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.timelineRight .div1{
-    background-image: url(../ok.webp);
-    
+    position: relative;
+    border-radius: 30px;
+    /* background-color: #8D1FD4; */
     
 }
-
-.timelineRight .div2{
-    background-image: url(../ok2.webp);
-    
-}
-.timelineRight .div3{
-    background-image: url(../ok3.webp);
-}
-
-
-
-.timelineRight .aLeft{
-    width: 0px;
-    opacity: 0;
-    z-index: 1;
-    transform: translateX(-100px);
-}
-
-.timelineRight .bLeft{
-    width: 0px;
-    opacity: 0;
-    z-index: 1;
-    transform: translateX(-80px);
-}
-.timelineRight .cLeft{
-    width: 0px;
-    opacity: 0;
-    z-index: 1;
-    border: none;
-    transform: translateX(-60%);
-
-}
-.timelineRight .bMiddle{
-    opacity: 1;
+.timelineRight::before{
+    position:absolute;
+    content: "";
+    inset: 0;
+    /* background-color: #8D1FD4; */
     z-index: 3;
-     transform: translateX(0%);
-     margin-left: 10px;
-     margin-right: 10px;
-     border: 3px solid #8D1FD4;
+    opacity: 0;
 }
-
-.timelineRight .aRight{
-    width: 0px;
-    opacity:0;
-    z-index: 1;
+.timelineRight video{
+    width: 90%;
+    /* border: 1px solid white; */
+    /* padding: 10px; */
+    /* background-color: #8D1FD4; */
+    height: auto;
+    /* height: 300px; */
+    /* transition: all 0.5s ease; */
+    position: absolute;
+    /* top: 0px; */
+    /* left: 0px; */
+    /* inset: 0; */
+    /* inset: 0; */
+    /* bottom: 0px; */
+    /* background-color: #8D1FD4; */
     border: none;
-     transform:translateX(60%);
-     
+    border-radius: 40px;
+    /* padding: 2px; */
+
 }
 
-.timelineRight .bRight{
-    width: 0px;
-    opacity:0;
-    z-index: 1;
-     transform:translateX(80px);
-     
+.timelineRight video.hide {
+    opacity: 0;
+    /* transform: translate(-50%, -50%) scale(0.9); */
+    transform: scale(0.7);
 }
 
-.timelineRight .cRight{
-    width: 0px;
-    opacity:0;
-    z-index: 1;
-     transform:translateX(100px);
-     
+.timelineRight video.show {
+    transition: all 0.5s ease;
+    opacity: 1;
+    /* transform: translate(-50%, -50%) scale(1); */
+    transform: scale(1);
+    border: 1px solid rgba(255, 255, 255, 0.878);
+    padding: 20px;
+    background-color: #9500f91e;
+    
 }
+
+
+
 
 
 
@@ -1170,20 +1160,34 @@
 .timelineBox{
     display: flex;
     flex-direction: column;
-    gap: 0px;
+    gap: 30px;
+    margin-top: 50px;
+    /* margin-top: 100px; */
+    /* background-color: #8D1FD4; */
 }
 .timelineLeft{
-    width: 50%;
-    justify-content: center;
-    align-items: center;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+
+    text-align: center;
+    
 }
-.leftBoxBtn{
-    justify-content: center;
+.timelineLeft h3{
+    text-align: center;
+    width: 100%;
 }
 
 .timelineRight{
-    width: 90%;
+    width: 100%;
+    /* background-color: #8D1FD4; */
 }
+
+.timelineRight video.show {
+    width: 90%;
+    padding: 10px;
+}
+
 
 /* how Earneddits works */
 .hEWork .EWorkSec{
@@ -1214,12 +1218,6 @@
 
 
 
-/* insidde the timeline */
-.timelineBox .timelineLeft{
-    width: 100%;
-    text-align: center;
-    /* background-color: #8D1FD4; */
-}
 
 
 /* whats include */
@@ -1230,13 +1228,14 @@
                          "gridittem4 gridittem2"
                          "gridittem3 gridittem4"
                          "gridittem5 gridittem6"; */
-     grid-template-columns: auto auto  ;
-    grid-template-rows: auto auto  auto;
-    grid-template-areas: "gridittem1 gridittem2"
-                        " gridittem4 gridittem3"
-                        " gridittem4 gridittem5"
-                        /* "gridittem3 gridittem5" */
-                        " gridittem6 gridittem6";
+     grid-template-columns: auto;
+    grid-template-rows: repeat(6,auto);
+    grid-template-areas: "gridittem1"
+                        "gridittem2"
+                        " gridittem3"
+                        " gridittem4"
+                        "gridittem5"
+                        " gridittem6";
 
     /* justify-content: space-between; */
     /* align-items: center; */
@@ -1246,6 +1245,23 @@
     /* padding-top: 50px; */
     /* background-color: #8c1fd44a; */
 }
+.incluContainer .iCon .iCon4{
+    width: 30%;
+    /* height: 50px; */
+    /* background-image: url(../What-do-we-offer-Img4.png); */
+}
 
  }
 
+ @media (max-width:1200px )and (min-width:786px) {
+
+.incluBox{
+         grid-template-columns: auto auto  ;
+    grid-template-rows: auto auto  auto;
+    grid-template-areas: "gridittem1 gridittem2"
+                        " gridittem4 gridittem3"
+                        " gridittem4 gridittem5"
+                        /* "gridittem3 gridittem5" */
+                        " gridittem6 gridittem6";
+    }
+ }

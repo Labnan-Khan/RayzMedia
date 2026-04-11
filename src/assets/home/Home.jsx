@@ -8,16 +8,20 @@ import videoFile from "../homePageVideo.mp4"
 import videoFile1 from "../homePageVideo1.mp4"
 import videoFile2 from "../Homepage-animation2.mp4"
 import videoFile3 from "../homePage-animaation3.mp4"
-import { CgChevronLeft, CgChevronRight } from 'react-icons/cg'
-import { PiXLogo } from 'react-icons/pi'
-import { BiLogoGmail, BiLogoTiktok } from 'react-icons/bi'
-import { ImYoutube } from 'react-icons/im'
-import { FaFacebookF, FaInstagram } from 'react-icons/fa'
-import { TfiPinterest } from 'react-icons/tfi'
+// import { CgChevronLeft, CgChevronRight } from 'react-icons/cg'
+// import { PiXLogo } from 'react-icons/pi'
+// import { BiLogoGmail, BiLogoTiktok } from 'react-icons/bi'
+// import { ImYoutube } from 'react-icons/im'
+// import { FaFacebookF, FaInstagram } from 'react-icons/fa'
+// import { TfiPinterest } from 'react-icons/tfi'
 import Testimonial from '../testimonial/Testimonial'
 import ExploreOurCollection from '../explorOurCollection/ExploreOurCollection'
 import FollowUs from '../FollowUs/FollowUs'
 import { Link } from 'react-router-dom'
+import requestVideoEdits1 from '../request-video-eits1.mp4'
+import requestVideoEdits2 from '../request-video-eits2.mp4'
+import requestVideoEdits3 from '../request-video-eits3.mp4'
+import whatDoWeOfferVideo from '../What.DO.We.OfferAnimation.mp4'
 
 
 
@@ -30,10 +34,14 @@ function Home() {
   const [displayText, setDisplayText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
 
-  const [showImg,SetShowImg] = useState(true)
-  const [imgPosition, setImgPosition] = useState(["cLeft" , "Middle" , "aRight"])
-  const [imgPositionHeading,setImgPositionHeading]= useState(["Request","Review","Download"])
-  const [imgPositionPer,setImgPositionPer]= useState(["Request a quick video edits ","Give feedback or request revisions if needed","Get final video in any format or size "])
+  // const [showImg,SetShowImg] = useState(true)
+  const [fadeVideo, setFadeVideo] = useState(true);
+
+  const [requestVieoEdits, setVideoEitds] = useState([requestVideoEdits1 , requestVideoEdits2 , requestVideoEdits3])
+
+  const [rVEPosition, setRVEPosition] = useState(0)
+  // const [imgPositionHeading,setImgPositionHeading]= useState(["Request","Review","Download"])
+  // const [imgPositionPer,setImgPositionPer]= useState(["Request a quick video edits ","Give feedback or request revisions if needed","Get final video in any format or size "])
 
 
  const [clients, setClients] = useState(0);
@@ -53,18 +61,18 @@ function Home() {
     return () => clearInterval(interval);
 }, []);
 
-useEffect(()=>{
-  if(imgPosition[0]=="middle"){
-    setImgPositionHeading("1 Request")
-  }
-   else if(imgPosition[1]=="middle"){
-    setImgPositionHeading("2 Review")
-  }
-   else if(imgPosition[2]=="middle"){
-    setImgPositionHeading("3 Download")
-  }
+// useEffect(()=>{
+//   if(imgPosition[0]=="middle"){
+//     setImgPositionHeading("1 Request")
+//   }
+//    else if(imgPosition[1]=="middle"){
+//     setImgPositionHeading("2 Review")
+//   }
+//    else if(imgPosition[2]=="middle"){
+//     setImgPositionHeading("3 Download")
+//   }
   
-},[imgPosition])
+// },[imgPosition])
 
 
   useEffect(() => {
@@ -98,24 +106,16 @@ useEffect(()=>{
 
   }, []);
 
-  // format 5M nicely
-  // const formatViews = (num) => {
-  //   if (num >= 0) return Math.floor(num / 1000000) + "M+";
-  //   return num + "+";
-  // };
+const handleChangeVideo = (index) => {
+   if (index === rVEPosition) return;
+  setFade(false); // fade out
 
+  setTimeout(() => {
+    setRVEPosition(index); // change video
+    setFade(true); // fade in
+  }, 1000); // match CSS duration
+};
 
-const rightClickButton =()=>{
-  setImgPosition(prev => [...prev.slice(1), prev[0]]);
-   setImgPositionHeading(prev => [...prev.slice(1), prev[0]])
-   setImgPositionPer(prev => [...prev.slice(1), prev[0]])
-}
-
-const leftClickButton = ()=>{
-  setImgPosition(prev => [prev[prev.length - 1], ...prev.slice(0, -1)])
-  setImgPositionHeading(prev => [prev[prev.length - 1], ...prev.slice(0, -1)])
-  setImgPositionPer(prev => [prev[prev.length - 1], ...prev.slice(0, -1)])
-}
 
   return (
     <>
@@ -162,7 +162,7 @@ const leftClickButton = ()=>{
         </div>
         <div className='homeRight'>
           <div className='rightVideo'>
-            <div><video  autoPlay loop  muted  src={videoFile1}></video></div>
+            <div><video autoPlay  loop  muted playsinline preload="metadata"   src={videoFile1}></video></div>
           </div>
 
           <div className='rightBox'>
@@ -216,7 +216,7 @@ const leftClickButton = ()=>{
 
             <div className='row3rd'>
                 <div>
-                    <video src={videoFile} autoPlay muted loop></video>
+                    <video src={videoFile} autoPlay muted loop  playsinline preload="metadata" ></video>
                     <span></span>
                     <span></span>
                     <span></span>
@@ -224,7 +224,7 @@ const leftClickButton = ()=>{
                     <span></span>
                 </div>
                 <div>
-                    <video src={videoFile} autoPlay muted loop></video>
+                    <video src={videoFile} autoPlay muted loop  playsinline preload="metadata" ></video>
                     <span></span>
                     <span></span>
                     <span></span>
@@ -233,7 +233,7 @@ const leftClickButton = ()=>{
                 </div>
 
                 <div>
-                    <video src={videoFile} autoPlay muted loop></video>
+                    <video src={videoFile} autoPlay muted loop  playsinline preload="metadata" ></video>
                     <span></span>
                     <span></span>
                     <span></span>
@@ -260,7 +260,7 @@ const leftClickButton = ()=>{
           </div>
 
           <div className='EWorkSecRight rightSec2'>
-            <video src={videoFile2} autoPlay muted loop></video>
+            <video src={videoFile2} autoPlay muted loop  playsinline preload="metadata" ></video>
           </div>
         </div>
 
@@ -279,7 +279,7 @@ const leftClickButton = ()=>{
           </div>
 
           <div className='EWorkSecRight rightSec3'>
-            <video src={videoFile3} autoPlay muted loop></video>
+            <video src={videoFile3} autoPlay muted loop  playsinline preload="metadata"></video>
           </div>
         </div>
 
@@ -363,7 +363,9 @@ const leftClickButton = ()=>{
 
               <div className='iconDiv'>
                 <div className='iCon'>
-                  <div className='iCon4'></div>
+                  <div className='iCon4'>
+                      <video src={whatDoWeOfferVideo} autoPlay muted loop  playsinline preload="metadata" ></video>
+                  </div>
                 </div>
               </div>
               <div>
@@ -423,18 +425,37 @@ const leftClickButton = ()=>{
       <div className='timelineBox'>
 
         <div className='timelineLeft'>
-          <h3>{imgPositionHeading[1]}</h3>
-          <p>{imgPositionPer[1]}</p>
-          <div className='leftBoxBtn'>
-            <button><CgChevronLeft className='leftBoxIcon' onClick={leftClickButton}/></button>
-            <button><CgChevronRight className='leftBoxIcon' onClick={rightClickButton}/></button>
+
+          <div className={`${(rVEPosition == 0)? "active": ""}`} onClick={()=>handleChangeVideo(0)}>
+            <h3>Request</h3>
+            <p>Request a quick video edits</p>
           </div>
+
+          <div className={`${(rVEPosition == 1)? "active": ""}`} onClick={()=>handleChangeVideo(1)}>
+            <h3>Review</h3>
+            <p>Give feedback or request revisions if needed</p>
+          </div>
+
+          <div className={`${(rVEPosition == 2)? "active": ""}`} onClick={()=>handleChangeVideo(2)}>
+            <h3>Download</h3>
+            <p>Get final video in any format or size</p>
+          </div>
+
+
+
         </div>
 
         <div className='timelineRight'>
-          <div className={`div1 ${(imgPosition[0] == "middle")? "timelineImg" : ""} ${imgPosition[0]}`}>1</div>
-          <div className={`div1 ${(imgPosition[1] == "middle")? "timelineImg" : ""} ${imgPosition[1]}`}>2</div>
-          <div className={`div1 ${(imgPosition[2] == "middle")? "timelineImg" : ""} ${imgPosition[2]}`}>3</div>
+          {
+            requestVieoEdits.map((video, index) =>{
+                return (
+                    
+                    <video className={(rVEPosition == index) ? "show" : "hide"} src={video} autoPlay loop muted  playsinline preload="metadata" ></video>
+        
+                )
+            })
+          }
+          {/* <video className={fadeVideo ? "show" : "hide"} src={requestVieoEdits[rVEPosition]} autoPlay loop muted ></video> */}
         </div>
 
       </div>

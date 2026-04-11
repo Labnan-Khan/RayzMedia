@@ -239,7 +239,7 @@ function OurPlan() {
                 </div>
 
                 <div className='solutionChildD gridittem4'>
-                    <video src={videoAi} autoPlay muted loop></video>
+                    <video src={videoAi} autoPlay muted loop playsinline preload="metadata" ></video>
                     {/* <div className='item4Animation0'>
                          <div className='item4Animation1'>
                             <div className='item4Animation2'>

@@ -4,6 +4,7 @@ import FollowUs from '../FollowUs/FollowUs'
 import { PiHandWavingDuotone } from 'react-icons/pi'
 import { FaHandPointLeft, FaHandshake } from 'react-icons/fa'
 import emailjs from '@emailjs/browser';
+import { IoMdCheckmark } from 'react-icons/io'
 
 function Contact() {
 
@@ -39,6 +40,30 @@ const sendEmail = (e)=>{
                     available to help
                      you and make sure everything works smoothly.
                 </p>
+                <div className='leftimg'></div>
+                <div className='leftBottom'>
+                    <div className='firestRow'>
+                        <p>Book a 1:1</p>
+                        <p>consultaion to:</p>
+                        <div></div>
+                    </div>
+                    <div className='secondRow'>
+                        <div>
+                            <span><IoMdCheckmark /></span>
+                            <p>See how we'll solve your editing needs</p>
+                        </div>
+
+                        <div>
+                            <span><IoMdCheckmark /></span>
+                            <p>Get a personalized plan recommendation</p>
+                        </div>
+
+                        <div>
+                            <span><IoMdCheckmark /></span>
+                            <p>View samples from businesses like yours</p>
+                        </div>
+                    </div>
+                </div>
             </div>
             
             <div className='contactHomeRight'>

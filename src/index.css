@@ -12,3 +12,7 @@ a{
   color: inherit;
   font-size: inherit;
 }
+
+p{
+  font-family:'Zain','Arivosans','Fira Sans';
+}
