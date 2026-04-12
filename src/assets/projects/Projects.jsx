@@ -29,7 +29,7 @@ function Projects() {
 
         <div className={`${videoSize? "ShowVideoF" : "hidevideoF"}`}  onClick={()=>setVideoSize(!videoSize)}>
             
-            <video src={videoSize? video1 : ""} controls muted controlsList="nodownload noplaybackrate  nofullscreen" onClick={(e) => e.stopPropagation()} ></video>
+            <video src={videoSize? video1 : ""} controls playsInline muted controlsList="nodownload noplaybackrate  nofullscreen" onClick={(e) => e.stopPropagation()} ></video>
         </div>
 
 
