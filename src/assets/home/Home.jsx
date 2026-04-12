@@ -183,7 +183,7 @@ const handleChangeVideo = (index) => {
     <div className='hEWork'>
       <div className='EWork'>
         <h4 className='EWorkH4'>How it Works</h4>
-        <p className='EWorkP'>Lets break this ddown in few 
+        <p className='EWorkP'>Lets break this down in few 
           simple steps
         </p>
 

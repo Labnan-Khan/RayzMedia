@@ -81,9 +81,9 @@
     padding: 20px;
     width: 200px;
     gap: 20px;
-    background-color: rgb(32, 32, 32);
+    background-color: rgba(32, 32, 32, 0.437);
     border-radius: 20px;
-    border: 2px solid black;
+    border: 2px solid rgba(120, 120, 120, 0.379);
     flex-shrink: 0;
     /* animation: scrollTesti 50s linear infinite; */
 }
