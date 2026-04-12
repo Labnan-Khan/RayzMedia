@@ -239,7 +239,7 @@ function OurPlan() {
                 </div>
 
                 <div className='solutionChildD gridittem4'>
-                    <video src={videoAi} autoPlay muted loop playsinline webkit-playsinline preload="metadata" style={{ pointerEvents: "none" }} ></video>
+                    <video src={videoAi} autoPlay muted loop playsInline preload="metadata" style={{ pointerEvents: "none" }} ></video>
                     {/* <div className='item4Animation0'>
                          <div className='item4Animation1'>
                             <div className='item4Animation2'>
