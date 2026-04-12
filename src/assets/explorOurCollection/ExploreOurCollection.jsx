@@ -17,9 +17,9 @@ function ExploreOurCollection() {
            <button className='expColLeftBtn'><Link to="/projects" >Browse Projects</Link></button>
         </div>
          <div className='explorCollectionVideo'>
-           <div className='video1'><video  autoPlay loop  muted playsinline preload="metadata"   src={videoFile}></video></div>
-          <div className='video2'><video  autoPlay loop  muted playsinline preload="metadata"  src={videoFile}></video></div>
-          <div className='video3'><video  autoPlay loop  muted playsinline preload="metadata"  src={videoFile}></video></div>
+           <div className='video1'><video  autoPlay loop  muted playsInline preload="metadata"   src={videoFile}></video></div>
+          <div className='video2'><video  autoPlay loop  muted playsInline preload="metadata"  src={videoFile}></video></div>
+          <div className='video3'><video  autoPlay loop  muted playsInline preload="metadata"  src={videoFile}></video></div>
          </div>
          <button className='expColLeftBtn2'>Browse All Projects</button>
       </div>

@@ -162,7 +162,7 @@ const handleChangeVideo = (index) => {
         </div>
         <div className='homeRight'>
           <div className='rightVideo'>
-            <div><video autoPlay  loop  muted playsinline preload="metadata"   src={videoFile1}></video></div>
+            <div><video autoPlay  loop  muted playsInline preload="metadata"   src={videoFile1}></video></div>
           </div>
 
           <div className='rightBox'>
@@ -216,7 +216,7 @@ const handleChangeVideo = (index) => {
 
             <div className='row3rd'>
                 <div>
-                    <video src={videoFile} autoPlay muted loop  playsinline preload="metadata" ></video>
+                    <video src={videoFile} autoPlay muted loop  playsInline preload="metadata" ></video>
                     <span></span>
                     <span></span>
                     <span></span>
@@ -224,7 +224,7 @@ const handleChangeVideo = (index) => {
                     <span></span>
                 </div>
                 <div>
-                    <video src={videoFile} autoPlay muted loop  playsinline preload="metadata" ></video>
+                    <video src={videoFile} autoPlay muted loop  playsInline preload="metadata" ></video>
                     <span></span>
                     <span></span>
                     <span></span>
@@ -233,7 +233,7 @@ const handleChangeVideo = (index) => {
                 </div>
 
                 <div>
-                    <video src={videoFile} autoPlay muted loop  playsinline preload="metadata" ></video>
+                    <video src={videoFile} autoPlay muted loop  playsInline preload="metadata" ></video>
                     <span></span>
                     <span></span>
                     <span></span>
@@ -260,7 +260,7 @@ const handleChangeVideo = (index) => {
           </div>
 
           <div className='EWorkSecRight rightSec2'>
-            <video src={videoFile2} autoPlay muted loop  playsinline preload="metadata" ></video>
+            <video src={videoFile2} autoPlay muted loop  playsInline preload="metadata" ></video>
           </div>
         </div>
 
@@ -279,7 +279,7 @@ const handleChangeVideo = (index) => {
           </div>
 
           <div className='EWorkSecRight rightSec3'>
-            <video src={videoFile3} autoPlay muted loop  playsinline preload="metadata"></video>
+            <video src={videoFile3} autoPlay muted loop  playsInline preload="metadata"></video>
           </div>
         </div>
 
@@ -364,7 +364,7 @@ const handleChangeVideo = (index) => {
               <div className='iconDiv'>
                 <div className='iCon'>
                   <div className='iCon4'>
-                      <video src={whatDoWeOfferVideo} autoPlay muted loop  playsinline preload="metadata" ></video>
+                      <video src={whatDoWeOfferVideo} autoPlay muted loop  playsInline preload="metadata" ></video>
                   </div>
                 </div>
               </div>
@@ -450,7 +450,7 @@ const handleChangeVideo = (index) => {
             requestVieoEdits.map((video, index) =>{
                 return (
                     
-                    <video className={(rVEPosition == index) ? "show" : "hide"} src={video} autoPlay loop muted  playsinline preload="metadata" ></video>
+                    <video className={(rVEPosition == index) ? "show" : "hide"} src={video} autoPlay loop muted  playsInline preload="metadata" ></video>
         
                 )
             })
