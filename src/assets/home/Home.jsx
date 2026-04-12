@@ -217,7 +217,7 @@ const handleChangeVideo = (index) => {
             <div className='row3rd'>
                 <div>
                     <video src={videoFile} autoPlay muted loop  playsInline preload="metadata" ></video>
-                    <span></span>
+                    <span><div></div></span>
                     <span></span>
                     <span></span>
                     <span></span>
@@ -225,7 +225,7 @@ const handleChangeVideo = (index) => {
                 </div>
                 <div>
                     <video src={videoFile} autoPlay muted loop  playsInline preload="metadata" ></video>
-                    <span></span>
+                    <span><div></div></span>
                     <span></span>
                     <span></span>
                     <span></span>
@@ -234,7 +234,7 @@ const handleChangeVideo = (index) => {
 
                 <div>
                     <video src={videoFile} autoPlay muted loop  playsInline preload="metadata" ></video>
-                    <span></span>
+                    <span><div></div></span>
                     <span></span>
                     <span></span>
                     <span></span>
@@ -290,11 +290,11 @@ const handleChangeVideo = (index) => {
 
 
 
-          {/* explorCollection after home css  */}
+          {/* explorCollection   */}
       
       <ExploreOurCollection />
      
-       {/* whats Included after explorCollection */}
+       {/* what do we offer after explorCollection */}
 
       <div className='inclu'>
         <div className='incluDiv'>
@@ -418,7 +418,7 @@ const handleChangeVideo = (index) => {
 
       </div>
 
-      {/* inside the timeline after what is included */}
+      {/* request video edits after what is included */}
 
     <div className='inTimeline'>
       <h4>Request Video Edits </h4>

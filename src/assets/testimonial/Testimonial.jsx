@@ -5,11 +5,11 @@ import { FaStar } from 'react-icons/fa'
 import { IoMdCheckmark } from 'react-icons/io'
 
 function Testimonial() {
-        const comment = [{user:"labnan", com:"nice work"}, {user:"labnan", com:"nice work"},{user:"labnan", com:"nice work"}, {user:"labnan", com:"nice work"},
-            {user:"labnan", com:"nice work"},{user:"labnan", com:"nice work"}, {user:"labnan", com:"nice work"},
-            {user:"labnan", com:"nice work"},{user:"labnan", com:"nice work"}, {user:"labnan", com:"nice work"},
-            {user:"labnan", com:"nice work"},{user:"labnan", com:"nice work"}, {user:"labnan", com:"nice work"},
-            {user:"labnan", com:"nice work"},{user:"labnan", com:"nice work"}]
+        const comment = [{user:"Kenny Jo", com:"Premium quality, every single time."}, {user:"Amaya Bailey", com:"Saved us time and scaled our output."},{user:"John Haack", com:"Not just editors — they understand content."}, {user:"Stevie Richards", com:"Our content finally started performing"},
+            {user:"Robyn", com:"Views doubled within weeks"},{user:"Charlie", com:"Finally content that actually converts"}, {user:"Shelby ", com:"Hook → retention → growth. They get it."},
+            {user:"Ruby Hayes", com:"Best decision for our brand content."},{user:"Sangrez", com:"High-quality storytelling that stands out."}, {user:"Jon Youshaie", com:"Fast delivery with premium quality results."},
+            {user:"Thomas Ross", com:"Great attention to detail in every project."},{user:"Anthony Parker", com:"High retention edits that actually work."}, {user:"Jordan Bryant", com:"Very reliable and consistent service."},
+            {user:"Abram", com:"Very smooth and modern editing style."},{user:"Michael Smith", com:"Exactly the style we were looking for."}]
 
 
 
@@ -20,13 +20,15 @@ function Testimonial() {
     <>
         <div className='testimonial'>
             <div className='testiUSec'>
-                <h4 className='testiUSecH4'> Real Feedback From Real Creators</h4>
-                <p className='testiUSecP1'>Proof of quality from editors who use our projects every day.</p>
+                <h4 className='testiUSecH4'> Edits Pay Off</h4>
+                <p className='testiUSecP1'>Trusted by Creators. Backed by Results.</p>
                 <div className='testiBoxSec'>
 
-                  {comment.map((comt,i)=>(
-                    <div className='tBox'>
+                    <div className='testiTrack'>
+                        {comment.map((comt,i)=>(
+                    <div className='tBox' key={i}>
                         <div className='tboxUpside'>
+                            
                             <div><FaStar /></div>
                             <div><FaStar /></div>
                             <div><FaStar /></div>
@@ -44,7 +46,7 @@ function Testimonial() {
                   ))}
 
                     {comment.map((comt,i)=>(
-                    <div className='tBox'>
+                    <div className='tBox' key={i}>
                         <div className='tboxUpside'>
                             <div><FaStar /></div>
                             <div><FaStar /></div>
@@ -61,6 +63,11 @@ function Testimonial() {
                         </div>
                     </div>
                   ))}
+
+
+                    </div>
+
+                 
 
                 </div>
             </div>

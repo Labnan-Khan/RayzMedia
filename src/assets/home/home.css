@@ -256,7 +256,7 @@
 
 
 
-/* whats included after explore our collection  */
+/* whats do we offer after explore our collection  */
 
 .inclu{
     /* background-color: #8D1FD4; */
@@ -265,8 +265,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 5%;
-    padding-bottom: 5%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    box-sizing: border-box;
+    margin: 150px 0px;
 
 }
 
@@ -432,7 +434,7 @@
     grid-area:gridittem6 ;
 }
 
-/* inside the timeline after what is included */
+/* request video edits after what is included */
 
 .inTimeline{
     width: 100%;
@@ -447,6 +449,9 @@
     gap: 20px;
     padding-top: 25px;
      /* padding-bottom: 25px; */
+     /* background-color: #8D1FD4; */
+     box-sizing: border-box;
+     margin-bottom: 100px;
 }
 
 .inTimeline h4{
@@ -578,7 +583,7 @@
 
 
 
-/* Why Choose EarnEdits? */
+/* Why Choose Rayzmedia */
 
 .earnEidts{
     width: 100%;
@@ -590,6 +595,9 @@
     padding-bottom: 150px;
     padding-top: 100px;
     height: auto;
+    box-sizing: border-box;
+    margin-bottom: 100px;
+    margin-top: 100px;
 }
 
 .earnEidts .eEdits{
@@ -738,7 +746,7 @@
 
 
 
-/* how earneidts works */
+/* how it  works */
 
 
 
@@ -750,8 +758,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 50px;
+    margin-top: 130px;
+    margin-bottom: 10px;
     padding-bottom: 10px;
+    box-sizing: border-box;
     
 }
 
@@ -982,7 +992,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: start;
+    align-items: center;
     
     padding: 5px;
     gap: 7px;
@@ -1002,8 +1012,17 @@
 }
 
 .EWorkSec .rightSec1 .row3rd div span:nth-child(2){
+    width: 100%;
+    height: auto ;
+    background-color: rgba(255, 255, 255, 0);
+    /* overflow:hidden ; */
+}
+.EWorkSec .rightSec1 .row3rd div span:nth-child(2) div{
     width: 20%;
-    height: 15px ;
+    /* display: inline-block; */
+    height: 15px;
+    border-radius: 10px;
+    background-color:  rgb(126, 126, 126);;
 }
 .EWorkSec .rightSec1 .row3rd div span:nth-child(3){
     height: 8px;

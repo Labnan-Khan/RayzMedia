@@ -33,7 +33,7 @@
         transform: translateX(0);
     }
     to {
-        transform: translateX(-100%);
+        transform: translateX(-50%);
     }
     
 
@@ -51,14 +51,26 @@
 }
 .testiBoxSec{
     margin-top: 40px;
-    width: 250vh;
-    display:flex ;
+    width: 100%;
+    /* display:flex ; */
     gap: 6px;
-     animation: scrollTesti 40s linear infinite;
+     /* animation: scrollTesti 4s linear infinite; */
+     /* background-color: #8D1FD4; */
+     overflow: hidden; /*add this*/
      
 }
 
-.testiBoxSec:hover{
+.testiTrack {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    gap: 6px;
+    width: max-content;
+    animation: scrollTesti 40s linear infinite;
+}
+
+
+.testiTrack:hover{
     animation-play-state: paused;
 }
 
@@ -67,11 +79,12 @@
     flex-direction: column;
     /* border: 2px solid white; */
     padding: 20px;
-    /* width: 20%; */
+    width: 200px;
     gap: 20px;
     background-color: rgb(32, 32, 32);
     border-radius: 20px;
     border: 2px solid black;
+    flex-shrink: 0;
     /* animation: scrollTesti 50s linear infinite; */
 }
 
@@ -101,7 +114,9 @@
     border-top: 1px solid white;
     padding-top: 10px;
 }
-
+.tBox .tBoxMP{
+    color: rgb(167, 167, 167);
+}
 .tBox .tboxDownSide div{
     background-color: rgb(4, 184, 22);
     color: black;
