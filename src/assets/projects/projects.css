@@ -14,7 +14,7 @@
     background-image: url(../snake2.0.png);
     background-repeat: no-repeat;
     background-position:top center;
-    background-size: contain;
+    background-size: cover;
 }
 
 .project .projectH4{
@@ -40,9 +40,12 @@
     width: 70%;
     gap: 10px;
     /* padding: 0px; */
-    
+    /* background-color: #8D1FD4; */
     /* color: white; */
+    z-index: 1;
 }
+
+
 
 .project .ProjectVideoTypeBtn button{
     color: rgb(129, 129, 129);
@@ -65,6 +68,8 @@
     background:linear-gradient(to top left, rgb(205, 191, 83), #8D1FD4);
     color: white;
 }
+
+
 
 .projectVideoBox{
     width: 90%;
@@ -148,17 +153,18 @@
 }
 
 
-/* show  video */
+/* hide  video sec */
 
 
-.project .showVideoF{
+.project .hidevideoF{
     width: 100%;
     height: 100vh;
     position: fixed;
     
     background-color: black;
     top: 0px;
-    z-index: 50;
+    z-index: 0;
+    opacity: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -176,35 +182,71 @@
     
 }
 
-.project .showVideoF .videoSec{
+
+
+
+
+.project .hidevideoF .videoSec{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
-    max-height: 80%;
+    max-height: 85%;
     max-width: 90%;
     position: relative;
+    border: 2px solid white;
+    padding: 20px;
+    
+    border-radius: 20px;
 }
 
-.project .showVideoF .videoSec video{
+.project .hidevideoF .videoSec video{
     max-height: 100%;
     max-width: 100%;
     border: none;
-    box-shadow: 0px 0px 20px white;
+    /* box-shadow: 0px 0px 20px white; */
     border-radius: 20px;
     position: relative;
-    transform: scale(1);
+    transform: scale(0.4);
     transition: all 0.5s ease;
     pointer-events: none;
+    border: 1px solid white;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.33);
 }
 
-
-
-.project .showVideoF .videoSec .videoControls{
+.project .hidevideoF .videoSec .firstPlaybtn{
     position: absolute;
-    bottom: 10px;
-    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    padding-left: 12px;
+    /* top: 50%; */
+    /* left: 50%; */
+    font-size: 40px;
+    border-radius: 50%;
+    border: 2px solid white;
+    background-color: #8c1fd47e;
+    color: white;
+}
+.project .hidevideoF .videoSec .tittle{
+    position: absolute;
+    bottom: -12px;
+    z-index: 1;
+    border-radius: 10px;
+    padding: 0px 10px;
+    color: #8D1FD4;
+    background-color:black;
+
+}
+.project .hidevideoF .videoSec .videoControls{
+    position: absolute;
+    bottom: 40px;
+    width: 70%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -218,25 +260,22 @@
     /* box-shadow: inset 0px 0px 2px black; */
 }
 
-.project .showVideoF .videoSec:hover .videoControls{
-    opacity: 1;
-}
 
-.project .showVideoF .videoSec .videoControls .progressBar {
+.project .hidevideoF .videoSec .videoControls .progressBar {
   width: 100%;
   height: 5px;
   background: white;
   cursor: pointer;
 }
 
-.project .showVideoF .videoSec .videoControls .progressFill {
+.project .hidevideoF .videoSec .videoControls .progressFill {
   height: 100%;
   background: #8D1FD4;
   width: 0%;
   transition: width 0.1s linear;
 }
 
-.showVideoF .videoSec .videoControls button{
+.hidevideoF .videoSec .videoControls button{
     font-size: 20px;
     display: flex;
     justify-content: center;
@@ -247,11 +286,29 @@
     border: none;
 }
 
-/* hide video */
-.hidevideoF{
-    display: none;
+/* show video sec */
+
+.project .showVideoF{
+    opacity: 1;
+    z-index: 50;
 }
 
+.project .showVideoF .videoSec video{
+    transform: scale(1);
+}
+.project .showVideoF .videoSec:hover .videoControls{
+    opacity: 1;
+}
+
+.project .showVideoF .videoSec .hidePlayBtn{
+    opacity: 0;
+    z-index: 0;
+    transition: all 0.2s ease;
+}
+.project .hidevideoF .videoSec .showBtnPlay{
+    opacity: 1;
+    z-index: 1;
+}
 
 
 

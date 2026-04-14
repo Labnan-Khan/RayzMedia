@@ -41,13 +41,15 @@ import imgTumbnail17 from "../ProjectVideosFile/project-page-video-Thumbnail17.p
 import imgTumbnail18 from "../ProjectVideosFile/project-page-video-Thumbnail18.png"
 import imgTumbnail19 from "../ProjectVideosFile/project-page-video-Thumbnail19.png"
 import { FaPause, FaPlay, FaPlayCircle, FaRegWindowClose } from 'react-icons/fa'
-import { IoMdClose } from 'react-icons/io'
+import { IoIosPlay, IoMdClose } from 'react-icons/io'
 import Testimonial from '../testimonial/Testimonial'
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { GiPlayButton } from 'react-icons/gi'
 import { GoUnmute } from 'react-icons/go'
 import { ImVolumeHigh, ImVolumeMute2 } from 'react-icons/im'
+import { FaCirclePlay } from 'react-icons/fa6'
+import { HiMiniPlay } from 'react-icons/hi2'
 
 
 function Projects() {
@@ -56,15 +58,17 @@ function Projects() {
     const videoTypeListBtn = ["All categories", "Ads", "Agencies", "iGaming", "Youtube", "Creators","Ecommerce", "Entertainment", "Fitness", "Intros", "Lifestyle", "Medical",  "Podcast", "product Ads", "Production Companies", "Real estate", "Languages", "Beauty & Fashion","Personal Brand", "Health & Wellness", "Custom nimtion/VFX","Business & Marketing","Coaching & Education", "Course Creators","Crowdfunding", "template-Based Videos", "Text hooks",  "Tiktok & Reel"]
     const videoList = [video1,video2,video3,video4,video5,video6,video7,video8,video9,video10,video11,video12,video13,video14,video15,video16,video17,video18,video19]
     const videoTumbnailsList = [imgTumbnail1,imgTumbnail2,imgTumbnail3,imgTumbnail4,imgTumbnail5,imgTumbnail6,imgTumbnail7,imgTumbnail8,imgTumbnail9,imgTumbnail10,imgTumbnail11,imgTumbnail12,imgTumbnail13,imgTumbnail14,imgTumbnail15,imgTumbnail16,imgTumbnail17,imgTumbnail18,imgTumbnail19]
-    const [currentVideo,setCurrentVideo] = useState("")
+    const [currentVideo,setCurrentVideo] = useState(video1)
     const [isPlay, setIsPlay] = useState(false)
     const [isMuted, setIsMuted] = useState(false)
+    const [hidePlayButton, setHidePlaayButton] = useState(false)
     useEffect(() => {
         AOS.init({duration: 2000,
              once: false,
              offset:0,
             anchorPlacement: 'top-bottom'});
     }, []);
+// handle scoll when video open
 
     const videoRef = useRef(null)
     // jkl;
@@ -101,6 +105,7 @@ const playVideo = () =>{
         videoPlayed.pause();
         setIsPlay(false)
     }
+    setHidePlaayButton(true)
 }
 const mutedVideo = () =>{
     const videoPlayed = videoRef.current;
@@ -115,25 +120,39 @@ const mutedVideo = () =>{
     }
 }
 
+const closeVideoSec = ()=>{
+    setVideoSize(false);
+
+    if(!videoRef.current) return
+    videoRef.current.pause();
+    videoRef.current.muted = false;
+    setIsMuted(false);
+    setIsPlay(false);
+    videoRef.current.currentTime = 0;
+    setProgress(0);
+    setHidePlaayButton(false)
+    document.body.style.overflow = "auto";
+}
+
   return (
     <>
     
     <div className='project'>
 
 
-        <div className={`${videoSize? "showVideoF" : "hidevideoF"}`}  onClick={()=>{setVideoSize(false); setIsMuted(false); setIsPlay(false); setProgress(0)}}>
+        <div className={ `hidevideoF ${videoSize? "showVideoF" : ""}`}  onClick={closeVideoSec}>
         
             <div className='videoSec' onClick={(e) => e.stopPropagation()} >
-                {/* {videoSize?  : "hidevideoF"}<video src={videoSize? video1 : ""} ref={videoRef} onTimeUpdate={handleTimeUpdate} playsInline preload='metadata'  muted controlsList="nodownload noplaybackrate  nofullscreen" ></video> */}
-                {videoSize && <video src={currentVideo} ref={videoRef} onTimeUpdate={handleTimeUpdate} playsInline preload='metadata'   controlsList="nodownload noplaybackrate  nofullscreen" ></video> }
+                <video src={currentVideo} ref={videoRef} onTimeUpdate={handleTimeUpdate} playsInline preload='metadata'   controlsList="nodownload noplaybackrate  nofullscreen" ></video> 
+                <button className={`firstPlaybtn ${(hidePlayButton)? "hidePlayBtn" : "showBtnPlay"}`} onClick={playVideo}><HiMiniPlay/></button>
                 <div className='videoControls' >
                     <button onClick={playVideo}> {(isPlay)?<FaPause /> : <FaPlay/>}  </button>
                     <div className="progressBar" onClick={handleSeek}>
-                        <div className="progressFill" style={{ width: `${progress}%` }} />
+                        <div className="progressFill"  style={{ width: `${(videoSize)? progress : 0}%` }} />
                     </div>
                     <button onClick={mutedVideo}> {(isMuted)?<ImVolumeMute2 /> : <ImVolumeHigh />} </button>
                 </div>
-                
+                <div className='tittle'>Rayzmedia</div>
 
             </div>
 
@@ -161,7 +180,7 @@ const mutedVideo = () =>{
                 return  (
                              <div className="videoCon" data-aos="fade-up" >
                 <div className='videoTumbnail'  style={{ backgroundImage: `url(${itemTumbnaail})` }} >
-                    <button className='playButton'  ><div onClick={()=>{setVideoSize(!videoSize); setCurrentVideo(videoList[index])}}><FaPlayCircle /></div></button>
+                    <button className='playButton'  ><div onClick={()=>{document.body.style.overflow = "hidden"; setVideoSize(!videoSize); setCurrentVideo(videoList[index])}}><FaPlayCircle /></div></button>
                 </div>
             </div>
                 )
