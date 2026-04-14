@@ -197,9 +197,11 @@
     position: relative;
     border: 2px solid white;
     padding: 20px;
-    
+    transform: scale(0);
+    transition: all 0.3s ease;
     border-radius: 20px;
 }
+
 
 .project .hidevideoF .videoSec video{
     max-height: 100%;
@@ -208,8 +210,7 @@
     /* box-shadow: 0px 0px 20px white; */
     border-radius: 20px;
     position: relative;
-    transform: scale(0.4);
-    transition: all 0.5s ease;
+   
     pointer-events: none;
     border: 1px solid white;
     padding: 10px;
@@ -292,10 +293,10 @@
     opacity: 1;
     z-index: 50;
 }
-
-.project .showVideoF .videoSec video{
+.project .showVideoF .videoSec{
     transform: scale(1);
 }
+
 .project .showVideoF .videoSec:hover .videoControls{
     opacity: 1;
 }

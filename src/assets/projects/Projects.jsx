@@ -58,7 +58,7 @@ function Projects() {
     const videoTypeListBtn = ["All categories", "Ads", "Agencies", "iGaming", "Youtube", "Creators","Ecommerce", "Entertainment", "Fitness", "Intros", "Lifestyle", "Medical",  "Podcast", "product Ads", "Production Companies", "Real estate", "Languages", "Beauty & Fashion","Personal Brand", "Health & Wellness", "Custom nimtion/VFX","Business & Marketing","Coaching & Education", "Course Creators","Crowdfunding", "template-Based Videos", "Text hooks",  "Tiktok & Reel"]
     const videoList = [video1,video2,video3,video4,video5,video6,video7,video8,video9,video10,video11,video12,video13,video14,video15,video16,video17,video18,video19]
     const videoTumbnailsList = [imgTumbnail1,imgTumbnail2,imgTumbnail3,imgTumbnail4,imgTumbnail5,imgTumbnail6,imgTumbnail7,imgTumbnail8,imgTumbnail9,imgTumbnail10,imgTumbnail11,imgTumbnail12,imgTumbnail13,imgTumbnail14,imgTumbnail15,imgTumbnail16,imgTumbnail17,imgTumbnail18,imgTumbnail19]
-    const [currentVideo,setCurrentVideo] = useState(video1)
+    const [currentVideo,setCurrentVideo] = useState(video2)
     const [isPlay, setIsPlay] = useState(false)
     const [isMuted, setIsMuted] = useState(false)
     const [hidePlayButton, setHidePlaayButton] = useState(false)
