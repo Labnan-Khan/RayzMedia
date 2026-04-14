@@ -1,19 +1,64 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import './projects.css'
 import FollowUs from '../FollowUs/FollowUs'
-import video1 from "../homePageVideo.mp4"
-import imgTumbnail from "../project-page-video-Thumbnail.png"
-import { FaPlayCircle, FaRegWindowClose } from 'react-icons/fa'
+import video1 from "../ProjectVideosFile/project-page-video1.mp4"
+import video2 from "../ProjectVideosFile/project-page-video2.mp4"
+import video3 from "../ProjectVideosFile/project-page-video3.mp4"
+import video4 from "../ProjectVideosFile/project-page-video4.mp4"
+import video5 from "../ProjectVideosFile/project-page-video5.mp4"
+import video6 from "../ProjectVideosFile/project-page-video6.mp4"
+import video7 from "../ProjectVideosFile/project-page-video7.mp4"
+import video8 from "../ProjectVideosFile/project-page-video8.mp4"
+import video9 from "../ProjectVideosFile/project-page-video9.mp4"
+import video10 from "../ProjectVideosFile/project-page-video10.mp4"
+import video11 from "../ProjectVideosFile/project-page-video11.mp4"
+import video12 from "../ProjectVideosFile/project-page-video12.mp4"
+import video13 from "../ProjectVideosFile/project-page-video13.mp4"
+import video14 from "../ProjectVideosFile/project-page-video14.mp4"
+import video15 from "../ProjectVideosFile/project-page-video15.mp4"
+import video16 from "../ProjectVideosFile/project-page-video16.mp4"
+import video17 from "../ProjectVideosFile/project-page-video17.mp4"
+import video18 from "../ProjectVideosFile/project-page-video18.mp4"
+import video19 from "../ProjectVideosFile/project-page-video19.mp4"
+
+import imgTumbnail1 from "../ProjectVideosFile/project-page-video-Thumbnail1.png"
+import imgTumbnail2 from "../ProjectVideosFile/project-page-video-Thumbnail2.png"
+import imgTumbnail3 from "../ProjectVideosFile/project-page-video-Thumbnail3.png"
+import imgTumbnail4 from "../ProjectVideosFile/project-page-video-Thumbnail4.png"
+import imgTumbnail5 from "../ProjectVideosFile/project-page-video-Thumbnail5.png"
+import imgTumbnail6 from "../ProjectVideosFile/project-page-video-Thumbnail6.png"
+import imgTumbnail7 from "../ProjectVideosFile/project-page-video-Thumbnail7.png"
+import imgTumbnail8 from "../ProjectVideosFile/project-page-video-Thumbnail8.png"
+import imgTumbnail9 from "../ProjectVideosFile/project-page-video-Thumbnail9.png"
+import imgTumbnail10 from "../ProjectVideosFile/project-page-video-Thumbnail10.png"
+import imgTumbnail11 from "../ProjectVideosFile/project-page-video-Thumbnail11.png"
+import imgTumbnail12 from "../ProjectVideosFile/project-page-video-Thumbnail12.png"
+import imgTumbnail13 from "../ProjectVideosFile/project-page-video-Thumbnail13.png"
+import imgTumbnail14 from "../ProjectVideosFile/project-page-video-Thumbnail14.png"
+import imgTumbnail15 from "../ProjectVideosFile/project-page-video-Thumbnail15.png"
+import imgTumbnail16 from "../ProjectVideosFile/project-page-video-Thumbnail16.png"
+import imgTumbnail17 from "../ProjectVideosFile/project-page-video-Thumbnail17.png"
+import imgTumbnail18 from "../ProjectVideosFile/project-page-video-Thumbnail18.png"
+import imgTumbnail19 from "../ProjectVideosFile/project-page-video-Thumbnail19.png"
+import { FaPause, FaPlay, FaPlayCircle, FaRegWindowClose } from 'react-icons/fa'
 import { IoMdClose } from 'react-icons/io'
 import Testimonial from '../testimonial/Testimonial'
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { GiPlayButton } from 'react-icons/gi'
+import { GoUnmute } from 'react-icons/go'
+import { ImVolumeHigh, ImVolumeMute2 } from 'react-icons/im'
 
 
 function Projects() {
     const [videoSize, setVideoSize] = useState(false)
     const [currentCatageryBtn, setCurrentCatageryBtn] =useState(0)
-    const videoTypeListBtn = ["All categories", "Ads", "Agencies", "Beauty & Fashion", "Business & Marketing","Coaching & Education", "Course Creators","Crowdfunding", "Custom nimtion/VFX", "Creators","Ecommerce", "Entertainment", "Fitness", "Health & Wellness", "Intros", "Lifestyle", "Medical", "Personal Brand", "Podcast", "product Ads", "Production Companies", "Real estate", "Languages", "template-Based Videos", "Text hooks",  "Tiktok & Reel", "Youtube"]
+    const videoTypeListBtn = ["All categories", "Ads", "Agencies", "iGaming", "Youtube", "Creators","Ecommerce", "Entertainment", "Fitness", "Intros", "Lifestyle", "Medical",  "Podcast", "product Ads", "Production Companies", "Real estate", "Languages", "Beauty & Fashion","Personal Brand", "Health & Wellness", "Custom nimtion/VFX","Business & Marketing","Coaching & Education", "Course Creators","Crowdfunding", "template-Based Videos", "Text hooks",  "Tiktok & Reel"]
+    const videoList = [video1,video2,video3,video4,video5,video6,video7,video8,video9,video10,video11,video12,video13,video14,video15,video16,video17,video18,video19]
+    const videoTumbnailsList = [imgTumbnail1,imgTumbnail2,imgTumbnail3,imgTumbnail4,imgTumbnail5,imgTumbnail6,imgTumbnail7,imgTumbnail8,imgTumbnail9,imgTumbnail10,imgTumbnail11,imgTumbnail12,imgTumbnail13,imgTumbnail14,imgTumbnail15,imgTumbnail16,imgTumbnail17,imgTumbnail18,imgTumbnail19]
+    const [currentVideo,setCurrentVideo] = useState("")
+    const [isPlay, setIsPlay] = useState(false)
+    const [isMuted, setIsMuted] = useState(false)
     useEffect(() => {
         AOS.init({duration: 2000,
              once: false,
@@ -21,15 +66,78 @@ function Projects() {
             anchorPlacement: 'top-bottom'});
     }, []);
 
+    const videoRef = useRef(null)
+    // jkl;
+    const [progress, setProgress] = useState(0);
+
+    const handleTimeUpdate = () => {
+        const video = videoRef.current;
+        if (!video.duration) return;
+
+        const percent = (video.currentTime / video.duration) * 100;
+        setProgress(percent);
+        if(percent == 100){
+            setIsPlay(false)
+        }
+    };
+
+    const handleSeek = (e) => {
+        const bar = e.currentTarget;
+        const clickX = e.nativeEvent.offsetX;
+        const width = bar.clientWidth;
+
+        const video = videoRef.current;
+        video.currentTime = (clickX / width) * video.duration;
+};
+
+const playVideo = () =>{
+    const videoPlayed = videoRef.current;
+    if(!videoPlayed) return
+    
+    if(videoPlayed.paused){
+        videoPlayed.play();
+        setIsPlay(true);
+    }else{
+        videoPlayed.pause();
+        setIsPlay(false)
+    }
+}
+const mutedVideo = () =>{
+    const videoPlayed = videoRef.current;
+    if(!videoPlayed) return
+    
+    if(isMuted){
+        videoPlayed.muted= false;
+        setIsMuted(false);
+    }else{
+        videoPlayed.muted = true;
+        setIsMuted(true)
+    }
+}
+
   return (
     <>
     
     <div className='project'>
 
 
-        <div className={`${videoSize? "ShowVideoF" : "hidevideoF"}`}  onClick={()=>setVideoSize(!videoSize)}>
+        <div className={`${videoSize? "showVideoF" : "hidevideoF"}`}  onClick={()=>{setVideoSize(false); setIsMuted(false); setIsPlay(false); setProgress(0)}}>
+        
+            <div className='videoSec' onClick={(e) => e.stopPropagation()} >
+                {/* {videoSize?  : "hidevideoF"}<video src={videoSize? video1 : ""} ref={videoRef} onTimeUpdate={handleTimeUpdate} playsInline preload='metadata'  muted controlsList="nodownload noplaybackrate  nofullscreen" ></video> */}
+                {videoSize && <video src={currentVideo} ref={videoRef} onTimeUpdate={handleTimeUpdate} playsInline preload='metadata'   controlsList="nodownload noplaybackrate  nofullscreen" ></video> }
+                <div className='videoControls' >
+                    <button onClick={playVideo}> {(isPlay)?<FaPause /> : <FaPlay/>}  </button>
+                    <div className="progressBar" onClick={handleSeek}>
+                        <div className="progressFill" style={{ width: `${progress}%` }} />
+                    </div>
+                    <button onClick={mutedVideo}> {(isMuted)?<ImVolumeMute2 /> : <ImVolumeHigh />} </button>
+                </div>
+                
+
+            </div>
+
             
-            <video src={videoSize? video1 : ""} controls playsInline muted controlsList="nodownload noplaybackrate  nofullscreen" onClick={(e) => e.stopPropagation()} ></video>
         </div>
 
 
@@ -48,80 +156,19 @@ function Projects() {
         </div>
 
         <div className='projectVideoBox'>
-            
-            <div className="videoCon" data-aos="fade-up" >
-                <div className='videoTumbnail'  style={{ backgroundImage: `url(${imgTumbnail})` }} >
-                    <button className='playButton'  ><div onClick={()=>setVideoSize(!videoSize)}><FaPlayCircle /></div></button>
-                </div>
-            </div>
-            
-            <div className="videoCon" data-aos="fade-up" >
-                <div className='videoTumbnail'  style={{ backgroundImage: `url(${imgTumbnail})` }} >
-                    <button className='playButton'  ><div onClick={()=>setVideoSize(!videoSize)}><FaPlayCircle /></div></button>
-                </div>
-            </div>
-            
-            <div className="videoCon" data-aos="fade-up" >
-                <div className='videoTumbnail'  style={{ backgroundImage: `url(${imgTumbnail})` }} >
-                    <button className='playButton'  ><div onClick={()=>setVideoSize(!videoSize)}><FaPlayCircle /></div></button>
-                </div>
-            </div>
-            
-            <div className="videoCon" data-aos="fade-up" >
-                <div className='videoTumbnail'  style={{ backgroundImage: `url(${imgTumbnail})` }} >
-                    <button className='playButton'  ><div onClick={()=>setVideoSize(!videoSize)}><FaPlayCircle /></div></button>
-                </div>
-            </div>
-            <div className="videoCon" data-aos="fade-up" >
-                <div className='videoTumbnail'  style={{ backgroundImage: `url(${imgTumbnail})` }} >
-                    <button className='playButton'  ><div onClick={()=>setVideoSize(!videoSize)}><FaPlayCircle /></div></button>
-                </div>
-            </div>
-            <div className="videoCon" data-aos="fade-up" >
-                <div className='videoTumbnail'  style={{ backgroundImage: `url(${imgTumbnail})` }} >
-                    <button className='playButton'  ><div onClick={()=>setVideoSize(!videoSize)}><FaPlayCircle /></div></button>
-                </div>
-            </div>
-            <div className="videoCon" data-aos="fade-up" >
-                <div className='videoTumbnail'  style={{ backgroundImage: `url(${imgTumbnail})` }} >
-                    <button className='playButton'  ><div onClick={()=>setVideoSize(!videoSize)}><FaPlayCircle /></div></button>
-                </div>
-            </div>
-            <div className="videoCon" data-aos="fade-up" >
-                <div className='videoTumbnail'  style={{ backgroundImage: `url(${imgTumbnail})` }} >
-                    <button className='playButton'  ><div onClick={()=>setVideoSize(!videoSize)}><FaPlayCircle /></div></button>
-                </div>
-            </div>
-            <div className="videoCon" data-aos="fade-up" >
-                <div className='videoTumbnail'  style={{ backgroundImage: `url(${imgTumbnail})` }} >
-                    <button className='playButton'  ><div onClick={()=>setVideoSize(!videoSize)}><FaPlayCircle /></div></button>
-                </div>
-            </div>
-            <div className="videoCon" data-aos="fade-up" >
-                <div className='videoTumbnail'  style={{ backgroundImage: `url(${imgTumbnail})` }} >
-                    <button className='playButton'  ><div onClick={()=>setVideoSize(!videoSize)}><FaPlayCircle /></div></button>
-                </div>
-            </div>
-            <div className="videoCon" data-aos="fade-up" >
-                <div className='videoTumbnail'  style={{ backgroundImage: `url(${imgTumbnail})` }} >
-                    <button className='playButton'  ><div onClick={()=>setVideoSize(!videoSize)}><FaPlayCircle /></div></button>
-                </div>
-            </div>
-            <div className="videoCon" data-aos="fade-up" >
-                <div className='videoTumbnail'  style={{ backgroundImage: `url(${imgTumbnail})` }} >
-                    <button className='playButton'  ><div onClick={()=>setVideoSize(!videoSize)}><FaPlayCircle /></div></button>
-                </div>
-            </div>
-            
 
-             {/* <div className="videoCon"  data-aos="fade-up">
-                <video className='proVideo' src={video1}  autoPlay muted loop   controlsList="nodownload noplaybackrate  nofullscreen">
-                    <button className='playButton' onClick={()=>setVideoSize(!videoSize)} ><div><FaPlayCircle /></div></button>
-                </video>
-                <button className='playButton' onClick={()=>setVideoSize(!videoSize)} ><div><FaPlayCircle /></div></button>
-            </div> */}
-
- 
+            {videoTumbnailsList.map((itemTumbnaail,index)=>{
+                return  (
+                             <div className="videoCon" data-aos="fade-up" >
+                <div className='videoTumbnail'  style={{ backgroundImage: `url(${itemTumbnaail})` }} >
+                    <button className='playButton'  ><div onClick={()=>{setVideoSize(!videoSize); setCurrentVideo(videoList[index])}}><FaPlayCircle /></div></button>
+                </div>
+            </div>
+                )
+            })}
+            
+           
+            
 
             
             

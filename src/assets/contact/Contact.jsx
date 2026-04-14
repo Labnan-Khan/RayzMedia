@@ -121,7 +121,11 @@ const sendEmail = (e)=>{
                 <div className='BoxSection'>
                     <div className='BoxSectionLeft'>
                         <h5>Technical Support</h5>
-                        <p>support@ryzmedia.com</p>
+                        <p>
+                            <a href="mailto:Admin@rayzmedia.com?subject=Editing%20Services%20Request&body=Hi,%0A%0AI’d%20like%20to%20get%20started%20with%20your%20editing%20services.%20Please%20let%20me%20know%20the%20next%20steps.%0A%0AProject%20details:%0A%0AName:%0ACompany:%0AType%20of%20Content:%0ANumber%20of%20videos:%0ATurnaround%20Time:%0A%0AThanks,"  target="_blank" rel="noopener noreferrer">
+                                support@ryzmedia.com
+                            </a>
+                        </p>
                     </div>
                     <div className='BoxSectionRight'><FaHandPointLeft /></div>
                 </div>
@@ -129,7 +133,11 @@ const sendEmail = (e)=>{
                 <div className='BoxSection'>
                     <div className='BoxSectionLeft'>
                         <h5>Information</h5>
-                        <p>info@rayzmedia.com</p>
+                        <p>
+                            <a href="mailto:Admin@rayzmedia.com?subject=Editing%20Services%20Request&body=Hi,%0A%0AI’d%20like%20to%20get%20started%20with%20your%20editing%20services.%20Please%20let%20me%20know%20the%20next%20steps.%0A%0AProject%20details:%0A%0AName:%0ACompany:%0AType%20of%20Content:%0ANumber%20of%20videos:%0ATurnaround%20Time:%0A%0AThanks,"  target="_blank" rel="noopener noreferrer">
+                                info@rayzmedia.com
+                            </a>
+                        </p>
                     </div>
                     <div className='BoxSectionRight'><FaHandPointLeft /></div>
                 </div>
@@ -137,7 +145,11 @@ const sendEmail = (e)=>{
                 <div className='BoxSection'>
                     <div className='BoxSectionLeft'>
                         <h5>General Contact</h5>
-                        <p>contact@rayzmedia.com</p>
+                        <p>
+                            <a href="mailto:Admin@rayzmedia.com?subject=Editing%20Services%20Request&body=Hi,%0A%0AI’d%20like%20to%20get%20started%20with%20your%20editing%20services.%20Please%20let%20me%20know%20the%20next%20steps.%0A%0AProject%20details:%0A%0AName:%0ACompany:%0AType%20of%20Content:%0ANumber%20of%20videos:%0ATurnaround%20Time:%0A%0AThanks,"  target="_blank" rel="noopener noreferrer">
+                                contact@rayzmedia.com
+                            </a>
+                        </p>
                     </div>
                     <div className='BoxSectionRight'><FaHandPointLeft /></div>
                 </div>
@@ -145,7 +157,11 @@ const sendEmail = (e)=>{
                 <div className='BoxSection'>
                     <div className='BoxSectionLeft'>
                         <h5>Collaboration</h5>
-                        <p>collab@rayzmedia.com</p>
+                        <p>
+                            <a href="mailto:Admin@rayzmedia.com?subject=Editing%20Services%20Request&body=Hi,%0A%0AI’d%20like%20to%20get%20started%20with%20your%20editing%20services.%20Please%20let%20me%20know%20the%20next%20steps.%0A%0AProject%20details:%0A%0AName:%0ACompany:%0AType%20of%20Content:%0ANumber%20of%20videos:%0ATurnaround%20Time:%0A%0AThanks,"  target="_blank" rel="noopener noreferrer">
+                                collab@rayzmedia.com
+                            </a>
+                        </p>
                     </div>
                     <div className='BoxSectionRight'><FaHandPointLeft /></div>
                 </div>
