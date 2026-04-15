@@ -316,6 +316,7 @@
     padding: 30px;
     flex: 1 2 25%;
     transition: all 0.3s ease;
+    box-sizing: border-box;
     /* background-color: #8D1FD4; */
 }
 
@@ -327,11 +328,9 @@
     gap: 5px;
 }
 
-.iconDiv p{
-    background-color: rgba(255, 255, 255, 0.26);
-    color: white;
-    padding: 4px;
-    border-radius: 2px;
+.incluContainer p{
+    padding-top: 6px;
+
 }
 
 
@@ -483,10 +482,12 @@
 .timelineLeft h3{
     color: rgb(158, 157, 157);
     text-align: start;
+     transition: all 0.3s ease;
 }
 .timelineLeft p{
     color: rgb(87, 87, 87);
     font-size: 18px;
+    transition: all 0.3s ease;
 }
 
 .timelineLeft div{
@@ -508,9 +509,9 @@
 .timelineLeft .active h3{
     color: #8D1FD4;
 }
-/* .timelineLeft .active p{
+.timelineLeft .active p{
     color: rgb(182, 182, 182);
-} */
+}
 
 
 

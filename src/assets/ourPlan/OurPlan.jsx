@@ -7,9 +7,9 @@ import { IoMdCheckmark, IoMdClose } from 'react-icons/io'
 function OurPlan() {
     const [currentRate, setCurrentRate] = useState(1)
     const [currentList, setCurrentList] = useState(1)
-    const regularItem = ["2–3 business days turnaround*","2 revisions","Dedicated Video Editing Team","p to 2 brands","Up to 2 users","ok"]
-    const proItem = ["1 day turnaround*","Unlimited revisions","Dedicated Video Editing Team","Unlimited brand accounts","Unlimited users","Chat with editor on Slack"]
-    const customItem = ["All in PRO Plan +","Custom Turnaround","Dedicated Video Editor","Instant Slack Collaboration","Simultaneous requests","ok"]
+    const regularItem = ["2–3 business days turnaround*","2 revisions","Dedicated Video Editing Team","p to 2 brands","Up to 2 users","Chat with editor"]
+    const proItem = ["1 day turnaround*","Unlimited revisions","Dedicated Video Editing Team","Unlimited brand accounts","Unlimited users","Chat with editor"]
+    const customItem = ["All in PRO Plan +","Custom Turnaround","Dedicated Video Editor","Instant Slack Collaboration","Simultaneous requests","24/7 support"]
     const [showWIncluded,setShowWIncluded] = useState(regularItem)
 
     const monthlyPrice =[850,1950,4499]

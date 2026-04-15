@@ -303,19 +303,22 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 20px;
-    padding-top: 7vh;;
+    margin-top: 40px;;
+    margin-bottom: 40px;
 }
 
 .waysToReachUsBoxes .BoxSection{
+    /* box-sizing:content-box; */
     display: flex;
-    width: 250px;
-    justify-content: space-between;
+    width: 300px;
+    justify-content: center;
     align-items: center;
     gap: 50px;
     border: 1px solid rgb(180, 180, 180);
     padding: 15px;
     border-radius: 10px;
     transition: all 1s ease;
+    /* background-color: #7619EE; */
 }
 
 .waysToReachUsBoxes .BoxSection:hover{
@@ -328,7 +331,7 @@
     flex-direction: column;
     gap: 10px;
     font-size: 15px;
-    transform: translateX(30%);
+    transform: translateX(32%);
     transition: all 1s ease;
 }
 .BoxSection:hover .BoxSectionLeft{

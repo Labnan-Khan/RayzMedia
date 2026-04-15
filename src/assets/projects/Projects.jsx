@@ -20,6 +20,7 @@ import video16 from "../ProjectVideosFile/project-page-video16.mp4"
 import video17 from "../ProjectVideosFile/project-page-video17.mp4"
 import video18 from "../ProjectVideosFile/project-page-video18.mp4"
 import video19 from "../ProjectVideosFile/project-page-video19.mp4"
+import video20 from "../ProjectVideosFile/project-page-video20.mp4"
 
 import imgTumbnail1 from "../ProjectVideosFile/project-page-video-Thumbnail1.png"
 import imgTumbnail2 from "../ProjectVideosFile/project-page-video-Thumbnail2.png"
@@ -40,6 +41,7 @@ import imgTumbnail16 from "../ProjectVideosFile/project-page-video-Thumbnail16.p
 import imgTumbnail17 from "../ProjectVideosFile/project-page-video-Thumbnail17.png"
 import imgTumbnail18 from "../ProjectVideosFile/project-page-video-Thumbnail18.png"
 import imgTumbnail19 from "../ProjectVideosFile/project-page-video-Thumbnail19.png"
+import imgTumbnail20 from "../ProjectVideosFile/project-page-video-Thumbnail20.png"
 import { FaPause, FaPlay, FaPlayCircle, FaRegWindowClose } from 'react-icons/fa'
 import { IoIosPlay, IoMdClose } from 'react-icons/io'
 import Testimonial from '../testimonial/Testimonial'
@@ -55,9 +57,141 @@ import { HiMiniPlay } from 'react-icons/hi2'
 function Projects() {
     const [videoSize, setVideoSize] = useState(false)
     const [currentCatageryBtn, setCurrentCatageryBtn] =useState(0)
-    const videoTypeListBtn = ["All categories", "Ads", "Agencies", "iGaming", "Youtube", "Creators","Ecommerce", "Entertainment", "Fitness", "Intros", "Lifestyle", "Medical",  "Podcast", "product Ads", "Production Companies", "Real estate", "Languages", "Beauty & Fashion","Personal Brand", "Health & Wellness", "Custom nimtion/VFX","Business & Marketing","Coaching & Education", "Course Creators","Crowdfunding", "template-Based Videos", "Text hooks",  "Tiktok & Reel"]
-    const videoList = [video1,video2,video3,video4,video5,video6,video7,video8,video9,video10,video11,video12,video13,video14,video15,video16,video17,video18,video19]
-    const videoTumbnailsList = [imgTumbnail1,imgTumbnail2,imgTumbnail3,imgTumbnail4,imgTumbnail5,imgTumbnail6,imgTumbnail7,imgTumbnail8,imgTumbnail9,imgTumbnail10,imgTumbnail11,imgTumbnail12,imgTumbnail13,imgTumbnail14,imgTumbnail15,imgTumbnail16,imgTumbnail17,imgTumbnail18,imgTumbnail19]
+    const videoTypeListBtn = ["All categories", "Ads", "Agencies", "iGaming", "Youtube", "Creators","Ecommerce", "Entertainment", "Fitness", "Intros", "Lifestyle", "Medical",  "Podcast", "product Ads", "Production Companies", "Real estate", "Languages", "Beauty & Fashion","Personal Brand", "Health & Wellness", "Custom Animation/VFX","Business & Marketing","Coaching & Education", "Course Creators","SAAS", "template-Based Videos", "Text hooks",  "Tiktok & Reel"]
+    // const videoList = [video1,video2,video3,video4,video5,video6,video7,video8,video9,video10,video11,video12,video13,video14,video15,video16,video17,video18,video19]
+    // const videoTumbnailsList = [imgTumbnail1,imgTumbnail2,imgTumbnail3,imgTumbnail4,imgTumbnail5,imgTumbnail6,imgTumbnail7,imgTumbnail8,imgTumbnail9,imgTumbnail10,imgTumbnail11,imgTumbnail12,imgTumbnail13,imgTumbnail14,imgTumbnail15,imgTumbnail16,imgTumbnail17,imgTumbnail18,imgTumbnail19]
+
+    const videosData = [
+  {
+    video: video1,
+    thumbnail: imgTumbnail1,
+    categories: ["Youtube", "Ai", "Personal Brand", "Creators"],
+  },
+  
+  {
+    video: video2,
+    thumbnail: imgTumbnail2,
+    categories: ["Ads", "Real estate", "Tiktok & Reel"],
+  },
+  {
+    video: video7,
+    thumbnail: imgTumbnail7,
+    categories: ["Real estate", "Creators", "Business & Marketing", "Tiktok & Reel", "Personal Brand"],
+  },
+  {
+    video: video8,
+    thumbnail: imgTumbnail8,
+    categories: ["Beauty & Fashion", "Tiktok & Reel", "Business & Marketing"],
+  },
+  {
+    video: video15,
+    thumbnail: imgTumbnail15,
+    categories: ["Tiktok & Reel", "Custom Animation/VFX"],
+  },
+  {
+    video: video16,
+    thumbnail: imgTumbnail16,
+    categories: ["Tiktok & Reel", "Custom Animation/VFX", "SAAS"],
+  },
+  {
+    video: video14,
+    thumbnail: imgTumbnail14,
+    categories: ["Ads", "Creators", "Personal Brand", "Business & Marketing", "Tiktok & Reel"],
+  },
+  
+  {
+    video: video4,
+    thumbnail: imgTumbnail4,
+    categories: ["Agencies", "Business & Marketing", "Course Creators", "Tiktok & Reel"],
+  },
+  {
+    video: video5,
+    thumbnail: imgTumbnail5,
+    categories: ["Real estate", "Creators", "Business & Marketing", "Tiktok & Reel", "Personal Brand"],
+  },
+  {
+    video: video6,
+    thumbnail: imgTumbnail6,
+    categories: ["Real estate", "Creators", "Business & Marketing", "Tiktok & Reel", "Personal Brand"],
+  },
+
+  {
+    video: video9,
+    thumbnail: imgTumbnail9,
+    categories: ["Lifestyle", "Personal Brand", "Tiktok & Reel"],
+  },
+  {
+    video: video12,
+    thumbnail: imgTumbnail12,
+    categories: ["Lifestyle", "Personal Brand", "Tiktok & Reel"],
+  },
+  {
+    video: video10,
+    thumbnail: imgTumbnail10,
+    categories: ["Podcast", "Business & Marketing", "Tiktok & Reel"],
+  },
+  {
+    video: video11,
+    thumbnail: imgTumbnail11,
+    categories: ["Podcast", "Business & Marketing", "Tiktok & Reel", "Ecommerce"],
+  },
+//   {
+//     video: video12,
+//     thumbnail: imgTumbnail12,
+//     categories: ["Lifestyle", "Personal Brand", "Tiktok & Reel"],
+//   },
+  {
+    video: video13,
+    thumbnail: imgTumbnail13,
+    categories: ["Custom Animation"],
+  },
+
+  {
+    video: video3,
+    thumbnail: imgTumbnail3,
+    categories: ["iGaming", "Ads", "Custom Animation", "Business & Marketing"],
+  },
+//   {
+//     video: video14,
+//     thumbnail: imgTumbnail14,
+//     categories: ["Ads", "Creators", "Personal Brand", "Business & Marketing", "Tiktok & Reel"],
+//   },
+//   {
+//     video: video15,
+//     thumbnail: imgTumbnail15,
+//     categories: ["Tiktok & Reel", "Custom Animation/VFX"],
+//   },
+//   {
+//     video: video16,
+//     thumbnail: imgTumbnail16,
+//     categories: ["Tiktok & Reel", "Custom Animation/VFX", "SAAS"],
+//   },
+  {
+    video: video17,
+    thumbnail: imgTumbnail17,
+    categories: ["Tiktok & Reel", "Custom Animation/VFX"],
+  },
+  {
+    video: video18,
+    thumbnail: imgTumbnail18,
+    categories: ["Tiktok & Reel", "Custom Animation/VFX"],
+  },
+  {
+    video: video19,
+    thumbnail: imgTumbnail19,
+    categories: ["Ads", "Creators", "Personal Brand", "Business & Marketing", "Tiktok & Reel"],
+  },
+  {
+    video: video20,
+    thumbnail: imgTumbnail20,
+    categories: ["product Ads", "Health & Wellness", "Medical"],
+  },
+];
+
+
+
+
+
     const [currentVideo,setCurrentVideo] = useState(video2)
     const [isPlay, setIsPlay] = useState(false)
     const [isMuted, setIsMuted] = useState(false)
@@ -134,6 +268,16 @@ const closeVideoSec = ()=>{
     document.body.style.overflow = "auto";
 }
 
+const selectedCategory = videoTypeListBtn[currentCatageryBtn];
+
+const filteredVideos =
+  selectedCategory === "All categories"
+    ? videosData
+    : videosData.filter((item) =>
+        item.categories.includes(selectedCategory)
+      );
+
+
   return (
     <>
     
@@ -176,11 +320,11 @@ const closeVideoSec = ()=>{
 
         <div className='projectVideoBox'>
 
-            {videoTumbnailsList.map((itemTumbnaail,index)=>{
+            {filteredVideos.map((item,index)=>{
                 return  (
                              <div className="videoCon" data-aos="fade-up" >
-                <div className='videoTumbnail'  style={{ backgroundImage: `url(${itemTumbnaail})` }} >
-                    <button className='playButton'  ><div onClick={()=>{document.body.style.overflow = "hidden"; setVideoSize(!videoSize); setCurrentVideo(videoList[index])}}><FaPlayCircle /></div></button>
+                <div className='videoTumbnail'  style={{ backgroundImage: `url(${item.thumbnail})` }} >
+                    <button className='playButton'  ><div onClick={()=>{document.body.style.overflow = "hidden"; setVideoSize(true); setCurrentVideo(item.video)}}><FaPlayCircle /></div></button>
                 </div>
             </div>
                 )

@@ -17,10 +17,11 @@
     justify-content: center;
     align-items: center;
     /* border: 2px solid white; */
+    
     width:100%;
     gap: 20px;
     overflow: hidden;
-
+    /* box-sizing:content-box ; */
     /*  */
  
 
@@ -57,6 +58,7 @@
      /* animation: scrollTesti 4s linear infinite; */
      /* background-color: #8D1FD4; */
      overflow: hidden; /*add this*/
+     box-sizing: content-box;
      
 }
 
@@ -85,6 +87,8 @@
     border-radius: 20px;
     border: 2px solid rgba(120, 120, 120, 0.379);
     flex-shrink: 0;
+    box-sizing: content-box;
+    /* background-color: #8D1FD4; */
     /* animation: scrollTesti 50s linear infinite; */
 }
 
