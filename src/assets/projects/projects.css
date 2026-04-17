@@ -90,6 +90,9 @@
 
 .videoCon{
     width: auto;
+    overflow: hidden;
+    border: 2px solid white;
+    border-radius: 20px;
     /* background-color: #8D1FD4; */
 }
 
@@ -98,11 +101,11 @@
     width: 100%;
     aspect-ratio: 9/ 16;
     /* min-height: 300px; */
-    border-radius: 20px;
+    /* border-radius: 20px; */
     background-position: top center;
     background-size: cover;
     background-repeat: no-repeat;
-    border: 2px solid white;
+    border: none;
     position: relative;
     display: flex;
     justify-content: center;
@@ -113,9 +116,17 @@
 }
 
 
-.videoCon:hover .videoTumbnail{
+.videoCon:hover {
     border: 2px solid #8D1FD4;
-    box-shadow: inset 0px 0px 30px #8D1FD4;
+    /* transform: scale(1.1); */
+    
+    /* box-shadow: inset 0px 0px 30px #8D1FD4; */
+}
+.videoCon:hover .videoTumbnail{
+    /* border: 2px solid #8D1FD4; */
+    transform: scale(1.2);
+    
+    box-shadow: inset 0px 0px 90px #9601f9;
 }
 
 .videoCon:hover .playButton{
@@ -151,7 +162,6 @@
     padding: 1px;
     border-radius: 50%;
 }
-
 
 /* hide  video sec */
 
