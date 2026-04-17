@@ -296,19 +296,28 @@
 .project .showVideoF .videoSec{
     transform: scale(1);
 }
-
+@media (hover: hover) and (pointer: fine) {
 .project .showVideoF .videoSec:hover .videoControls{
     opacity: 1;
+    /* background-color: #8D1FD4; */
+}
 }
 
 .project .showVideoF .videoSec .hidePlayBtn{
     opacity: 0;
-    z-index: 0;
+    z-index: -2;
     transition: all 0.2s ease;
+    pointer-events: none;
 }
 .project .hidevideoF .videoSec .showBtnPlay{
     opacity: 1;
     z-index: 1;
+}
+
+.project .showVideoF .videoSec .videoControls.hideVideoControls{
+    opacity: 0;
+    pointer-events: none;
+
 }
 
 
@@ -337,7 +346,7 @@
         /* height:30vh; */
     }
 
-
+    
     .project .ProjectVideoTypeBtn{
         width: 90%;
         /* background-color: #8D1FD4; */

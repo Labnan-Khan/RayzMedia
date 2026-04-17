@@ -196,6 +196,7 @@ function Projects() {
     const [isPlay, setIsPlay] = useState(false)
     const [isMuted, setIsMuted] = useState(false)
     const [hidePlayButton, setHidePlaayButton] = useState(false)
+    const [onOffvideoControl, setOnOffvideoControl] = useState(false)
     useEffect(() => {
         AOS.init({duration: 2000,
              once: false,
@@ -240,8 +241,10 @@ const playVideo = () =>{
         setIsPlay(false)
     }
     setHidePlaayButton(true)
+    setOnOffvideoControl(true)
 }
 const mutedVideo = () =>{
+    
     const videoPlayed = videoRef.current;
     if(!videoPlayed) return
     
@@ -252,6 +255,7 @@ const mutedVideo = () =>{
         videoPlayed.muted = true;
         setIsMuted(true)
     }
+    
 }
 
 const closeVideoSec = ()=>{
@@ -265,6 +269,7 @@ const closeVideoSec = ()=>{
     videoRef.current.currentTime = 0;
     setProgress(0);
     setHidePlaayButton(false)
+    setOnOffvideoControl(false)
     document.body.style.overflow = "auto";
 }
 
@@ -278,6 +283,7 @@ const filteredVideos =
       );
 
 
+
   return (
     <>
     
@@ -286,10 +292,10 @@ const filteredVideos =
 
         <div className={ `hidevideoF ${videoSize? "showVideoF" : ""}`}  onClick={closeVideoSec}>
         
-            <div className='videoSec' onClick={(e) => e.stopPropagation()} >
-                <video src={currentVideo[0]} poster={currentVideo[1]} ref={videoRef} onTimeUpdate={handleTimeUpdate} playsInline preload='metadata'   controlsList="nodownload noplaybackrate  nofullscreen" ></video> 
+            <div className='videoSec' onClick={(e) => {e.stopPropagation(); setOnOffvideoControl(!onOffvideoControl);}} > 
+                <video src={currentVideo[0]} poster={currentVideo[1]} ref={videoRef} onTimeUpdate={handleTimeUpdate}  playsInline preload='metadata'   controlsList="nodownload noplaybackrate  nofullscreen" ></video> 
                 <button className={`firstPlaybtn ${(hidePlayButton)? "hidePlayBtn" : "showBtnPlay"}`} onClick={playVideo}><HiMiniPlay/></button>
-                <div className='videoControls' >
+                <div className={`videoControls ${onOffvideoControl? "hideVideoControls" : ""}`} onClick={(e)=> e.stopPropagation()}>
                     <button onClick={playVideo}> {(isPlay)?<FaPause /> : <FaPlay/>}  </button>
                     <div className="progressBar" onClick={handleSeek}>
                         <div className="progressFill"  style={{ width: `${(videoSize)? progress : 0}%` }} />
