@@ -360,6 +360,12 @@
     opacity: 1;
 
 }
+.videoCon:hover .videoTumbnail{
+    /* border: 2px solid #8D1FD4; */
+    transform: scale(1.1);
+    
+    box-shadow: inset 0px 0px 30px #9601f9;
+}
     .project .showVideoF .videoSec .videoControls.hideVideoControls{
     opacity: 0;
     pointer-events: none;
