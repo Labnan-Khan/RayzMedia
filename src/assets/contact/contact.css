@@ -128,7 +128,7 @@
 }
 
 .ContactUs .contactHome .contactHomeRight{
-    width: 40%;
+    width: 45%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -139,7 +139,7 @@
     border-radius: 20px;
     
     box-shadow: inset 0px 0px 20px #8D1FD4;
-    
+    box-sizing: border-box;
 }
 .ContactUs .contactHome .contactHomeRight .formSec{
     display: flex;
@@ -393,7 +393,7 @@
 }
 
 .ContactUs .contactHome .contactHomeRight{
-    width: 75%;
+    width: 90%;
 }
 
 }

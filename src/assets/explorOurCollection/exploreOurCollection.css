@@ -22,6 +22,7 @@
     gap: 10px;
     /* background-color: red; */
     box-shadow: inset 0px 0px 20px #8D1FD4;
+    box-sizing: content-box;
     /* box-shadow:  0px 0px 20px #a603f8; */
     
 
@@ -114,7 +115,7 @@
     width: auto;
     font-weight: 500;
     font-size: 16px;
-     background-color: white;
+     background-color: black;
     color: #8D1FD4;
     transition: all 0.7 ease-in;
     border: 2px solid #8D1FD4;
@@ -188,7 +189,7 @@
     width: auto;
     font-weight: 500;
     font-size: 16px;
-    background-color: white;
+    background-color: black;
     color: #8D1FD4;
     transition: all 0.7 ease-in;
     border: 2px solid #8D1FD4;

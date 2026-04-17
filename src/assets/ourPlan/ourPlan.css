@@ -305,12 +305,11 @@
     justify-content: center;
     align-items: center;
     gap: 5px;
-    /* min-width: 80px; */
     margin-left: 10px;
+    /*  */
     padding: 5px 15px;
     font-size: 25px;
     color: white;
-    /* background-color: #64ec0a; */
 }
 
 .comparePrice table th div span{
@@ -655,8 +654,13 @@
 @media (max-width:768px){
 
     .priceHead{
-        max-width: 85%;
-        /* gap: 0px; */
+        width: 90%;
+        gap: 10px;
+    }
+    .priceHead button{
+        /* background-color: #8004fd; */
+        font-size: 10px;
+        /* font-weight: 900; */
     }
     
     .ourPlan .priceSec{
@@ -720,28 +724,33 @@
     text-align: start;
 }
     .comparePrice table{
-        width: 100%;
+        width: 100%; 
+        /*  */
         border:0px ;
         padding-left: 0px;
         padding-right: 0px;
         margin: 0px;
         border-top: 1px solid #9a03ff;
+        border-bottom: 1px solid #9a03ff;
+        padding-bottom: 0px;
         /* border-bottom: 1px solid white; */
         border-radius: 0px;
-        /* box-shadow: 0px 0px 10px #a56dca; */
+        
         
         
     }
+    .comparePrice table th div{
+        margin: 0px;
+    }
     .comparePriceTableSec,.comparePrice{
         width: 100%;
-        overflow: hidden;
+        /* overflow: hidden; */
         
     }
     .comparePriceTableSec .headP{
         width: 90%;
     }
     .comparePrice table tr th:first-child{
-        
         padding-left: 20px;
     }
     .comparePrice table tr td:first-child{

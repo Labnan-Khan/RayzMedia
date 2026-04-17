@@ -160,9 +160,11 @@ const handleChangeVideo = (index) => {
 
             </div>
         </div>
+
         <div className='homeRight'>
           <div className='rightVideo'>
             <div><video autoPlay  loop  muted playsInline preload="metadata"   src={videoFile1}></video></div>
+            <h4 className='rayzh4'>Rayzmedia</h4>
           </div>
 
           <div className='rightBox'>
@@ -172,6 +174,7 @@ const handleChangeVideo = (index) => {
             <div className='rightBox1'><div><AiOutlinePicture/></div> <div>Logo.png</div></div>
             <div className='rightBox1'><div><GiMusicalNotes/></div> <div>Music.mp3</div></div>
           </div>
+          
         </div>
     </div>
 
