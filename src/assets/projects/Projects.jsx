@@ -192,7 +192,7 @@ function Projects() {
 
 
 
-    const [currentVideo,setCurrentVideo] = useState(video2)
+    const [currentVideo,setCurrentVideo] = useState([video2,imgTumbnail2])
     const [isPlay, setIsPlay] = useState(false)
     const [isMuted, setIsMuted] = useState(false)
     const [hidePlayButton, setHidePlaayButton] = useState(false)
@@ -287,7 +287,7 @@ const filteredVideos =
         <div className={ `hidevideoF ${videoSize? "showVideoF" : ""}`}  onClick={closeVideoSec}>
         
             <div className='videoSec' onClick={(e) => e.stopPropagation()} >
-                <video src={currentVideo} ref={videoRef} onTimeUpdate={handleTimeUpdate} playsInline preload='metadata'   controlsList="nodownload noplaybackrate  nofullscreen" ></video> 
+                <video src={currentVideo[0]} poster={currentVideo[1]} ref={videoRef} onTimeUpdate={handleTimeUpdate} playsInline preload='metadata'   controlsList="nodownload noplaybackrate  nofullscreen" ></video> 
                 <button className={`firstPlaybtn ${(hidePlayButton)? "hidePlayBtn" : "showBtnPlay"}`} onClick={playVideo}><HiMiniPlay/></button>
                 <div className='videoControls' >
                     <button onClick={playVideo}> {(isPlay)?<FaPause /> : <FaPlay/>}  </button>
@@ -324,7 +324,7 @@ const filteredVideos =
                 return  (
                              <div className="videoCon" data-aos="fade-up" >
                 <div className='videoTumbnail'  style={{ backgroundImage: `url(${item.thumbnail})` }} >
-                    <button className='playButton'  ><div onClick={()=>{document.body.style.overflow = "hidden"; setVideoSize(true); setCurrentVideo(item.video)}}><FaPlayCircle /></div></button>
+                    <button className='playButton'  ><div onClick={()=>{document.body.style.overflow = "hidden"; setVideoSize(true); setCurrentVideo([item.video, item.thumbnail])}}><FaPlayCircle /></div></button>
                 </div>
             </div>
                 )

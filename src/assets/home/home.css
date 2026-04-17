@@ -245,6 +245,7 @@
     /* width: 140px; */
     border-radius: 5%;
     font-size: 15px;
+    box-sizing: content-box;
  }
  .rightBox1{
     background-color: rgb(37, 32, 32);
@@ -1178,6 +1179,8 @@
         position: relative;
         width: auto;
          /* height: 25%; */
+         box-sizing: content-box;
+         border: 1px solid rgba(255, 255, 255, 0.075);
     }
 
     .rightBox1{
@@ -1191,7 +1194,7 @@
     align-items: center;
     width: 90%;
     margin-right: 5px;
-
+    box-sizing: content-box;
  }
 
  
