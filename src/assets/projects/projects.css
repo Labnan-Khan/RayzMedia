@@ -124,7 +124,7 @@
 }
 .videoCon:hover .videoTumbnail{
     /* border: 2px solid #8D1FD4; */
-    transform: scale(1.2);
+    transform: scale(1.1);
     
     box-shadow: inset 0px 0px 90px #9601f9;
 }
