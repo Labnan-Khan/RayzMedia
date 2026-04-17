@@ -346,6 +346,10 @@
         /* height:30vh; */
     }
 
+    .project .showVideoF .videoSec .videoControls{
+    opacity: 1;
+
+}
     .project .showVideoF .videoSec .videoControls.hideVideoControls{
     opacity: 0;
     pointer-events: none;
