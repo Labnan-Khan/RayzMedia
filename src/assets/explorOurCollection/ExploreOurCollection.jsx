@@ -1,6 +1,9 @@
 import React from 'react'
 import './exploreOurCollection.css'
-import videoFile from "../homePageVideo.mp4"
+// import videoFile from "../homePageVideo.mp4"
+import video1 from "../homepageCompressed1.mp4"
+import video2 from "../homepageCompressed2.mp4"
+import video3 from "../homepageCompressed3.mp4"
 import { Link } from 'react-router-dom'
 
 function ExploreOurCollection() {
@@ -17,9 +20,9 @@ function ExploreOurCollection() {
            <button className='expColLeftBtn'><Link to="/projects" >Browse Projects</Link></button>
         </div>
          <div className='explorCollectionVideo'>
-           <div className='video1'><video  autoPlay loop  muted playsInline preload="metadata"   src={videoFile}></video></div>
-          <div className='video2'><video  autoPlay loop  muted playsInline preload="metadata"  src={videoFile}></video></div>
-          <div className='video3'><video  autoPlay loop  muted playsInline preload="metadata"  src={videoFile}></video></div>
+           <div className='video1'><video  autoPlay loop  muted playsInline preload="metadata"   src={video2}></video></div>
+          <div className='video2'><video  autoPlay loop  muted playsInline preload="metadata"  src={video1}></video></div>
+          <div className='video3'><video  autoPlay loop  muted playsInline preload="metadata"  src={video3}></video></div>
          </div>
          <button className='expColLeftBtn2'><Link to="/projects" >Browse All Projects</Link></button>
       </div>

@@ -402,6 +402,8 @@
 }
 .incluContainer .iCon .iCon5{
     background-image: url(../What-do-we-offer-Img5.png);
+    width: 80px;
+    height: 80px;
 }
 .incluContainer .iCon .iCon6{
     background-image: url(../What-do-we-offer-Img6.png);
@@ -447,10 +449,10 @@
     grid-area:gridittem4 ;
 }
 .incluBox .incluContainer:nth-child(5){
-    grid-area:gridittem5 ;
+    grid-area:gridittem6 ;
 }
 .incluBox .incluContainer:nth-child(6){
-    grid-area:gridittem6 ;
+    grid-area:gridittem5 ;
 }
 
 /* request video edits after what is included */
@@ -884,7 +886,7 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: left center;
-    /* background-color: #8D1FD4; */
+    /* background-color: #1fd446; */
     
 }
 
@@ -1027,6 +1029,7 @@
     height: auto;
      border-radius: 10px; 
      margin-bottom: 10px;
+     border: 1px solid rgba(141, 140, 140, 0.325);
 }
 .EWorkSec .rightSec1 .row3rd div span{
     width: 100%;
@@ -1292,6 +1295,12 @@
 }
 .incluContainer .iCon .iCon4{
     width: 30%;
+    /* height: 50px; */
+    /* background-image: url(../What-do-we-offer-Img4.png); */
+}
+.incluContainer .iCon .iCon5{
+    width: 50px;
+    height: 50px;
     /* height: 50px; */
     /* background-image: url(../What-do-we-offer-Img4.png); */
 }

@@ -8,6 +8,9 @@ import videoFile from "../homePageVideo.mp4"
 import videoFile1 from "../homePageVideo1.mp4"
 import videoFile2 from "../Homepage-animation2.mp4"
 import videoFile3 from "../homePage-animaation3.mp4"
+import videoMuted1 from "../homepageCompressed1.mp4"
+import videoMuted2 from "../homepageCompressed2.mp4"
+import videoMuted3 from "../homepageCompressed3.mp4"
 // import { CgChevronLeft, CgChevronRight } from 'react-icons/cg'
 // import { PiXLogo } from 'react-icons/pi'
 // import { BiLogoGmail, BiLogoTiktok } from 'react-icons/bi'
@@ -219,7 +222,7 @@ const handleChangeVideo = (index) => {
 
             <div className='row3rd'>
                 <div>
-                    <video src={videoFile} autoPlay muted loop  playsInline preload="metadata" ></video>
+                    <video src={videoMuted1} autoPlay muted loop  playsInline preload="metadata" ></video>
                     <span><div></div></span>
                     <span></span>
                     <span></span>
@@ -227,7 +230,7 @@ const handleChangeVideo = (index) => {
                     <span></span>
                 </div>
                 <div>
-                    <video src={videoFile} autoPlay muted loop  playsInline preload="metadata" ></video>
+                    <video src={videoMuted2} autoPlay muted loop  playsInline preload="metadata" ></video>
                     <span><div></div></span>
                     <span></span>
                     <span></span>
@@ -236,7 +239,7 @@ const handleChangeVideo = (index) => {
                 </div>
 
                 <div>
-                    <video src={videoFile} autoPlay muted loop  playsInline preload="metadata" ></video>
+                    <video src={videoMuted3} autoPlay muted loop  playsInline preload="metadata" ></video>
                     <span><div></div></span>
                     <span></span>
                     <span></span>
