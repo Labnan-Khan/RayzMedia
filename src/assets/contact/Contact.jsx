@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import './contact.css'
 import FollowUs from '../FollowUs/FollowUs'
 import { PiHandWavingDuotone } from 'react-icons/pi'
@@ -7,6 +7,7 @@ import emailjs from '@emailjs/browser';
 import { IoMdCheckmark } from 'react-icons/io'
 
 function Contact() {
+    const[submitBtn, setSubmitBtn] = useState(false)
 
 const form = useRef()
 
@@ -15,13 +16,25 @@ const sendEmail = (e)=>{
 
     emailjs.sendForm("service_hhc0j9n", "template_79utwuf" , form.current, {
         publicKey: "VUw7twkZAl6-LpT5M",
-    }).then(
+    }).then(()=>{
         form.current.reset()
-    ),
+
+        setSubmitBtn(true)
+}),
     (error)=>{
         console.log("failed")
     }
 }
+
+useEffect(() => {
+    if (submitBtn === true) {
+        const timer = setTimeout(() => {
+            setSubmitBtn(false);
+        }, 4000);
+
+        return () => clearTimeout(timer);
+    }
+}, [submitBtn]);
 
 
   return (
@@ -68,12 +81,12 @@ const sendEmail = (e)=>{
             
             <div className='contactHomeRight'>
                 <form className='formSec' ref={form} onSubmit={sendEmail}>
-                <input type="text" name="user_name" placeholder='Name'/>
-                <input type="text" name="company_name" placeholder='Company Name'/>
-                <input type="email" name="user_email" placeholder='Email' />
+                <input type="text" name="user_name" placeholder='Name'  required />
+                <input type="text" name="company_name" placeholder='Company Name'  required />
+                <input type="email" name="user_email" placeholder='Email'  required />
                 <div className='dropdownSec'>
                     <p>How do you get your video editing done?</p>
-                    <select id="country" name="user_dropdown1">
+                    <select id="country" name="user_dropdown1"  required >
                         <option  value="">please select</option>
                         <option value="I don't">I don't</option>
                         <option value="I do it myself">I do it myself</option>
@@ -106,8 +119,17 @@ const sendEmail = (e)=>{
                     <label><input type="checkbox" name='user_checkbox'  value="other" />other</label>
                 </div>
                 <textarea type="text" name='message' placeholder='Message' cols="7"></textarea >
-                <button type='submit'>Send Message</button>
+                <div className='SubmitBtnDiv'>
+                    <button type='submit'  className={`${submitBtn? "MessageSubmite": ""}`}>
+
+                        {(submitBtn)? <span><IoMdCheckmark /></span>  : ""}
+                        {(submitBtn)?  "Sent successfully" : "Send Message"}
+                        </button>                    
+                {/* <div className={`messageDiv ${submitBtn? "messageSubmit": ""}`}>Thank you for your message. It has been sent.</div> */}
+                </div>
+                {/* <button type='submit' onClick={()=>setSubmitBtn(true)}>Send Message</button> */}
                 </form>
+                {/* <div className={`messageDiv ${submitBtn? "messageSubmit": ""}`}>Thank you for your message. It has been sent.</div> */}
                 {/* <p>ok</p> */}
             </div>
         </div>
