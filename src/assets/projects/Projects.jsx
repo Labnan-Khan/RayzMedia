@@ -328,11 +328,11 @@ const filteredVideos =
 
             {filteredVideos.map((item,index)=>{
                 return  (
-                             <div className="videoCon" data-aos="fade-up" >
-                <div className='videoTumbnail'  style={{ backgroundImage: `url(${item.thumbnail})` }} >
-                    <button className='playButton'  ><div onClick={()=>{document.body.style.overflow = "hidden"; setVideoSize(true); setCurrentVideo([item.video, item.thumbnail])}}><FaPlayCircle /></div></button>
-                </div>
-            </div>
+                  <div className="videoCon" data-aos="fade-up" >
+                    <div className='videoTumbnail'  style={{ backgroundImage: `url(${item.thumbnail})` }} >
+                      <button className='playButton'  ><div onClick={()=>{document.body.style.overflow = "hidden"; setVideoSize(true); setCurrentVideo([item.video, item.thumbnail])}}><FaPlayCircle /></div></button>
+                    </div>
+                  </div>
                 )
             })}
             

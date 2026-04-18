@@ -167,6 +167,7 @@ const handleChangeVideo = (index) => {
         <div className='homeRight'>
           <div className='rightVideo'>
             <div><video autoPlay  loop  muted playsInline preload="metadata"   src={videoFile1}></video></div>
+            {/* <video autoPlay  loop  muted playsInline preload="metadata"   src={videoFile1}></video> */}
             <h4 className='rayzh4'>Rayzmedia</h4>
           </div>
 
