@@ -4,7 +4,7 @@ import { BsBoxArrowRight } from 'react-icons/bs'
 import { TbBrandAdobeAfterEffect, TbTextRecognition } from 'react-icons/tb'
 import { AiOutlinePicture } from 'react-icons/ai'
 import { GiMusicalNotes } from 'react-icons/gi'
-import videoFile from "../homePageVideo.mp4"
+// import videoFile from "../homePageVideo.mp4"
 import videoFile1 from "../homePageVideo1.mp4"
 import videoFile2 from "../Homepage-animation2.mp4"
 import videoFile3 from "../homePage-animaation3.mp4"
