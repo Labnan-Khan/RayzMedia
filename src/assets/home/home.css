@@ -181,7 +181,7 @@
     justify-content: start;
     align-items: center;
     position: relative;
-    /* background-color: #8D1FD4; */
+    /* background-color: #37765352; */
 }
 
 .homeRight::before{
@@ -221,17 +221,19 @@
     /* border-left: 2px solid #8D1FD4; */
     border: 2px solid #8D1FD4;
     border-radius: 20px;
-    padding-bottom: 15px;
-    padding-top: 15px;
-    /* padding: 10px; */
+    padding-bottom: 20px;
+    padding-top: 20px;
+    /* padding: 15px; */
     display: flex;
     justify-content: center;
     align-items: center;
      box-shadow: inset 0px 0px 10px #8D1FD4;
+     /* box-sizing: content-box; */
  }
 
  .homeRight .rightBox{
     background-color: rgba(0, 0, 0, 0.677);
+    /* color: white; */
     position: relative;
     width: 30%;
     /* text-align: center; */
@@ -268,7 +270,7 @@
     padding: 0px 10px;
     font-size: 20px;
     background-color: black;
-    color: #8D1FD4;
+    color: white;
     /* border-radius: 20px; */
     /* transform: translateY(0px); */
     bottom: -10px;
@@ -407,6 +409,8 @@
 }
 .incluContainer .iCon .iCon6{
     background-image: url(../What-do-we-offer-Img6.png);
+    width: 60px;
+    height: 60px;
 }
 
 
