@@ -116,7 +116,7 @@ const handleChangeVideo = (index) => {
   setTimeout(() => {
     setRVEPosition(index); // change video
     setFade(true); // fade in
-  }, 1000); // match CSS duration
+  }, 500); // match CSS duration
 };
 
 
