@@ -8,23 +8,18 @@ import { IoMdCheckmark } from 'react-icons/io'
 
 function Contact() {
     const[submitBtn, setSubmitBtn] = useState(false)
+    const [errors, setErrors] = useState({  userName: false,  companyName: false,  userEmail: false,  firstDropDown: false,
+});
+
+    const[userName, setUserName] = useState("")
+    const[companyName, setCompanyName] = useState("")
+    const[userEmail, setUserEmail] = useState("")
+    const[firstDropDown, setFirstDropDown] = useState("")
+
 
 const form = useRef()
 
-const sendEmail = (e)=>{
-    e.preventDefault()
 
-    emailjs.sendForm("service_hhc0j9n", "template_79utwuf" , form.current, {
-        publicKey: "VUw7twkZAl6-LpT5M",
-    }).then(()=>{
-        form.current.reset()
-
-        setSubmitBtn(true)
-}),
-    (error)=>{
-        console.log("failed")
-    }
-}
 
 useEffect(() => {
     if (submitBtn === true) {
@@ -35,6 +30,39 @@ useEffect(() => {
         return () => clearTimeout(timer);
     }
 }, [submitBtn]);
+
+
+const sendEmail = (e) => {
+  e.preventDefault();
+
+  const newErrors = {
+  userName: userName.trim() === "",
+  companyName: companyName.trim() === "",
+  userEmail: userEmail.trim() === "",
+  firstDropDown: firstDropDown === "",
+};
+
+setErrors(newErrors);
+
+// stop if any error exists
+if (Object.values(newErrors).some(err => err)) return;
+
+
+    
+  // your email logic here
+   emailjs.sendForm("service_hhc0j9n", "template_79utwuf" , form.current, {
+        publicKey: "VUw7twkZAl6-LpT5M",
+    }).then(()=>{
+        form.current.reset()
+        setUserName("");
+        setCompanyName("");
+        setUserEmail("");
+        setFirstDropDown("");
+        setSubmitBtn(true)
+}).catch((error)=>{
+        console.log("failed")
+    })
+};
 
 
   return (
@@ -78,15 +106,15 @@ useEffect(() => {
                     </div>
                 </div>
             </div>
-            
             <div className='contactHomeRight'>
-                <form className='formSec' ref={form} onSubmit={sendEmail}>
-                <input type="text" name="user_name" placeholder='Name'  required />
-                <input type="text" name="company_name" placeholder='Company Name'  required />
-                <input type="email" name="user_email" placeholder='Email'  required />
+
+                <form className='formSec' ref={form} onSubmit={sendEmail} >
+                <input type="text" className={errors.userName? "errorInput" :""} name="user_name"  placeholder='Name' value={userName} onChange={(e)=> setUserName(e.target.value)}/>
+                <input type="text" className={errors.companyName? "errorInput" :""} name="company_name" placeholder='Company Name' value={companyName} onChange={(e)=> setCompanyName(e.target.value)}/>
+                <input type="email" className={errors.userEmail? "errorInput" :""} name="user_email" placeholder='Email' value={userEmail} onChange={(e)=> setUserEmail(e.target.value)}/>
                 <div className='dropdownSec'>
                     <p>How do you get your video editing done?</p>
-                    <select id="country" name="user_dropdown1"  required >
+                    <select id="country" name="user_dropdown1" className={errors.firstDropDown? "errorInput" :""} value={firstDropDown} onChange={(e)=> setFirstDropDown(e.target.value)}>
                         <option  value="">please select</option>
                         <option value="I don't">I don't</option>
                         <option value="I do it myself">I do it myself</option>
@@ -129,8 +157,8 @@ useEffect(() => {
                 </div>
                 {/* <button type='submit' onClick={()=>setSubmitBtn(true)}>Send Message</button> */}
                 </form>
-                {/* <div className={`messageDiv ${submitBtn? "messageSubmit": ""}`}>Thank you for your message. It has been sent.</div> */}
-                {/* <p>ok</p> */}
+                <div className={`hideErrorMeg ${(errors.userName || errors.companyName || errors.userEmail || errors.firstDropDown)? "showErrorMeg": ""}`}>Please fill the Required inputs</div>
+                
             </div>
         </div>
 

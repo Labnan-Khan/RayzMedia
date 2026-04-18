@@ -186,6 +186,11 @@
     outline: none;
     font-size: 14px;
 }
+.contactHome .contactHomeRight .errorInput{
+    border: 1px solid red !important;
+    box-shadow: inset 0px 0px 1px red;
+}
+
 
 .contactHome .contactHomeRight input::placeholder, textarea::placeholder{
     color: white;
@@ -311,6 +316,27 @@
     transition: all 0.5s ease;
 }
 
+.hideErrorMeg{
+    position: absolute;
+    color: red;
+    bottom: -10px;
+    transform: translateY(100%);
+    padding: 10px 20px;
+    width: 80%;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid rgb(238, 6, 6);
+    background-color: #1a0133;
+    transition: all 0.5s ease;
+    opacity: 0;
+    /* transform: scale(0.9); */
+}
+
+.showErrorMeg{
+    /* transform: scale(1); */
+    opacity: 1;
+    transform: translateY(100%);
+}
 
 
 
