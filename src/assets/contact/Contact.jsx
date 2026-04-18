@@ -109,12 +109,12 @@ if (Object.values(newErrors).some(err => err)) return;
             <div className='contactHomeRight'>
 
                 <form className='formSec' ref={form} onSubmit={sendEmail} >
-                <input type="text" className={errors.userName? "errorInput" :""} name="user_name"  placeholder='Name' value={userName} onChange={(e)=> setUserName(e.target.value)}/>
-                <input type="text" className={errors.companyName? "errorInput" :""} name="company_name" placeholder='Company Name' value={companyName} onChange={(e)=> setCompanyName(e.target.value)}/>
-                <input type="email" className={errors.userEmail? "errorInput" :""} name="user_email" placeholder='Email' value={userEmail} onChange={(e)=> setUserEmail(e.target.value)}/>
+                <input type="text" className={errors.userName? "errorInput" :""} name="user_name"  placeholder='Name' value={userName} onChange={(e)=>{ setUserName(e.target.value); setErrors(prev => ({ ...prev, userName: false }));}}/>
+                <input type="text" className={errors.companyName? "errorInput" :""} name="company_name" placeholder='Company Name' value={companyName} onChange={(e)=>{ setCompanyName(e.target.value); setErrors(prev => ({ ...prev, companyName: false }));}}/>
+                <input type="email" className={errors.userEmail? "errorInput" :""} name="user_email" placeholder='Email' value={userEmail} onChange={(e)=>{ setUserEmail(e.target.value); setErrors(prev => ({ ...prev, userEmail: false }));}}/>
                 <div className='dropdownSec'>
                     <p>How do you get your video editing done?</p>
-                    <select id="country" name="user_dropdown1" className={errors.firstDropDown? "errorInput" :""} value={firstDropDown} onChange={(e)=> setFirstDropDown(e.target.value)}>
+                    <select id="country" name="user_dropdown1" className={errors.firstDropDown? "errorInput" :""} value={firstDropDown} onChange={(e)=>{ setFirstDropDown(e.target.value); setErrors(prev => ({ ...prev, firstDropDown: false }));}}>
                         <option  value="">please select</option>
                         <option value="I don't">I don't</option>
                         <option value="I do it myself">I do it myself</option>
