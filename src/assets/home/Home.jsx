@@ -458,7 +458,7 @@ const handleChangeVideo = (index) => {
             requestVieoEdits.map((video, index) =>{
                 return (
                     
-                    <video className={(rVEPosition == index) ? "show" : "hide"} src={video} autoPlay loop muted  playsInline preload="metadata" ></video>
+                    <video key={index} className={(rVEPosition == index) ? "show" : "hide"} src={video} autoPlay loop muted  playsInline preload="metadata" ></video>
         
                 )
             })

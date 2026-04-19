@@ -15,7 +15,8 @@ function Navbar() {
 
             if (curentScroll <= 0){
                 setShowNavbar(true);
-                 lastScroll.current = 0;
+                //  lastScroll.current = 0;
+                 setLastScroll(0);
                 return
             }
 

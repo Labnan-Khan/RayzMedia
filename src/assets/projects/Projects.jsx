@@ -58,9 +58,7 @@ function Projects() {
     const [videoSize, setVideoSize] = useState(false)
     const [currentCatageryBtn, setCurrentCatageryBtn] =useState(0)
     const videoTypeListBtn = ["All categories", "Ads", "Agencies", "iGaming", "Youtube", "Creators","Ecommerce", "Entertainment", "Fitness", "Intros", "Lifestyle", "Medical",  "Podcast", "product Ads", "Production Companies", "Real estate", "Languages", "Beauty & Fashion","Personal Brand", "Health & Wellness", "Custom Animation/VFX","Business & Marketing","Coaching & Education", "Course Creators","SAAS", "template-Based Videos", "Text hooks",  "Tiktok & Reel"]
-    // const videoList = [video1,video2,video3,video4,video5,video6,video7,video8,video9,video10,video11,video12,video13,video14,video15,video16,video17,video18,video19]
-    // const videoTumbnailsList = [imgTumbnail1,imgTumbnail2,imgTumbnail3,imgTumbnail4,imgTumbnail5,imgTumbnail6,imgTumbnail7,imgTumbnail8,imgTumbnail9,imgTumbnail10,imgTumbnail11,imgTumbnail12,imgTumbnail13,imgTumbnail14,imgTumbnail15,imgTumbnail16,imgTumbnail17,imgTumbnail18,imgTumbnail19]
-
+   
     const videosData = [
   {
     video: video1,
@@ -135,11 +133,6 @@ function Projects() {
     thumbnail: imgTumbnail11,
     categories: ["Podcast", "Business & Marketing", "Tiktok & Reel", "Ecommerce"],
   },
-//   {
-//     video: video12,
-//     thumbnail: imgTumbnail12,
-//     categories: ["Lifestyle", "Personal Brand", "Tiktok & Reel"],
-//   },
   {
     video: video13,
     thumbnail: imgTumbnail13,
@@ -151,21 +144,6 @@ function Projects() {
     thumbnail: imgTumbnail3,
     categories: ["iGaming", "Ads", "Custom Animation", "Business & Marketing"],
   },
-//   {
-//     video: video14,
-//     thumbnail: imgTumbnail14,
-//     categories: ["Ads", "Creators", "Personal Brand", "Business & Marketing", "Tiktok & Reel"],
-//   },
-//   {
-//     video: video15,
-//     thumbnail: imgTumbnail15,
-//     categories: ["Tiktok & Reel", "Custom Animation/VFX"],
-//   },
-//   {
-//     video: video16,
-//     thumbnail: imgTumbnail16,
-//     categories: ["Tiktok & Reel", "Custom Animation/VFX", "SAAS"],
-//   },
   {
     video: video17,
     thumbnail: imgTumbnail17,
@@ -319,7 +297,7 @@ const filteredVideos =
 
         <div className='ProjectVideoTypeBtn'>
             {videoTypeListBtn.map((btn,index) =>{
-                return <button className={`${(currentCatageryBtn == index)? "currentCatagerybutton" : ""}`} onClick={()=>{setCurrentCatageryBtn(index)}}>{btn}</button>
+                return <button key={index} className={`${(currentCatageryBtn == index)?  "currentCatagerybutton" : ""}`} onClick={()=>{setCurrentCatageryBtn(index)}}>{btn}</button>
             })}
             
         </div>
@@ -328,7 +306,7 @@ const filteredVideos =
 
             {filteredVideos.map((item,index)=>{
                 return  (
-                  <div className="videoCon" data-aos="fade-up" >
+                  <div key={index} className="videoCon" data-aos="fade-up" >
                     <div className='videoTumbnail'  style={{ backgroundImage: `url(${item.thumbnail})` }} >
                       <button className='playButton'  ><div onClick={()=>{document.body.style.overflow = "hidden"; setVideoSize(true); setCurrentVideo([item.video, item.thumbnail])}}><FaPlayCircle /></div></button>
                     </div>
