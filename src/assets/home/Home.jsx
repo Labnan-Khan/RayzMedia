@@ -6,6 +6,7 @@ import { AiOutlinePicture } from 'react-icons/ai'
 import { GiMusicalNotes } from 'react-icons/gi'
 // import videoFile from "../homePageVideo.mp4"
 import videoFile1 from "../homePageVideo1.mp4"
+import videoFile1Tumbnail from "../hopePagevideoTumbnail.png"
 import videoFile2 from "../Homepage-animation2.mp4"
 import videoFile3 from "../homePage-animaation3.mp4"
 import videoMuted1 from "../homepageCompressed1.mp4"
@@ -166,7 +167,7 @@ const handleChangeVideo = (index) => {
 
         <div className='homeRight'>
           <div className='rightVideo'>
-            <div><video autoPlay  loop  muted playsInline preload="metadata"   src={videoFile1}></video></div>
+            <div><video autoPlay   loop  muted playsInline preload="metadata" poster={videoFile1Tumbnail}   src={videoFile1}></video></div>
             {/* <video autoPlay  loop  muted playsInline preload="metadata"   src={videoFile1}></video> */}
             <h4 className='rayzh4'>Rayzmedia</h4>
           </div>

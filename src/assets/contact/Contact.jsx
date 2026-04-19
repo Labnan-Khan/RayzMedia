@@ -18,7 +18,6 @@ function Contact() {
 
 
 const form = useRef()
-const formScroll = useRef()
 
 
 
@@ -51,7 +50,7 @@ if (Object.values(newErrors).some(err => err)) {
     const timer = setTimeout(() => {
         if(formTop){
             const top = formTop.getBoundingClientRect().top +window.scrollY;
-            window.scrollTo({ top:top - 100, behavior: "smooth", block: "start" })
+            window.scrollTo({ top:top - 100, behavior: "smooth"})
         }
         
         }, 500);

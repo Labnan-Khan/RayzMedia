@@ -260,7 +260,9 @@
     cursor: pointer;
     accent-color: #8D1FD4;
 }
-
+.contactHomeRight  .checkboxSec label:hover{
+    cursor: pointer;
+}
 .contactHome .contactHomeRight textarea{
     width: 100%;
      background-color: #630e9b6e;
