@@ -8,8 +8,8 @@ import { IoMdCheckmark } from 'react-icons/io'
 
 function Contact() {
     const[submitBtn, setSubmitBtn] = useState(false)
-    const [errors, setErrors] = useState({  userName: false,  companyName: false,  userEmail: false,  firstDropDown: false,
-});
+    const [errors, setErrors] = useState({  userName: false,  companyName: false,  userEmail: false,  firstDropDown: false,});
+    const hasError = Object.values(errors).some(Boolean);
 
     const[userName, setUserName] = useState("")
     const[companyName, setCompanyName] = useState("")
@@ -18,6 +18,7 @@ function Contact() {
 
 
 const form = useRef()
+const formScroll = useRef()
 
 
 
@@ -45,7 +46,19 @@ const sendEmail = (e) => {
 setErrors(newErrors);
 
 // stop if any error exists
-if (Object.values(newErrors).some(err => err)) return;
+if (Object.values(newErrors).some(err => err)) {
+    const formTop = document.getElementById("scrollForm");
+    const timer = setTimeout(() => {
+        if(formTop){
+            const top = formTop.getBoundingClientRect().top +window.scrollY;
+            window.scrollTo({ top:top - 100, behavior: "smooth", block: "start" })
+        }
+        
+        }, 500);
+
+    
+    return;
+}
 
 
     
@@ -106,9 +119,9 @@ if (Object.values(newErrors).some(err => err)) return;
                     </div>
                 </div>
             </div>
-            <div className='contactHomeRight'>
+            <div className='contactHomeRight' id="scrollForm" >
 
-                <form className='formSec' ref={form} onSubmit={sendEmail} >
+                <form className='formSec'  ref={form} onSubmit={sendEmail} >
                 <input type="text" className={errors.userName? "errorInput" :""} name="user_name"  placeholder='Name' value={userName} onChange={(e)=>{ setUserName(e.target.value); setErrors(prev => ({ ...prev, userName: false }));}}/>
                 <input type="text" className={errors.companyName? "errorInput" :""} name="company_name" placeholder='Company Name' value={companyName} onChange={(e)=>{ setCompanyName(e.target.value); setErrors(prev => ({ ...prev, companyName: false }));}}/>
                 <input type="email" className={errors.userEmail? "errorInput" :""} name="user_email" placeholder='Email' value={userEmail} onChange={(e)=>{ setUserEmail(e.target.value); setErrors(prev => ({ ...prev, userEmail: false }));}}/>
@@ -157,7 +170,7 @@ if (Object.values(newErrors).some(err => err)) return;
                 </div>
                 {/* <button type='submit' onClick={()=>setSubmitBtn(true)}>Send Message</button> */}
                 </form>
-                <div className={`hideErrorMeg ${(errors.userName || errors.companyName || errors.userEmail || errors.firstDropDown)? "showErrorMeg": ""}`}>Please fill the Required inputs</div>
+                <div className={`hideErrorMeg ${(hasError)? "showErrorMeg": ""}`}>Please fill the Required inputs</div>
                 
             </div>
         </div>
