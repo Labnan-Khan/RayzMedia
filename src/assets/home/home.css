@@ -223,27 +223,66 @@
  }
 
  .homeRight .rightBox{
-    background-color: rgba(0, 0, 0, 0.677);
+    background-color: #8c1fd414;
     /* color: white; */
     position: relative;
     width: 30%;
     /* text-align: center; */
-    z-index: 1;
+    z-index: 2;
     right: 10%;
     top: -20%;
     display: flex;
     flex-direction: column;
-    gap:3px ;
-    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap:8px ;
+    padding: 20px;
     /* width: 140px; */
-    border-radius: 5%;
+    border-radius: 10px;
     font-size: 15px;
     box-sizing: content-box;
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    box-shadow: inset 0px 0px 20px #8c1fd455;
+    /* border: 1px solid #8c1fd42c; */
  }
+
+ .rightBox::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 10px;
+  background: linear-gradient(
+    120deg,
+    rgba(255,255,255,0.4),
+    rgba(255,255,255,0.05)
+  );
+  opacity: 0.4;
+    box-shadow: 0px 0px 20px black;
+  /* z-index: 1; */
+}
+
+.rightBox::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 10px;
+  background: radial-gradient(
+    circle at 30% 30%,
+    rgba(255,255,255,0.3),
+    transparent 60%
+  );
+  box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.037);
+  /* z-index: 1; */
+}
+
  .rightBox1{
-    background-color: rgb(37, 32, 32);
+    background-color: transparent;
+    border: 1px solid #8c1fd4fa;
     display: flex;
-    gap: 2px;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
     padding-left: 10px;
     height: 3vw;
     border-radius: 10px;
@@ -254,6 +293,7 @@
 
  }
 
+ 
  .rayzh4{
     /* background-color: #8D1FD4; */
     width: fit-content;
@@ -1173,16 +1213,22 @@
     align-items: center;
     }
 
-     .homeRight .rightBox{
+    .homeRight .rightVideo{
+        padding: 10px;
+        background-color: red ;
+    }
+
+    .homeRight .rightBox{
         position: relative;
         width: auto;
+        padding: 10px;
          /* height: 25%; */
          box-sizing: content-box;
-         border: 1px solid rgba(255, 255, 255, 0.075);
+         /* border: 1px solid rgba(255, 255, 255, 0.075); */
     }
 
     .rightBox1{
-    background-color: rgb(37, 32, 32);
+    /* background-color: rgb(37, 32, 32); */
     display: flex;
     gap: 4px;
     padding-left: 10px;
