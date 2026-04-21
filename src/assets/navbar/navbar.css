@@ -22,7 +22,9 @@
      background: linear-gradient(90deg, white, #8D1FD4 );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+
 }
+
 .nav .navLi{
     width: 70%;
     height: 100%;

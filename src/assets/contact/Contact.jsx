@@ -62,8 +62,8 @@ if (Object.values(newErrors).some(err => err)) {
 
     
   // your email logic here
-   emailjs.sendForm("service_hhc0j9n", "template_79utwuf" , form.current, {
-        publicKey: "VUw7twkZAl6-LpT5M",
+   emailjs.sendForm("service_4rctlan", "template_jywq00z" , form.current, {
+        publicKey: "iAcTdkXScDxMzppgd",
     }).then(()=>{
         form.current.reset()
         setUserName("");
