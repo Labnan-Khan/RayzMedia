@@ -285,8 +285,10 @@
 
 
 
-
-.project .hidevideoF .videoSec .videoControls{
+.project .hidevideoF .videoSec .videoControls:hover{
+    cursor: pointer;
+}
+.project .showVideoF .videoSec .videoControls{
     position: absolute;
     bottom: 40px;
     width: 70%;
@@ -295,14 +297,45 @@
     align-items: center;
     padding: 5px;
     border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.397);
-    background-color: rgba(0, 0, 0, 0.753);
+    /* border: 1px solid rgba(255, 255, 255, 0.397); */
+    background-color: #8c1fd414;
     opacity: 0;
     gap: 4px;
+    z-index: 60;
     transition: opacity 0.3s ease;
+     backdrop-filter: brightness(1.1) blur(20px)  saturate(180%);
+     box-shadow: inset 0px 0px 30px #8c1fd473;
     /* box-shadow: inset 0px 0px 2px black; */
 }
 
+ .videoSec .showVideoF .videoControls::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 10px;
+  background: linear-gradient(
+    120deg,
+    rgba(255,255,255,0.4),
+    rgba(255,255,255,0.05)
+  );
+  opacity: 0.4;
+    box-shadow: 0px 0px 20px black;
+  z-index: 50;
+}
+
+ .videoSec .showVideoF .videoControls::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 10px;
+  background: radial-gradient(
+    circle at 30% 30%,
+    rgba(255,255,255,0.3),
+    transparent 60%
+  );
+  box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.037);
+  z-index: 50;
+}
 
 .project .hidevideoF .videoSec .videoControls .progressBar {
   width: 100%;
