@@ -284,7 +284,8 @@ const filteredVideos =
 
             </div>
 
-            
+            {/* <div className='gradientBg1'>.</div> */}
+            {/* <div className='gradientBg2'>.</div> */}
         </div>
 
 
