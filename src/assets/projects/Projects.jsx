@@ -170,7 +170,7 @@ function Projects() {
 
 
 
-    const [currentVideo,setCurrentVideo] = useState([video2,imgTumbnail2])
+    const [currentVideo,setCurrentVideo] = useState([video2,""])
     const [isPlay, setIsPlay] = useState(false)
     const [isMuted, setIsMuted] = useState(false)
     const [hidePlayButton, setHidePlaayButton] = useState(false)
@@ -249,6 +249,7 @@ const closeVideoSec = ()=>{
     setHidePlaayButton(false)
     setOnOffvideoControl(false)
     document.body.style.overflow = "auto";
+    useState([video2,""]) // add this line to revome the current thumbnail of video if closed
 }
 
 const selectedCategory = videoTypeListBtn[currentCatageryBtn];
