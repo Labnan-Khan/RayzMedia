@@ -175,8 +175,10 @@
 
  @media (max-width:768px){
         .VideoSec{
-        width: 150%;
-        align-items: start;
+        width: 100%;
+        align-items: center;
+        padding: 0px;
+        bottom: -20px;
     }
     .testimonial{
         background-image: none;
