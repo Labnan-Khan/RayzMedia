@@ -176,6 +176,9 @@
  @media (max-width:768px){
         .VideoSec{
         width: 150%;
-        align-items: end;
+        align-items: start;
+    }
+    .testimonial{
+        background-image: none;
     }
  }
