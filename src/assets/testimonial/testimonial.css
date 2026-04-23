@@ -154,7 +154,9 @@
     z-index: -1;
     padding: 10px 0px;
     /* background-color: aqua; */
-    
+    display: flex;
+    justify-content:center;
+    align-items: start;
     pointer-events: none;
 }
 
@@ -174,5 +176,6 @@
  @media (max-width:768px){
         .VideoSec{
         width: 150%;
+        align-items: end;
     }
  }
