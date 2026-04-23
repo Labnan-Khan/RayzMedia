@@ -3,6 +3,7 @@ import './testimonial.css'
 import { GoStar } from 'react-icons/go'
 import { FaStar } from 'react-icons/fa'
 import { IoMdCheckmark } from 'react-icons/io'
+import testiVideo from '../testimonailBgVideo.mp4'
 
 function Testimonial() {
         const comment = [{user:"Kenny Jo", com:"Premium quality, every single time."}, {user:"Amaya Bailey", com:"Saved us time and scaled our output."},{user:"John Haack", com:"Not just editors — they understand content."}, {user:"Stevie Richards", com:"Our content finally started performing"},
@@ -68,9 +69,13 @@ function Testimonial() {
                     </div>
 
                  
-
+                    
                 </div>
+                
             </div>
+             <div className='VideoSec'>
+                    <video src={testiVideo} autoPlay muted loop  muted playsInline preload="metadata" ></video>
+                </div>
         </div>
     </>
   )

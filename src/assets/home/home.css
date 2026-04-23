@@ -243,7 +243,6 @@
     box-sizing: content-box;
     
     backdrop-filter: brightness(1.1) blur(20px)  saturate(180%);
-    /* -webkit-backdrop-filter: blur(20px) saturate(180%); */
     box-shadow: inset 0px 0px 30px #8c1fd473;
     /* border: 1px solid #8c1fd411; */
  }
