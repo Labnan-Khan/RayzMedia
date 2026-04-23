@@ -175,8 +175,8 @@
 
  @media (max-width:768px){
         .VideoSec{
-        width: 100%;
-        align-items: center;
+        width: 200%;
+        align-items: start;
         padding: 0px;
         bottom: -20px;
     }
