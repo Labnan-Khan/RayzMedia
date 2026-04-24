@@ -140,7 +140,7 @@ const handleChangeVideo = (index) => {
             <p className='leftP2'>Built by Editors — for Editors</p>
 
             <p className='leftSimpleP'>Rayzmedia is a high-performance video editing & marketing agency built 
-              for those who want to stand out ,go viral and scale faster </p>
+              for those who want to stand out, go viral and scale faster </p>
             
             <div className='leftBtnD'>
                 <button className='leftBtn1'><Link to="/projects" >Explore Projects</Link></button>

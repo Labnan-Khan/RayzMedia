@@ -366,7 +366,12 @@
      -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-
+.ourPlan .ourPlnSolution h3:first-child span{
+    background: linear-gradient(to right, white, white);
+     -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+     
+}
 .ourPlan .ourPlnSolution .solutionContiner{
     display: grid;
     width: 90%;

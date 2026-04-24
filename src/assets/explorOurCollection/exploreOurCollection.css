@@ -13,7 +13,7 @@
     background-color: #1a0133;
     width: 80%;
     height: auto;
-    padding: 45px 10px;
+    padding: 45px;
     border-radius:10px;
     display: flex;
     flex-direction: row-reverse;
@@ -94,7 +94,6 @@
     justify-content: center;
     align-items: start;
     gap: 20px;
-    /* background-color: rgb(15, 132, 128); */
     padding-left: 5%;
 }
 .explorCollectionLeft h3{
@@ -145,24 +144,32 @@
     justify-content:start ;
     align-items: center;
     
-    width: 90%;
-    gap: 10px;
+    width: 70%;
+    gap: 20px;
     height: auto;
     padding-top: 20px;
     padding-bottom: 20px;
  }
 
  .explorCollectionLeft{
-    width: 90%;
+    width: 100%;
     justify-content: center;
     align-items: center;
-    /* background-color: aqua; */
     text-align: center;
+    margin-top: 10px;
+    padding: 0px 10px;
  }
+.explorCollectionLeft h3{
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+    
+}
+
 .explorCollectionLeft p{
     width: 90%;
     text-align: center;
-    /* background-color: #8D1FD4; */
 }
 
 
@@ -170,7 +177,9 @@
 .explorCollectionVideo{
     width: 100%;
     /* background-color: #8D1FD4; */
-    height: 40vh;
+    height: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 .explorCollectionVideo video{
     width: 100px;
@@ -193,6 +202,7 @@
     color: #8D1FD4;
     transition: all 0.7 ease-in;
     border: 2px solid #8D1FD4;
+    margin-bottom: 10px;
 }
 
 .expColLeftBtn2:hover{

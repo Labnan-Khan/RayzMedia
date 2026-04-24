@@ -208,7 +208,7 @@ function OurPlan() {
         </div>
 
         <div className='ourPlnSolution'>
-            <h3>Video Editing Solution</h3>
+            <h3>Video Editing <span>Solution</span></h3>
             <h3>You’ve been looking for</h3>
 
             <div className='solutionContiner'>

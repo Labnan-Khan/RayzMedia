@@ -184,4 +184,8 @@
         background-image: none;
         padding-bottom: 30px;
     }
+
+    .testiTrack {
+    animation: scrollTesti 50s linear infinite;
+}
  }

@@ -24,7 +24,7 @@ function ExploreOurCollection() {
           <div className='video2'><video  autoPlay loop  muted playsInline preload="metadata"  src={video1}></video></div>
           <div className='video3'><video  autoPlay loop  muted playsInline preload="metadata"  src={video3}></video></div>
          </div>
-         <button className='expColLeftBtn2'><Link to="/projects" >Browse All Projects</Link></button>
+         <button className='expColLeftBtn2'><Link to="/projects" >Browse Projects</Link></button>
       </div>
     </div>
 
